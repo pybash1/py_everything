@@ -8,7 +8,10 @@ Being available on [PyPi](https://pypi.org), you can install it as simply as eve
 ```
 $ python -m pip install py_essestials
 ```
-py_essesntials supports officially Python 3.0+
+py_utils officially supports Python 3.0+
 
 # Features
 - You can make use of the thousands of functions and classes available to you.
+- You don't have to write all of that code yourself, just call the function
+- You can inherit from our base class, and make your own with customizations
+- 

@@ -8,7 +8,7 @@ setup(
     author="play 4 Tutorials",
     author_email="play.4.tutotials",
     packages=['py_utils'],
-    install_requires=[],
+    install_requires=['requests'],
     license="MIT License",
     url="https://github.com/play4Tutorials/py_essentials",
     classifiers=[
