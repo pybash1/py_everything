@@ -6,7 +6,7 @@ It allows you to use many of its functions and classes without having to write h
 # Installation
 Being available on [PyPi](https://pypi.org), you can install it as simply as ever!
 ```
-$ python -m pip install py_essestials
+$ python -m pip install py_utils
 ```
 py_utils officially supports Python 3.0+
 
