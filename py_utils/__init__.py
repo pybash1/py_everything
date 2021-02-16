@@ -1,11 +1,7 @@
 import os, subprocess, time, random
 
 def hello_world():
-    string = '''
-Hello, World!
-This is my first program using Python!
-And hope to make more soon!
-    '''
+    string = 'Hello, World!'
     return string
 
 def print_no_newline(*args):
@@ -26,9 +22,9 @@ def install_modules(*args):
         command = f"python -m pip install {module}"
         subprocess.run(command)
 
-def py_utils_help():
+def help_me():
     base = 'This command gives you a list of all available functions and classes.'
-    mainString = '''update this'''
+    funcList = ['update', 'this']
     print(base)
     time.sleep(random.choice([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
-    return mainString
+    return funcList

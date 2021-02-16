@@ -1,6 +1,5 @@
 build/
 dist/
-py_essentials.egg-info/
+py_utils.egg-info/
 .vscode/
 __pycache__/
-
