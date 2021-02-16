@@ -21,10 +21,9 @@ def optionsR(apiUrl):
 def headR(apiUrl):
     requests.head(apiUrl)
 
-class ReqLib:
-    def __init__(self, apiUrl, data=None):
+class ReqLibBase:
+    def __init__(self, apiUrl):
         self.apiUrl = apiUrl
-        self.data = data
         self.response = ''
 
     def getR(self, apiUrl):
