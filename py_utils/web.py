@@ -1,5 +1,54 @@
 import webbrowser
 
+google_url = 'https://google.com/search?q='
+yt_url = 'https://youtube.com/results?search_query='
+github_url = 'https://github.com/search?q='
+so_url = 'https://stackoverflow.com/search?q='
+amz_in_url = 'https://www.amazon.in/s?k='
+amz_com_url = 'https://www.amazon.com/s?k='
+pypi_url = 'https://pypi.org/search/?q='
+rtdocs_url = 'https://readthedocs.io/search/?q='
+
+def google_search(query):
+    final_url = google_url + query
+    webbrowser.open(final_url)
+
+def yt_search(query):
+    final_url = yt_url + query
+    webbrowser.open(final_url)
+
+def github_search(query):
+    final_url = github_url + query
+    webbrowser.open(final_url)
+
+def so_search(query):
+    final_url = so_url + query
+    webbrowser.open(final_url)
+
+def amz_in_search(query):
+    final_url = amz_in_url + query
+    webbrowser.open(final_url)
+
+def amz_com_search(query):
+    final_url = amz_com_url + query
+    webbrowser.open(final_url)
+
+def pypi_search(query):
+    final_url = pypi_url + query
+    webbrowser.open(final_url)
+
+def rtdocs_search(query):
+    final_url = rtdocs_url + query
+    webbrowser.open(final_url)
+
+def open_new_tab(url, query):
+    final_url = url + query
+    webbrowser.open_new_tab(final_url)
+
+def open_new_window(url, query):
+    final_url = url + query
+    webbrowser.open_new(final_url)
+
 class webSearchBase:
     def __init__(self):
         self.google_url = 'https://google.com/search?q='
