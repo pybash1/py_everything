@@ -1,27 +1,66 @@
 import requests
 
 def getR(apiUrl):
-    requests.get(apiUrl)
+    response = requests.get(apiUrl)
+    return response
 
 def postR(apiUrl, data):
-    requests.post(apiUrl, data=data)
+    response = requests.post(apiUrl, data=None)
+    return response
 
 def putR(apiUrl, data):
-    requests.put(apiUrl, data=data)
+    response = requests.put(apiUrl, data=None)
+    return response
 
 def deleteR(apiUrl):
-    requests.delete(apiUrl)
+    response = requests.delete(apiUrl)
+    return response
 
 def patchR(apiUrl, data):
-    requests.patch(apiUrl, data=data)
+    response = requests.patch(apiUrl, data=None)
+    return response
 
 def optionsR(apiUrl):
-    requests.options(apiUrl)
+    response = requests.options(apiUrl)
+    return response
 
 def headR(apiUrl):
-    requests.head(apiUrl)
+    response = requests.head(apiUrl)
+    return response
+
+def getContent(response):
+    return response.content
+
+def getText(response):
+    return response.text
+
+def getJson(response):
+    return response.json
+
+def getHeader(response):
+    return response.headers
+
+def getSpecificHeader(response, headerName):
+    return response.headers[headerName]
 
 class ReqLibBase:
+    def __init__(self, apiUrl):
+        self.apiUrl = apiUrl
+        self.response = ''
+
+    def getR(self, apiUrl):
+        self.response = requests.get(apiUrl)
+
+    def postR(self, apiUrl, data):
+        self.response = requests.post(apiUrl, data=data)
+
+    def getContent(self, response):
+        return response.content
+
+    def getText(self, response):
+        return response.text
+
+class ReqLibAdvanced:
     def __init__(self, apiUrl):
         self.apiUrl = apiUrl
         self.response = ''

@@ -23,3 +23,21 @@ def search_exts(ext, path):
             if file.endswith(ext):
                 files.append(root + '\\' + str(file))
     return files
+
+def search_list(listOfTerms, query, filter='in'):
+    matches = []
+    for item in listOfTerms:
+        if filter == 'in':
+            if query in item:
+                matches.append(item)
+        elif filter == 'start':
+            if item.startswith(query):
+                matches.append(item)
+        elif filter == 'end':
+            if item.endswith(query):
+                matches.append(item)
+        elif filter == 'exact':
+            if item == query:
+                matches.append(item)
+
+    return matches

@@ -53,6 +53,13 @@ def eval_exp(exp):
     solution = eval(exp)
     return solution
 
+def avg(listOfNos):
+    avg = 0
+    for num in listOfNos:
+        avg += num
+
+    avg = avg / len(listOfNos)
+    return avg
 
 class MathsBase:
     def __init__(self, num1=0, num2=0):
@@ -132,3 +139,11 @@ class MathsAdvanced:
     def eval_exp(self, exp):
         solution = eval(exp)
         return solution
+
+    def avg(self, listOfNos):
+        avg = 0
+        for num in listOfNos:
+            avg += num
+
+        avg = avg / len(listOfNos)
+        return avg

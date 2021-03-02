@@ -15,8 +15,7 @@ py_utils officially supports Python 3.0+
 - You don't have to write all of that code yourself, just call the pre-made functions.
 - You can inherit from our base class, and make your own with customizations.
 - There are two variants of most classes, a `Base` variant and an `Advanced` variant.
-- Make your own classes from our pre-provided `Base` variants.
-- Contribute to this project to add more features to the package.
+- Make your own classes from our pre-provided `Base` variants. The Advanced ones are not for inheriting, but you could experiment.
 
 # Contributing
 ## Contribute to Code
