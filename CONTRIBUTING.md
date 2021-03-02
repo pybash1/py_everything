@@ -1,5 +1,5 @@
 # Contributing
-## Want to contribute to py_utils?
+## Want to contribute to py_everything?
 Do you want to contribute to this repository? Great! We love contributors! Alright, but how do you do that?
 You can contribute in two ways - Contribute to the Code or Contribute without Code
 

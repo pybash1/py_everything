@@ -1,4 +1,4 @@
-# py_utils
+# py_everything
 A python module containing all the basic functions and classes for python. From simple addition to advanced file encryption. Everything is included in this one package.
 
 It allows you to use many of its functions and classes without having to write huge complex code. It is a very simple and easy to use library. 
@@ -6,9 +6,9 @@ It allows you to use many of its functions and classes without having to write h
 # Installation
 Being available on [PyPi](https://pypi.org), you can install it as simply as ever!
 ```
-$ python -m pip install py_utils
+$ python -m pip install py_everything
 ```
-py_utils officially supports Python 3.0+
+py_everything officially supports Python 3.0+
 
 # Features
 - You can make use of the thousands of functions and classes available to you.

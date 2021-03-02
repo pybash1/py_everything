@@ -1,16 +1,16 @@
 from setuptools import setup
 
 setup(
-    name="py_utils",
-    version="1.0.1",
+    name="py_everything",
+    version="1.0.2",
     description="A python module containing all the basic functions and classes for python. From simple addition to advanced file encryption.",
     long_description=open("README.md", "r").read(),
     author="play 4 Tutorials",
-    author_email="play.4.tutotials",
-    packages=['py_utils'],
+    author_email="play.4.tutotials@gmail.com",
+    packages=['py_everything'],
     install_requires=['requests'],
     license="MIT License",
-    url="https://github.com/play4Tutorials/py_essentials",
+    url="https://github.com/play4Tutorials/py_everything",
     classifiers=[
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
