@@ -8,7 +8,7 @@ setup(
     author="play 4 Tutorials",
     author_email="play.4.tutotials@gmail.com",
     packages=['py_everything'],
-    install_requires=['requests'],
+    install_requires=['requests', 'pytube', 'playsound'],
     license="MIT License",
     url="https://github.com/play4Tutorials/py_everything",
     classifiers=[
@@ -20,8 +20,6 @@ setup(
         "Intended Audience :: Developers",
         "Intended Audience :: Education",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.3",
-        "Programming Language :: Python :: 3.4",
         "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
