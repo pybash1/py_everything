@@ -1,10 +1,14 @@
 from setuptools import setup
 
+readme_file = open("README.md", "r").read()
+
+
 setup(
     name="py_everything",
-    version="1.1.0",
+    version="1.1.1",
     description="A python module containing all the basic functions and classes for python. From simple addition to advanced file encryption.",
-    long_description=open("README.md", "r").read(),
+    long_description=readme_file,
+    long_description_content_type="text/markdown",
     author="play 4 Tutorials",
     author_email="play.4.tutotials@gmail.com",
     packages=['py_everything'],
