@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name="py_everything",
-    version="1.0.3",
+    version="1.1.0",
     description="A python module containing all the basic functions and classes for python. From simple addition to advanced file encryption.",
     long_description=open("README.md", "r").read(),
     author="play 4 Tutorials",
@@ -15,7 +15,7 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
         "Natural Language :: English",
-        "Development Status :: 4 - Beta",
+        "Development Status :: 5 - Production/Stable",
         "Programming Language :: Python :: Implementation :: CPython",
         "Intended Audience :: Developers",
         "Intended Audience :: Education",
@@ -26,5 +26,5 @@ setup(
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
     ],
-    python_requires='>=3.3'
+    python_requires='>=3.5'
 )

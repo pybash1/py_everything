@@ -15,3 +15,10 @@ Remove vulnerable dependencies and add safe ones.
 
 ## Things to remember
 - Do not add duplicate classes or functions
+
+## How to Clone?
+To clone this repository, you need to have git installed.
+```
+$ git clone https://github.com/play4Tutorials/py_everything.git
+```
+And, then to go into the directory where it has been cloned, type, `cd py_everything`
