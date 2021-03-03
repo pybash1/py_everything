@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name="py_everything",
-    version="1.0.2",
+    version="1.0.3",
     description="A python module containing all the basic functions and classes for python. From simple addition to advanced file encryption.",
     long_description=open("README.md", "r").read(),
     author="play 4 Tutorials",
