@@ -30,4 +30,4 @@ jobs:
     - name: Test the package
       run: |
         cd tests/
-        python -m unittest test_py_everything.py
+        python -m unittest discover -s . -p "test_*.py"
