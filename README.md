@@ -13,7 +13,7 @@ It allows you to use all of its functions and classes without having to write hu
 py_everything is available on [PyPi](https://pypi.org/project/py-everything), and you can install it as follows:
 
 `$ python -m pip install py_everything`
-py_everything officially supports Python 3.5+
+py_everything officially supports Python 3.6+
 
 # Features
 
@@ -40,6 +40,7 @@ C:\Programming\python_project.py
 C:\Programming\python_py_everything.docx
 >>> my_list = [2, 4, 5, 3, 7, 5, 6, 3 , 12 , 9, 6]
 >>> py_everything.maths.avg(my_list)
+5.636363636363637
 ```
 # Contributing
 
