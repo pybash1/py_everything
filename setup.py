@@ -14,7 +14,8 @@ setup(
     packages=['py_everything'],
     install_requires=['requests', 'pytube', 'playsound'],
     license="MIT License",
-    url="https://github.com/play4Tutorials/py_everything",
+    url="https://github.com/play4Tutorials/py_everything/tree/master/docs/DOCS.md",
+    repository="https://github.com/play4Tutorials/py_everything",
     classifiers=[
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
@@ -29,6 +30,9 @@ setup(
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
+        "Topic :: Communications :: Email",
+        "Topic :: Internet :: WWW/HTTP",
+        "Topic :: Scientific/Engineering :: Mathematics",
     ],
     python_requires='>=3.5'
 )

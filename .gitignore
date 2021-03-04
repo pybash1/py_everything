@@ -1,5 +1,4 @@
 build/
-dist/
 py_everything.egg-info/
 .vscode/
 __pycache__/
