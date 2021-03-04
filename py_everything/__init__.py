@@ -21,7 +21,7 @@ def clearPycache(path):
 
 def install_modules(*args):
     for module in args:
-        command = f"python -m pip install {module}"
+        command = "python -m pip install {}".format(module)
         if subprocess.run(command):
             return True
         else:
