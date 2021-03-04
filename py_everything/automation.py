@@ -12,7 +12,11 @@ def email_bot(send_addr, password, recv_addr, body, server, port, sub='No Subjec
 
         smtp.login(send_addr, password)
 
-        final_msg = f'Subject: {sub}\n\n {body}'
+        sub_msg = 'Subject: {}'.format(sub)
+        body_msg = '\n\n {}'.format(body)
+
+        final_msg = sub_msg + body_msg
+
         smtp.sendmail(send_addr, recv_addr, final_msg)
         return True
 
