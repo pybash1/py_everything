@@ -1,6 +1,3 @@
-# This workflow will install Python dependencies, run tests and lint with a variety of Python versions
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
-
 name: Test Package
 
 on:
@@ -30,3 +27,7 @@ jobs:
       run: |
         flake8 py_everything/ --count --select=E9,F63,F7,F82 --show-source --statistics
         flake8 py_everything/ --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+    - name: Test the package
+      run: |
+        cd tests/
+        pytest
