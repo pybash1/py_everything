@@ -34,15 +34,12 @@ GitHub -
 ![GitHub watchers](https://img.shields.io/github/watchers/play4Tutorials/py_everything?style=social)
 ![GitHub repo size](https://img.shields.io/github/repo-size/play4Tutorials/py_everything?logo=github)
 
-FOSSA License Status - 
-
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fplay4Tutorials%2Fpy_everything.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fplay4Tutorials%2Fpy_everything?ref=badge_large)
-
 # Installation
 
 py_everything is available on [PyPi](https://pypi.org/project/py-everything), and you can install it as follows:
 
 `$ python -m pip install py_everything`
+
 py_everything officially supports Python 3.6+
 
 # Features
