@@ -9,6 +9,7 @@ Downloads -
 [![Downloads](https://pepy.tech/badge/py-everything)](https://pypi.org/project/py-everything)
 [![Downloads](https://pepy.tech/badge/py-everything/month)](https://pypi.org/project/py-everything)
 [![Downloads](https://pepy.tech/badge/py-everything/week)](https://pypi.org/project/py-everything)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fplay4Tutorials%2Fpy_everything.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fplay4Tutorials%2Fpy_everything?ref=badge_shield)
 
 PyPI - 
 
@@ -71,3 +72,7 @@ C:\Programming\python_py_everything.docx
 # Contributing
 
 For details, on how to contribute, please read [CONTRIBUTING.md](https://github.com/play4Tutorials/py_everything/tree/master/CONTRIBUTING.md)
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fplay4Tutorials%2Fpy_everything.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fplay4Tutorials%2Fpy_everything?ref=badge_large)
