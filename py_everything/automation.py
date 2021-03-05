@@ -1,5 +1,8 @@
 import smtplib
 import random
+import subprocess
+import os
+import shutil
 from pytube import YouTube
 import playsound
 
@@ -28,7 +31,7 @@ def email_address_slicer(full_addr):
     return username, domain
 
 
-def yt_downloader(video_url):
+def yt_downloader(video_url, output_path=str(os.getcwd()), filename='video'):
     yt = YouTube(video_url)
     if yt.streams.first().download():
         return True
@@ -51,3 +54,24 @@ def timer(seconds, audio_file):
         if time <= 0:
             playsound.playsound(audio_file)
         time = time - 1
+
+def start_app(drive, app_path, exe_name):
+    command = drive + ': && cd ' + app_path + '&&' + exe_name
+    if subprocess.run(command, shell=True):
+        return True
+
+def mk_dir(dir_name, path):
+    os.mkdir(os.path.join(path, dir_name))
+
+def mk_file(file_name, path):
+    with open(path+file_name, 'w') as f: 
+        pass
+
+def del_dir(path, dir_name):
+    os.rmdir(os.path.join(path, dir_name))
+
+def del_dir_rec(path, dir_name):
+    shutil.rmtree(os.path.join(path+dir_name))
+
+def del_file(path, file_name):
+    os.remove(os.path.join(path+file_name))

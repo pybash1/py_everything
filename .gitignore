@@ -1,4 +1,19 @@
+# setup.py generated files
 build/
 py_everything.egg-info/
+
+# VSCode Files
 .vscode/
+
+# Python generated
 __pycache__/
+
+# Other media files
+*.mp4
+*.jpg
+*.gif
+*.png
+*.mp3
+
+# Log files(although there are none)
+*.log
