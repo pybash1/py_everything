@@ -55,23 +55,7 @@ def timer(seconds, audio_file):
             playsound.playsound(audio_file)
         time = time - 1
 
-def start_app(drive, app_path, exe_name):
-    command = drive + ': && cd ' + app_path + '&&' + exe_name
+def start_app(drive, exe_path):
+    command = drive + ': && ' + exe_path
     if subprocess.run(command, shell=True):
         return True
-
-def mk_dir(dir_name, path):
-    os.mkdir(os.path.join(path, dir_name))
-
-def mk_file(file_name, path):
-    with open(path+file_name, 'w') as f: 
-        pass
-
-def del_dir(path, dir_name):
-    os.rmdir(os.path.join(path, dir_name))
-
-def del_dir_rec(path, dir_name):
-    shutil.rmtree(os.path.join(path+dir_name))
-
-def del_file(path, file_name):
-    os.remove(os.path.join(path+file_name))

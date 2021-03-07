@@ -4,7 +4,7 @@ import shutil
 
 def hello_world():
     string = 'Hello, World!'
-    return string
+    print(string)
 
 
 def print_no_newline(*args):
