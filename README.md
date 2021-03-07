@@ -26,6 +26,7 @@ Status -
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/play4Tutorials/py_everything)
 ![GitHub branch checks state](https://img.shields.io/github/checks-status/play4Tutorials/py_everything/master)
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/play4Tutorials/py_everything/Test%20Package)
+[![Documentation Status](https://readthedocs.org/projects/py-everything/badge/?version=latest)](https://py-everything.readthedocs.io/en/latest/?badge=latest)
 
 GitHub - 
 
