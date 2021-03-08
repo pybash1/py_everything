@@ -18,20 +18,25 @@ def clear_file(filename):
         return True
 
 def mk_dir(dir_name, path):
-    os.mkdir(os.path.join(path, dir_name))
+    if os.mkdir(os.path.join(path, dir_name)):
+        return True
 
 def mk_file(file_name, path):
     with open(path+file_name, 'w') as f: 
         pass
+        return True
 
 def del_dir(path, dir_name):
-    os.rmdir(os.path.join(path, dir_name))
+    if os.rmdir(os.path.join(path, dir_name)):
+        return True
 
 def del_dir_rec(path, dir_name):
-    shutil.rmtree(os.path.join(path+dir_name))
+    if shutil.rmtree(os.path.join(path+dir_name)):
+        return True
 
 def del_file(path, file_name):
-    os.remove(os.path.join(path+file_name))
+    if os.remove(os.path.join(path+file_name)):
+        return True
 
 
 class FileIOBase:
@@ -75,17 +80,22 @@ class FileIOAdvanced:
             return True
 
     def mk_dir(self, dir_name, path):
-        os.mkdir(os.path.join(path, dir_name))
+        if os.mkdir(os.path.join(path, dir_name)):
+            return True
 
     def mk_file(self, file_name, path):
         with open(path+file_name, 'w') as f: 
             pass
+        return True
 
     def del_dir(self, path, dir_name):
-        os.rmdir(os.path.join(path, dir_name))
+        if os.rmdir(os.path.join(path, dir_name)):
+            return True
 
     def del_dir_rec(self, path, dir_name):
-        shutil.rmtree(os.path.join(path+dir_name))
+        if shutil.rmtree(os.path.join(path+dir_name)):
+            return True
 
     def del_file(self, path, file_name):
-        os.remove(os.path.join(path+file_name))
+        if os.remove(os.path.join(path+file_name)):
+            return True
