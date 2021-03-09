@@ -4,20 +4,20 @@ def getR(apiUrl):
     response = requests.get(apiUrl)
     return response
 
-def postR(apiUrl, data):
-    response = requests.post(apiUrl, data=None)
+def postR(apiUrl, data=None):
+    response = requests.post(apiUrl, data)
     return response
 
-def putR(apiUrl, data):
-    response = requests.put(apiUrl, data=None)
+def putR(apiUrl, data=None):
+    response = requests.put(apiUrl, data)
     return response
 
 def deleteR(apiUrl):
     response = requests.delete(apiUrl)
     return response
 
-def patchR(apiUrl, data):
-    response = requests.patch(apiUrl, data=None)
+def patchR(apiUrl, data=None):
+    response = requests.patch(apiUrl, data)
     return response
 
 def optionsR(apiUrl):
