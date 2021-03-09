@@ -1,0 +1,380 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>py_everything.fileIO &mdash; py_everything 1.1.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="py_everything.maths" href="py_everything.maths.html" />
+    <link rel="prev" title="py_everything.date_utils" href="py_everything.date_utils.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> py_everything
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Basic:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Welcome to py_everything’s Documentation!</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#power-of-py-everything">Power of py_everything -</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#contributors">Contributors -</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Modules, Functions, and Classes.html">Modules, Functions, and Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Functions:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="py_everything.html">py_everything</a></li>
+<li class="toctree-l1"><a class="reference internal" href="py_everything.automation.html">py_everything.automation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="py_everything.date_utils.html">py_everything.date_utils</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">py_everything.fileIO</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#import">Import -</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#read-data-from-a-file">Read Data from a File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#write-data-to-a-file">Write Data to a File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#clear-or-erase-contents-of-a-file">Clear or Erase Contents of a File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#make-a-new-directory-or-folder">Make a New <span class="xref std std-term">directory</span> or Folder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#make-a-new-file">Make a New File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#delete-an-empty-directory">Delete an Empty <span class="xref std std-term">directory</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#delete-a-directory-with-items-recursive-deletion">Delete a <span class="xref std std-term">directory</span> with Items(Recursive Deletion)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#delete-a-file">Delete a File</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="py_everything.maths.html">py_everything.maths</a></li>
+<li class="toctree-l1"><a class="reference internal" href="py_everything.requestsLib.html">py_everything.requestsLib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="py_everything.search.html">py_everything.search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="py_everything.web.html">py_everything.web</a></li>
+</ul>
+<p class="caption"><span class="caption-text">About the Project:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Dependencies &amp; Dependents.html">Dependencies and Dependents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="License.html">License</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">py_everything</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>py_everything.fileIO</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/py_everything.fileIO.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="py-everything-fileio">
+<h1>py_everything.fileIO<a class="headerlink" href="#py-everything-fileio" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="import">
+<h2>Import -<a class="headerlink" href="#import" title="Permalink to this headline">¶</a></h2>
+<p>How to import the module?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">py_everything.fileIO</span> <span class="k">as</span> <span class="nn">pyeFiles</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="read-data-from-a-file">
+<h2>Read Data from a File<a class="headerlink" href="#read-data-from-a-file" title="Permalink to this headline">¶</a></h2>
+<p>Function Name - read_file(filename)</p>
+<p>No. of Parameters - 1</p>
+<p>Parameter - filename</p>
+<div class="section" id="usage">
+<h3>Usage -<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyeFiles</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;path/to/file&#39;</span><span class="p">)</span>
+<span class="go">Data of the file is returned.</span>
+</pre></div>
+</div>
+<p>This function reads the data of <code class="docutils literal notranslate"><span class="pre">filename</span></code> and returns it.</p>
+</div>
+</div>
+<div class="section" id="write-data-to-a-file">
+<h2>Write Data to a File<a class="headerlink" href="#write-data-to-a-file" title="Permalink to this headline">¶</a></h2>
+<p>Function Name - write_file(filename, writeData=’’)</p>
+<p>No. of Parameters - 2</p>
+<p>Parameter - filename, writeData</p>
+<div class="section" id="id1">
+<h3>Usage -<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyeFiles</span><span class="o">.</span><span class="n">write_file</span><span class="p">(</span><span class="s1">&#39;path/to/file&#39;</span><span class="p">,</span> <span class="n">writeData</span><span class="o">=</span><span class="s2">&quot;Data to be written to the file.&quot;</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>This function reads the file given in <code class="docutils literal notranslate"><span class="pre">filename</span></code>, then clears all its
+content and then writes <code class="docutils literal notranslate"><span class="pre">writeData</span></code> to the file. If these steps are
+successful, it returns True.</p>
+</div>
+</div>
+<div class="section" id="clear-or-erase-contents-of-a-file">
+<h2>Clear or Erase Contents of a File<a class="headerlink" href="#clear-or-erase-contents-of-a-file" title="Permalink to this headline">¶</a></h2>
+<p>Function Name - write_file(filename)</p>
+<p>No. of Parameters - 1</p>
+<p>Parameter - filename</p>
+<div class="section" id="id2">
+<h3>Usage -<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyeFiles</span><span class="o">.</span><span class="n">clear_file</span><span class="p">(</span><span class="s1">&#39;path/to/file&#39;</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>This function reads the file given in <code class="docutils literal notranslate"><span class="pre">filename</span></code>, then clears all its
+contents. If the steps are successful, it returns True.</p>
+</div>
+</div>
+<div class="section" id="make-a-new-directory-or-folder">
+<h2>Make a New <a class="reference internal" href="glossary.html#term-directory"><span class="xref std std-term">directory</span></a> or Folder<a class="headerlink" href="#make-a-new-directory-or-folder" title="Permalink to this headline">¶</a></h2>
+<p>Function Name - mk_dir(dir_name, path)</p>
+<p>No. of Parameters - 2</p>
+<p>Parameter - dir_name, path</p>
+<div class="section" id="id3">
+<h3>Usage -<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyeFiles</span><span class="o">.</span><span class="n">mk_dir</span><span class="p">(</span><span class="s1">&#39;folderName&#39;</span><span class="p">,</span> <span class="s1">&#39;path/to/folder&#39;</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>This function makes a new <a class="reference internal" href="glossary.html#term-directory"><span class="xref std std-term">directory</span></a> named <code class="docutils literal notranslate"><span class="pre">dir_name</span></code> in <code class="docutils literal notranslate"><span class="pre">path</span></code>. If
+steps are successful, returns True.</p>
+</div>
+</div>
+<div class="section" id="make-a-new-file">
+<h2>Make a New File<a class="headerlink" href="#make-a-new-file" title="Permalink to this headline">¶</a></h2>
+<p>Function Name - mk_file(file_name, path)</p>
+<p>No. of Parameters - 2</p>
+<p>Parameter - file_name, path</p>
+<div class="section" id="id4">
+<h3>Usage -<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyeFiles</span><span class="o">.</span><span class="n">mk_file</span><span class="p">(</span><span class="s1">&#39;fileName.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;path/to/file/location&#39;</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>This function makes a new file named <code class="docutils literal notranslate"><span class="pre">file_name</span></code> in <code class="docutils literal notranslate"><span class="pre">path</span></code>. If steps
+are successful, returns True.</p>
+</div>
+</div>
+<div class="section" id="delete-an-empty-directory">
+<h2>Delete an Empty <a class="reference internal" href="glossary.html#term-directory"><span class="xref std std-term">directory</span></a><a class="headerlink" href="#delete-an-empty-directory" title="Permalink to this headline">¶</a></h2>
+<p>Function Name - del_dir(path, dir_name)</p>
+<p>No. of Parameters - 2</p>
+<p>Parameter - path, dir_name</p>
+<div class="section" id="id5">
+<h3>Usage -<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyeFiles</span><span class="o">.</span><span class="n">del_dir</span><span class="p">(</span><span class="s1">&#39;folderName&#39;</span><span class="p">,</span> <span class="s1">&#39;path/to/folder&#39;</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>This function deletes an existing empty <a class="reference internal" href="glossary.html#term-directory"><span class="xref std std-term">directory</span></a> named <code class="docutils literal notranslate"><span class="pre">dir_name</span></code>
+that is in <code class="docutils literal notranslate"><span class="pre">path</span></code>. If steps are successful, returns True. Raises error
+if <a class="reference internal" href="glossary.html#term-directory"><span class="xref std std-term">directory</span></a> is not empty or does not exist.</p>
+</div>
+</div>
+<div class="section" id="delete-a-directory-with-items-recursive-deletion">
+<h2>Delete a <a class="reference internal" href="glossary.html#term-directory"><span class="xref std std-term">directory</span></a> with Items(Recursive Deletion)<a class="headerlink" href="#delete-a-directory-with-items-recursive-deletion" title="Permalink to this headline">¶</a></h2>
+<p>Function Name - del_dir_rec(path, dir_name)</p>
+<p>No. of Parameters - 2</p>
+<p>Parameter - path, dir_name</p>
+<div class="section" id="id6">
+<h3>Usage -<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyeFiles</span><span class="o">.</span><span class="n">del_dir_rec</span><span class="p">(</span><span class="s1">&#39;folderName&#39;</span><span class="p">,</span> <span class="s1">&#39;path/to/folder&#39;</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>This function deletes an existing <a class="reference internal" href="glossary.html#term-directory"><span class="xref std std-term">directory</span></a> named <code class="docutils literal notranslate"><span class="pre">dir_name</span></code> that is
+in <code class="docutils literal notranslate"><span class="pre">path</span></code>. It deletes it regardless, it is empty or has items. If
+steps are successful, returns True. Raises error if direectory does not
+exist.</p>
+</div>
+</div>
+<div class="section" id="delete-a-file">
+<h2>Delete a File<a class="headerlink" href="#delete-a-file" title="Permalink to this headline">¶</a></h2>
+<p>Function Name - del_file(path, file_name)</p>
+<p>No. of Parameters - 2</p>
+<p>Parameter - path, file_name</p>
+<div class="section" id="id7">
+<h3>Usage -<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pyeFiles</span><span class="o">.</span><span class="n">del_file</span><span class="p">(</span><span class="s1">&#39;fileName.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;path/to/file/location&#39;</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>This function deletes an existing file named <code class="docutils literal notranslate"><span class="pre">file_name</span></code> that is in
+<code class="docutils literal notranslate"><span class="pre">path</span></code>. If steps are successful, returns True. Raises error if file
+does not exist.</p>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="py_everything.maths.html" class="btn btn-neutral float-right" title="py_everything.maths" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="py_everything.date_utils.html" class="btn btn-neutral float-left" title="py_everything.date_utils" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Play 4 Tutorials.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

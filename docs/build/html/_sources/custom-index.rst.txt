@@ -1,0 +1,25 @@
+*****
+Index
+*****
+
+D
+=====
+
+.. glossary::
+    dependencies
+        Other projects a project is dependent for it to work.
+        
+.. glossary::
+    dependents
+        Other projects which are depending on this project to work.
+
+.. glossary::
+    directory
+        A folder.
+
+P
+=====
+
+.. glossary::
+    py_everything
+        This Project's name.
