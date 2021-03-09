@@ -12,28 +12,28 @@ Downloads -
 
 PyPI - 
 
-![PyPI - Implementation](https://img.shields.io/pypi/implementation/py-everything?logo=python&logoColor=yellow)
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/py-everything?logo=pypi&logoColor=green)
-![PyPI](https://img.shields.io/pypi/v/py-everything?logo=pypi&logoColor=green)
-![PyPI - Wheel](https://img.shields.io/pypi/wheel/py-everything)
-![PyPI - Status](https://img.shields.io/pypi/status/py-everything)
-![PyPI - License](https://img.shields.io/pypi/l/py-everything?color=success)
+[![PyPI - Implementation](https://img.shields.io/pypi/implementation/py-everything?logo=python&logoColor=yellow)](https://pypi.org/project/py-everything)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/py-everything?logo=pypi&logoColor=green)](https://pypi.org/project/py-everything)
+[![PyPI](https://img.shields.io/pypi/v/py-everything?logo=pypi&logoColor=green)](https://pypi.org/project/py-everything)
+[![PyPI - Wheel](https://img.shields.io/pypi/wheel/py-everything)](https://pypi.org/project/py-everything)
+[![PyPI - Status](https://img.shields.io/pypi/status/py-everything)](https://pypi.org/project/py-everything)
+[![PyPI - License](https://img.shields.io/pypi/l/py-everything?color=success)](https://pypi.org/project/py-everything)
 
 Status - 
 
-![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/pypi/py-everything/1.1.1)
-![GitHub issues](https://img.shields.io/github/issues/play4Tutorials/py_everything)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/play4Tutorials/py_everything)
-![GitHub branch checks state](https://img.shields.io/github/checks-status/play4Tutorials/py_everything/master)
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/play4Tutorials/py_everything/Test%20Package)
+[![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/pypi/py-everything/1.1.1)](https://libraries.io/pypi/py-everything)
+[![GitHub issues](https://img.shields.io/github/issues/play4Tutorials/py_everything)](https://github.com/play4Tutorials/py_everything/issues)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/play4Tutorials/py_everything)](https://github.com/play4Tutorials/py_everything/pulls)
+[![GitHub branch checks state](https://img.shields.io/github/checks-status/play4Tutorials/py_everything/master)](https://github.com/play4Tutorials/py_everything)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/play4Tutorials/py_everything/Test%20Package)](https://github.com/play4Tutorials/py_everything)
 [![Documentation Status](https://readthedocs.org/projects/py-everything/badge/?version=latest)](https://py-everything.readthedocs.io/en/latest/?badge=latest)
 
 GitHub - 
 
-![GitHub forks](https://img.shields.io/github/forks/play4Tutorials/py_everything?style=social)
-![GitHub Repo stars](https://img.shields.io/github/stars/play4Tutorials/py_everything?style=social)
-![GitHub watchers](https://img.shields.io/github/watchers/play4Tutorials/py_everything?style=social)
-![GitHub repo size](https://img.shields.io/github/repo-size/play4Tutorials/py_everything?logo=github)
+[![GitHub forks](https://img.shields.io/github/forks/play4Tutorials/py_everything?style=social)](https://github.com/play4Tutorials/py_everything/pulls)
+[![GitHub Repo stars](https://img.shields.io/github/stars/play4Tutorials/py_everything?style=social)](https://github.com/play4Tutorials/py_everything/pulls)
+[![GitHub watchers](https://img.shields.io/github/watchers/play4Tutorials/py_everything?style=social)](https://github.com/play4Tutorials/py_everything/pulls)
+[![GitHub repo size](https://img.shields.io/github/repo-size/play4Tutorials/py_everything?logo=github)](https://github.com/play4Tutorials/py_everything/pulls)
 
 # Installation
 
@@ -54,7 +54,7 @@ py_everything officially supports Python 3.6+
 
 # Documentation and Usage
 
-The documentation can be found at [GitHub](https://github.com/play4Tutorials/py_everything/tree/master/docs)
+The documentation can be found on [ReadTheDocs](https://py-everything.readthedocs.io/en/latest/)
 
 
 The basic usage for this library is given below:
