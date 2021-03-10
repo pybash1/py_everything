@@ -5,7 +5,7 @@ readme_file = open("README.md", "r").read()
 
 setup(
     name="py_everything",
-    version="1.1.1",
+    version="1.1.2",
     description="A python module containing all the basic functions and classes for python. From simple addition to advanced file encryption.",
     long_description=readme_file,
     long_description_content_type="text/markdown",
