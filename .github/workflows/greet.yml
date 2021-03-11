@@ -10,4 +10,4 @@ jobs:
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         issue-message: "Thanks for opening the issue. Hope, it get's fixed soon."
-        pr-message: 'Thanks for contributing to py_everything.'
+        pr-message: 'Thanks for contributing to $GITHUB_REPOSITORY.'
