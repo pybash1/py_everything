@@ -22,7 +22,7 @@ def mk_dir(dir_name, path):
         return True
 
 def mk_file(file_name, path):
-    with open(path+file_name, 'w') as f: 
+    with open(path+'\\'+file_name, 'w') as f: 
         pass
         return True
 
@@ -31,11 +31,11 @@ def del_dir(path, dir_name):
         return True
 
 def del_dir_rec(path, dir_name):
-    if shutil.rmtree(os.path.join(path+dir_name)):
+    if shutil.rmtree(os.path.join(path, dir_name)):
         return True
 
 def del_file(path, file_name):
-    if os.remove(os.path.join(path+file_name)):
+    if os.remove(os.path.join(path, file_name)):
         return True
 
 
@@ -84,18 +84,18 @@ class FileIOAdvanced:
             return True
 
     def mk_file(self, file_name, path):
-        with open(path+file_name, 'w') as f: 
+        with open(path+'\\'+file_name, 'w') as f: 
             pass
-        return True
+            return True
 
     def del_dir(self, path, dir_name):
         if os.rmdir(os.path.join(path, dir_name)):
             return True
 
     def del_dir_rec(self, path, dir_name):
-        if shutil.rmtree(os.path.join(path+dir_name)):
+        if shutil.rmtree(os.path.join(path, dir_name)):
             return True
 
     def del_file(self, path, file_name):
-        if os.remove(os.path.join(path+file_name)):
+        if os.remove(os.path.join(path, file_name)):
             return True

@@ -2,12 +2,11 @@ import smtplib
 import random
 import subprocess
 import os
-import shutil
 from pytube import YouTube
 import playsound
 
 
-def email_bot(send_addr, password, recv_addr, body, server, port, sub='No Subject'):
+def send_email(send_addr, password, recv_addr, body, server, port, sub='No Subject'):
     with smtplib.SMTP(server, port) as smtp:
         smtp.ehlo()
         smtp.starttls()

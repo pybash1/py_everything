@@ -18,6 +18,7 @@ def multiply(num1, *args):
     product = num1
     for num in args:
         product = product * num
+    return product
 
 
 def divide(num1, num2, type):

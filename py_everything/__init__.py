@@ -13,10 +13,10 @@ def print_no_newline(*args):
 
 
 def clearPycache(path):
-    if not shutil.rmtree(os.path.join(path, "__pycache__")):
-        return False
-    else:
+    if shutil.rmtree(os.path.join(path, "__pycache__")):
         return True
+    else:
+        return False
 
 
 def install_modules(*args):
