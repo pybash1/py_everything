@@ -1,3 +1,9 @@
+<p align="center">
+
+<img width="170px" height="170px" src="https://raw.githubusercontent.com/play4Tutorials/py_everything/master/extra/logo.png" alt="Logo">
+
+</p>
+
 # py_everything
 
 A python module containing all the functions and classes from basic to advanced for Python. From simple calculations  to advanced file encryption. **Everything** is included in this one package.

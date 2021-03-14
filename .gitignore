@@ -3,6 +3,10 @@
 /build/
 py_everything.egg-info/
 
+# Exclude Sphinx Build Directory #
+##################################
+docs/build/
+
 # VSCode Files #
 ################
 .vscode/
@@ -16,7 +20,7 @@ __pycache__/
 *.mp4
 *.jpg
 *.gif
-*.png
+# *.png
 *.mp3
 
 # Log files(although there are none) #
