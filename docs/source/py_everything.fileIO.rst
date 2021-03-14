@@ -72,7 +72,7 @@ This function reads the file given in ``filename``, then clears all its
 contents. If the steps are successful, it returns True.
 
 Make a New :term:`directory` or Folder
-------------------------------
+--------------------------------------
 
 Function Name - mk_dir(dir_name, path)
 
@@ -112,7 +112,7 @@ This function makes a new file named ``file_name`` in ``path``. If steps
 are successful, returns True.
 
 Delete an Empty :term:`directory`
--------------------------
+----------------------------------
 
 Function Name - del_dir(path, dir_name)
 
@@ -133,7 +133,7 @@ that is in ``path``. If steps are successful, returns True. Raises error
 if :term:`directory` is not empty or does not exist.
 
 Delete a :term:`directory` with Items(Recursive Deletion)
--------------------------------------------------
+----------------------------------------------------------
 
 Function Name - del_dir_rec(path, dir_name)
 
