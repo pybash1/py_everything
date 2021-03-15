@@ -30,7 +30,7 @@ def email_address_slicer(full_addr):
     return username, domain
 
 
-def yt_downloader(video_url, output_path=str(os.getcwd()), filename='video'):
+def yt_downloader(video_url, output_path=str(os.getcwd()), filename='video'): # TODO: [ ] Use output_path and filename
     yt = YouTube(video_url)
     if yt.streams.first().download():
         return True
@@ -54,7 +54,7 @@ def timer(seconds, audio_file):
             playsound.playsound(audio_file)
         time = time - 1
 
-def start_app(drive, exe_path):
+def start_app(drive, exe_path): # FIX: Use only 1 parameter, exe_path
     command = drive + ': && ' + exe_path
     if subprocess.run(command, shell=True):
         return True
