@@ -1,0 +1,46 @@
+These are optional requirements for cloning and editing this repository.
+
+Required - 
+
+Tools and Technologies:
+1. Python <= 3.6 (<= 3.8 Preffered) - https://python.org
+2. Command Prompt(Windows) or Terminal(macOS and Linux)
+3. Git(& Git Bash)
+4. GitHub(Account)
+
+Python Packages:
+1. requests
+2. pytube
+3. playsound
+
+Extensions(If using VS Code):
+1. Python by Microsoft
+2. Pylance by Microsoft
+
+Preffered or Optional - 
+
+Tools and Technologies:
+1. Anaconda3
+
+Code Editor(anyone):
+1. Visual Studio Code - https://code.visualstudio.com
+2. Visual Studio Code Insiders - https://code.visualstudio.com/insiders
+
+Extensions in Visual Studio Code:
+1. Error Lens by Alexander
+2. Git Graph by mhutchie
+3. GitLens - Git Supercharged by Eric Amodio
+4. Python Indent by Kevin Rose
+5. Python Preview by dongli
+6. Python Test Explorer for Visual Studio Code by Little Fox Team
+7. TabNine Autocomplete by TabNine
+8. GitHub Pull Requests and Issues by GitHub
+9. TODO Highlight by Wayou Liu
+
+Themes in Visual Studio Code(Fully Optional):
+2. Theme - GitHub Dark
+3. File Icon Theme - Material Icon Theme
+4. Product Icon Theme - Carbon Icons
+
+Font(If using VS Code):
+1. Fira Code with Font Ligatures Enabled
