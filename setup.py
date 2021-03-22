@@ -5,7 +5,7 @@ readme_file = open("README.md", "r").read()
 
 setup(
     name="py_everything",
-    version="1.1.2",
+    version="1.2.0",
     description="A python module containing all the basic functions and classes for python. From simple addition to advanced file encryption.",
     long_description=readme_file,
     long_description_content_type="text/markdown",
@@ -15,11 +15,11 @@ setup(
     maintainer_email="play.4.tutotials@gmail.com", 
     packages=find_packages(),
     entry_points ={ 
-            'console_scripts': [ 
+            'console_scripts': [
                 'setupPyGen = py_everything.setupPyGen:main'
             ]
     },
-    install_requires=['requests', 'pytube', 'playsound', 'cryptography', 'rsa', 'setuptools', 'wheel', 'pip'],
+    install_requires=['requests', 'pytube', 'playsound', 'setuptools', 'wheel', 'pip'],
     license="MIT License",
     url="https://py_everything.readthedocs.io/en/latest",
     download_url="https://pypi.org/project/py-everything/#files",
