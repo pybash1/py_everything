@@ -23,3 +23,7 @@ html_theme_options = {
 }
 
 html_static_path = ['_static']
+
+html_logo = '..\\..\\extra\\logo.png'
+
+html_favicon = '..\\..\\extra\\logo.png'

@@ -16,7 +16,7 @@ How to import the module?
 Send a mail with Python
 -----------------------
 
-Function name - email_bot(send_addr, password, recv_addr, body, server,
+Function name - sendMail(send_addr, password, recv_addr, body, server,
 port, sub='No Subject')
 
 No. of Parameters - 7
@@ -36,7 +36,7 @@ Usage -
    >>> my_server = "your.smtp.server"
    >>> my_port = "123"
    >>> my_sub = "My Subject"
-   >>> pye.email_bot(my_addr, my_pass, to_addr, my_body, my_server, my_port, my_sub)
+   >>> pye.sendMail(my_addr, my_pass, to_addr, my_body, my_server, my_port, my_sub)
    True
 
 
@@ -49,7 +49,7 @@ Note - Speacial settings must be enabled for this function to work properly. For
 Slice an email address
 ----------------------
 
-Function name - email_address_slicer(full_addr)
+Function name - emailAddressSlicer(full_addr)
 
 No. of Parameters - 1
 
@@ -61,7 +61,7 @@ Usage -
 .. code:: python
 
    >>> full_addr = 'long.demo.address@long-domain.com'
-   >>> pye.email_address_slicer(full_addr)
+   >>> pye.emailAddressSlicer(full_addr)
    ['long.demo.address', 'long-domain.com']
 
 This function is usefull to get the username and domain of a email
@@ -71,7 +71,7 @@ that is to sliced.
 Roll the Dice!
 --------------
 
-Function name - roll_dice(dice1=True)
+Function name - rollDice(dice1=True)
 
 No. of Parameters - 1
 
@@ -82,13 +82,13 @@ Usage -
 
 .. code:: python
 
-   >>> pye.roll_dice(dice_1=True)
+   >>> pye.rollDice(dice_1=True)
    4
-   >>> pye.roll_dice(dice_1=False)
+   >>> pye.rollDice(dice_1=False)
    8
-   >>> pye.roll_dice(dice_1=True)
+   >>> pye.rollDice(dice_1=True)
    6
-   >>> pye.roll_dice(dice_1=False)
+   >>> pye.rollDice(dice_1=False)
    11
 
 This function doesn't need explanation but still. If ``dice_1`` is True
@@ -119,7 +119,7 @@ This function countsdown ``seconds`` untill it reaches 0 and then plays
 Start or run a app or executable.
 ---------------------------------
 
-Function name - start_app(drive, app_path, exe_name)
+Function name - startApp(drive, app_path, exe_name)
 
 No. of Parameters - 3
 
@@ -130,14 +130,14 @@ Usage -
 
 .. code:: python
 
-   >>> pye.start_app('C', 'path/to/exe_file/file_name.exe')
+   >>> pye.startApp('C', 'path/to/exe_file/file_name.exe')
    True
 
 This function uses the 3 parameters to run any executable.
 
 Note - In ``exe_path``, the full path, including exe name and extension
 are to be provided, in ``drive``, only the letter is to be provided, the
-colon(:) is to be ommited. For example - start_app('C', 'C:/Program
+colon(:) is to be ommited. For example - startApp('C', 'C:/Program
 Files/company/exe_name.exe').
 
 ... toctree::
@@ -145,6 +145,9 @@ Files/company/exe_name.exe').
 
 .. toctree::
    :caption: Functions:
+
+.. toctree::
+   :caption: setupPyGen:
 
 .. toctree::
    :caption: About the Project:

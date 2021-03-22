@@ -1,5 +1,5 @@
 *******************
-py_everything.maths
+pyEverything.maths
 *******************
 
 Import -
@@ -9,7 +9,7 @@ How to import the module?
 
 .. code:: python
 
-   >>> import py_everything.maths as pyeMaths
+   >>> import pyEverything.maths as pyeMaths
 
 Add
 ---
@@ -80,7 +80,7 @@ Usage -
 Float Division
 --------------
 
-Function Name - float_div(num1, num2)
+Function Name - floatDiv(num1, num2)
 
 No. of Parameters - 2
 
@@ -90,13 +90,13 @@ Usage -
 
 .. code:: python
 
-   >>> pyeMaths.float_div(36, 3)
+   >>> pyeMaths.floatDiv(36, 3)
    12.0
 
 Integer Division
 ----------------
 
-Function Name - int_div(num1, num2)
+Function Name - intDiv(num1, num2)
 
 No. of Parameters - 2
 
@@ -106,7 +106,7 @@ Usage -
 
 .. code:: python
 
-   >>> pyeMaths.int_div(36, 3)
+   >>> pyeMaths.intDiv(36, 3)
    12
 
 Exponent
@@ -144,7 +144,7 @@ Usage -
 Evaluate Any Mathematics Expression
 -----------------------------------
 
-Function Name - eval_exp(exp)
+Function Name - evalExp(exp)
 
 No. of Parameters - 1
 
@@ -182,6 +182,9 @@ These functions have not been explained seperately because they explain themselv
 
 .. toctree::
    :caption: Functions:
+
+.. toctree::
+   :caption: setupPyGen:
 
 .. toctree::
    :caption: About the Project:

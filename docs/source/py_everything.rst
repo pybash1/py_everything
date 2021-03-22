@@ -18,7 +18,7 @@ Your First Program using this package
 
 What's the best way to write your first program than "Hello, World!"
 
-Function name - hello_world()
+Function name - helloWorld()
 
 No. of Parameters - 0
 
@@ -29,7 +29,7 @@ Usage -
 
 .. code:: python
 
-   >>> pye.hello_world()
+   >>> pye.helloWorld()
    Hello, World!
 
 So, we wrote our first program. Let's move on.
@@ -61,7 +61,7 @@ return False.
 Print without newline
 ---------------------
 
-Function name - print_no_newline(\*args)
+Function name - printNoNewline(\*args)
 
 No. of Parameters - infinte
 
@@ -72,7 +72,7 @@ Usage -
 
 .. code:: python
 
-   >>> pye.print_no_newline("hello", "world", "this is printed without newline", ".")
+   >>> pye.printNoNewline("hello", "world", "this is printed without newline", ".")
    hello world this is printed without newline .
 
 Pass in the words you want to get printed without newline and That will
@@ -81,7 +81,7 @@ be printed.
 Install modules with pip
 ------------------------
 
-Function name - install_modules(\*args)
+Function name - installModules(\*args)
 
 No. of Parameters - infinte
 
@@ -92,7 +92,7 @@ Usage -
 
 .. code:: python
 
-   >>> pye.install_modules("py_everything", "requests")
+   >>> pye.installModules("py_everything", "requests")
    True
 
 This function install the given modules using ``pip``. If the command is
@@ -102,6 +102,9 @@ successful it returns True else False.
    :caption: Basic:
 .. toctree::
    :caption: Functions:
+
+.. toctree::
+   :caption: setupPyGen:
 
 .. toctree::
    :caption: About the Project:

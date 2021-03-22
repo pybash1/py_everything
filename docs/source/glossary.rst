@@ -19,3 +19,15 @@ D
     directory
     Directory
         A folder.
+
+.. toctree::
+   :caption: Basic:
+
+.. toctree::
+   :caption: Functions:
+
+.. toctree::
+   :caption: setupPyGen:
+
+.. toctree::
+   :caption: About the Project:

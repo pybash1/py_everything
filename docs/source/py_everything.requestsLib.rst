@@ -250,4 +250,7 @@ returned to ``response``.
    :caption: Functions:
 
 .. toctree::
+   :caption: setupPyGen:
+
+.. toctree::
    :caption: About the Project:

@@ -14,7 +14,7 @@ How to import the module?
 Get Current Date
 ----------------
 
-Function Name - get_date()
+Function Name - getDate()
 
 No. of Parameters - 0
 
@@ -25,7 +25,7 @@ Usage -
 
 .. code:: python
 
-   >>> pyeDate.get_date()
+   >>> pyeDate.getDate()
    2021-03-17
 
 This function prints the current date.
@@ -33,7 +33,7 @@ This function prints the current date.
 Get Current Date and Time
 -------------------------
 
-Function Name - get_date_time()
+Function Name - getDateTime()
 
 No. of Parameters - 0
 
@@ -44,7 +44,7 @@ Usage -
 
 .. code:: python
 
-   >>> pyeDate.get_date_time()
+   >>> pyeDate.getDateTime()
    2021-03-07 18:08:19.018239
 
 This function prints the current date and time.
@@ -52,7 +52,7 @@ This function prints the current date and time.
 Get Current Time
 ----------------
 
-Function Name - get_time()
+Function Name - getTime()
 
 No. of Parameters - 0
 
@@ -63,7 +63,7 @@ Usage -
 
 .. code:: python
 
-   >>> pyeDate.get_time()
+   >>> pyeDate.getTime()
    18:09:13
 
 This function prints the current time.
@@ -71,7 +71,7 @@ This function prints the current time.
 Get Date and Time in Custom Format
 ----------------------------------
 
-Function Name - get_custom_format(format)
+Function Name - getCustomFormat(format)
 
 No. of Parameters - 1
 
@@ -82,7 +82,7 @@ Usage -
 
 .. code:: python
 
-   >>> pyeDate.get_custom_format('%H:%M:%S')
+   >>> pyeDate.getCustomFormat('%H:%M:%S')
    18:09:13
 
 This function prints the current date or time in ``format``.
@@ -92,6 +92,9 @@ This function prints the current date or time in ``format``.
 
 .. toctree::
    :caption: Functions:
+
+.. toctree::
+   :caption: setupPyGen:
 
 .. toctree::
    :caption: About the Project:

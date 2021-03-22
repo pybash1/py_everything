@@ -25,4 +25,7 @@ py_everything_ is depended upon by -
    :caption: Functions:
 
 .. toctree::
+   :caption: setupPyGen:
+
+.. toctree::
    :caption: About the Project:

@@ -23,31 +23,31 @@ Functions:
 
 py_everything:
 ^^^^^^^^^^^^^^
-* `hello_world`
-* `print_no_newline`
+* `helloWorld`
+* `printNoNewline`
 * `clearPycache`
-* `install_modules`
+* `installModules`
 
 py_everything.automation:
 ^^^^^^^^^^^^^^^^^^^^^^^^^
-* `email_bot`
-* `email_address_slicer`
-* `yt_downloader`
-* `roll_dice`
+* `emailBot`
+* `emailAddressSlicer`
+* `ytDownloader`
+* `rollDice`
 * `timer`
 
 py_everything.date_utils:
 ^^^^^^^^^^^^^^^^^^^^^^^^^
-* `get_date`
-* `get_date_time`
-* `get_time`
-* `get_custom_format`
+* `getDate`
+* `getDateTime`
+* `getTime`
+* `getCustom_Format`
 
 py_everything.fileIO:
 ^^^^^^^^^^^^^^^^^^^^^
-* `read_file`
-* `write_file`
-* `clear_file`
+* `readFile`
+* `writeFile`
+* `clearFile`
 
 py_everything.maths:
 ^^^^^^^^^^^^^^^^^^^^
@@ -55,11 +55,11 @@ py_everything.maths:
 * `subtract`
 * `multiply`
 * `divide`
-* `float_div`
-* `int_div`
+* `floatDiv`
+* `intDiv`
 * `expo`
 * `mod`
-* `eval_exp`
+* `evalExp`
 * `avg`
 
 py_everything.requestsLib:
@@ -79,23 +79,23 @@ py_everything.requestsLib:
 
 py_everything.search:
 ^^^^^^^^^^^^^^^^^^^^^
-* `search_files`
-* `search_dirs`
-* `search_exts`
-* `search_list`
+* `searchFiles`
+* `searchDirs`
+* `searchExts`
+* `searchList`
 
 py_evrything.web:
 ^^^^^^^^^^^^^^^^^
-* `google_search`
-* `yt_search`
-* `github_search`
-* `so_search`
-* `amz_in_search`
-* `amz_com_search`
-* `pypi_search`
-* `rtdocs_search`
-* `open_new_tab`
-* `open_new_window`
+* `googleSearch`
+* `ytSearch`
+* `githubSearch`
+* `soSearch`
+* `amzInSearch`
+* `amzComSearch`
+* `pypiSearch`
+* `rtdocsSearch`
+* `openNewTab`
+* `openNewWindow`
 
 Classes:
 ========
@@ -127,6 +127,9 @@ py_everything.web:
 
 .. toctree::
    :caption: Functions:
+
+.. toctree::
+   :caption: setupPyGen:
 
 .. toctree::
    :caption: About the Project:

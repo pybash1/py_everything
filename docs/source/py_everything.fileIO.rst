@@ -14,7 +14,7 @@ How to import the module?
 Read Data from a File
 ---------------------
 
-Function Name - read_file(filename)
+Function Name - readFile(filename)
 
 No. of Parameters - 1
 
@@ -25,7 +25,7 @@ Usage -
 
 .. code:: python
 
-   >>> pyeFiles.read_file('path/to/file')
+   >>> pyeFiles.readFile('path/to/file')
    Data of the file is returned.
 
 This function reads the data of ``filename`` and returns it.
@@ -33,7 +33,7 @@ This function reads the data of ``filename`` and returns it.
 Write Data to a File
 --------------------
 
-Function Name - write_file(filename, writeData='')
+Function Name - writeFile(filename, writeData='')
 
 No. of Parameters - 2
 
@@ -44,7 +44,7 @@ Usage -
 
 .. code:: python
 
-   >>> pyeFiles.write_file('path/to/file', writeData="Data to be written to the file.")
+   >>> pyeFiles.writeFile('path/to/file', writeData="Data to be written to the file.")
    True
 
 This function reads the file given in ``filename``, then clears all its
@@ -54,7 +54,7 @@ successful, it returns True.
 Clear or Erase Contents of a File
 ---------------------------------
 
-Function Name - write_file(filename)
+Function Name - writeFile(filename)
 
 No. of Parameters - 1
 
@@ -65,7 +65,7 @@ Usage -
 
 .. code:: python
 
-   >>> pyeFiles.clear_file('path/to/file')
+   >>> pyeFiles.clearFile('path/to/file')
    True
 
 This function reads the file given in ``filename``, then clears all its
@@ -180,6 +180,9 @@ does not exist.
 
 .. toctree::
    :caption: Functions:
+
+.. toctree::
+   :caption: setupPyGen:
 
 .. toctree::
    :caption: About the Project:

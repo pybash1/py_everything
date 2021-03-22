@@ -58,6 +58,13 @@ People who have contributed to this project -
    py_everything.web
 
 .. toctree::
+   :caption: setupPyGen:
+   :maxdepth: 2
+
+   setupPyGen
+   setupPyGenChangelog
+
+.. toctree::
    :caption: About the Project:
    :maxdepth: 2
    

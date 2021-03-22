@@ -37,4 +37,7 @@ Need help with anything? Join the `GitHub Discussions <https://github.com/play4T
    :caption: Functions:
 
 .. toctree::
+   :caption: setupPyGen:
+
+.. toctree::
    :caption: About the Project:

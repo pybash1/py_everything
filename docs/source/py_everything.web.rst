@@ -14,7 +14,7 @@ How to import the module?
 Search Google
 -------------
 
-Function Name - google_search(query)
+Function Name - googleSearch(query)
 
 No. of Parameters - 1
 
@@ -25,7 +25,7 @@ Usage -
 
 .. code:: python
 
-   >>> pyeWeb.google_search("py_everything")
+   >>> pyeWeb.googleSearch("py_everything")
    <--It opens a tab in your browser and shows the results-->
 
 This function searches Google for ``query``.
@@ -33,7 +33,7 @@ This function searches Google for ``query``.
 Search Youtube
 --------------
 
-Function Name - yt_search(query)
+Function Name - ytSearch(query)
 
 No. of Parameters - 1
 
@@ -44,7 +44,7 @@ Usage -
 
 .. code:: python
 
-   >>> pyeWeb.yt_search("py_everything")
+   >>> pyeWeb.ytSearch("py_everything")
    <--It opens a tab in your browser and shows the results-->
 
 This function searches YouTube for ``query``.
@@ -52,7 +52,7 @@ This function searches YouTube for ``query``.
 Search GitHub
 -------------
 
-Function Name - github_search(query)
+Function Name - githubSearch(query)
 
 No. of Parameters - 1
 
@@ -63,7 +63,7 @@ Usage -
 
 .. code:: python
 
-   >>> pyeWeb.github_search("py_everything")
+   >>> pyeWeb.githubSearch("py_everything")
    <--It opens a tab in your browser and shows the results-->
 
 This function searches GitHub for ``query``.
@@ -71,7 +71,7 @@ This function searches GitHub for ``query``.
 Search Stack Overflow
 ---------------------
 
-Function Name - so_search(query)
+Function Name - soSearch(query)
 
 No. of Parameters - 1
 
@@ -82,7 +82,7 @@ Usage -
 
 .. code:: python
 
-   >>> pyeWeb.so_search("py_everything")
+   >>> pyeWeb.soSearch("py_everything")
    <--It opens a tab in your browser and shows the results-->
 
 This function searches Stack Overflow for ``query``.
@@ -92,7 +92,7 @@ This function searches Stack Overflow for ``query``.
 Search Amazon.in
 ----------------
 
-Function Name - amz_in_search(query)
+Function Name - amzInSearch(query)
 
 No. of Parameters - 1
 
@@ -103,7 +103,7 @@ Usage -
 
 .. code:: python
 
-   >>> pyeWeb.amz_in_search("py_everything")
+   >>> pyeWeb.amzInSearch("py_everything")
    <--It opens a tab in your browser and shows the results-->
 
 This function searches Amazon.in for ``query``.
@@ -113,7 +113,7 @@ This function searches Amazon.in for ``query``.
 Search Amazon.com
 -----------------
 
-Function Name - amz_com_search(query)
+Function Name - amzComSearch(query)
 
 No. of Parameters - 1
 
@@ -124,7 +124,7 @@ Usage -
 
 .. code:: python
 
-   >>> pyeWeb.amz_com_search("py_everything")
+   >>> pyeWeb.amzComSearch("py_everything")
    <--It opens a tab in your browser and shows the results-->
 
 This function searches Amazon.com for ``query``.
@@ -132,7 +132,7 @@ This function searches Amazon.com for ``query``.
 Search PyPI
 -----------
 
-Function Name - pypi_search(query)
+Function Name - pypiSearch(query)
 
 No. of Parameters - 1
 
@@ -143,7 +143,7 @@ Usage -
 
 .. code:: python
 
-   >>> pyeWeb.pypi_search("py_everything")
+   >>> pyeWeb.pypiSearch("py_everything")
    <--It opens a tab in your browser and shows the results-->
 
 This function searches PyPI for ``query``.
@@ -151,7 +151,7 @@ This function searches PyPI for ``query``.
 Search Read The Docs
 --------------------
 
-Function Name - rtdocs_search(query)
+Function Name - rtdocsSearch(query)
 
 No. of Parameters - 1
 
@@ -162,7 +162,7 @@ Usage -
 
 .. code:: python
 
-   >>> pyeWeb.rtdocs_search("py_everything")
+   >>> pyeWeb.rtdocsSearch("py_everything")
    <--It opens a tab in your browser and shows the results-->
 
 This function searches Read the Docs for ``query``.
@@ -170,7 +170,7 @@ This function searches Read the Docs for ``query``.
 Search in a New Tab
 -------------------
 
-Function Name - open_new_tab(url, query)
+Function Name - openNewTab(url, query)
 
 No. of Parameters - 2
 
@@ -182,7 +182,7 @@ Usage -
 .. code:: python
 
    >>> google_url = 'https://google.com/search?q='
-   >>> pyeWeb.open_new_tab(google_url, "py_everything")
+   >>> pyeWeb.openNewTab(google_url, "py_everything")
    <--It opens a tab in your browser and shows the results-->
 
 This function searches Google for ``query`` in a new tab.
@@ -190,7 +190,7 @@ This function searches Google for ``query`` in a new tab.
 Search in a New Window
 ----------------------
 
-Function Name - open_new_window(url, query)
+Function Name - openNewWindow(url, query)
 
 No. of Parameters - 2
 
@@ -202,16 +202,19 @@ Usage -
 .. code:: python
 
    >>> gh_url = 'https://github.com/search?q='
-   >>> pyeWeb.open_new_window(gh_url, "py_everything")
+   >>> pyeWeb.openNewWindow(gh_url, "py_everything")
    <--It opens a window in your browser and shows the results-->
 
 This function searches GitHub for ``query`` in a new window.
 
-... toctree::
+.. toctree::
    :caption: Basic:
 
 .. toctree::
    :caption: Functions:
+
+.. toctree::
+   :caption: setupPyGen:
 
 .. toctree::
    :caption: About the Project:
