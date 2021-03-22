@@ -15,13 +15,13 @@ import py_everything.web as pye_web # Do not remove or change this statement
 
 # Add tests here and push or pull request to testthem on GitHub.
 # Format:
-'''
-class TestPyEverything(unittest.TestCase):
-    def test_[function_name]():
-        code to test goes here
-        example given below - 
-        assert py_everything.maths.add(2, 4) == 6
-'''
+# class TestPyEverything(unittest.TestCase):
+#     def test_[function_name]():
+#         code to test goes here
+#         example given below - 
+#         assert py_everything.maths.add(2, 4) == 6
+
+
 class TestPyEverything(unittest.TestCase):
     def test_add(self):
         assert pye_maths.add(2, 4) == 6
@@ -39,31 +39,31 @@ class TestPyEverything(unittest.TestCase):
         assert pye_maths.divide(120, 10, "int") == 12
 
     def test_float_div(self):
-        assert pye_maths.float_div(120, 10) == 12.0
+        assert pye_maths.floatDiv(120, 10) == 12.0
 
     def test_int_div(self):
-        assert pye_maths.int_div(120, 10) == 12
+        assert pye_maths.intDiv(120, 10) == 12
 
     def test_mod(self):
         assert pye_maths.mod(123, 2) == 1
 
     def test_eval_exp(self):
-        assert pye_maths.eval_exp("(2+3-1)*2") == 8
+        assert pye_maths.evalExp("(2+3-1)*2") == 8
 
     def test_avg(self):
         assert pye_maths.avg([2, 4, 6, 8]) == 5
 
     def test_install_modules(self):
-        assert pye.install_modules("playsound") == True
+        assert pye.installModules("playsound") == True
 
     def test_read_file(self):
-        assert pye_fileIO.read_file("read.txt") == 'demo\n'
+        assert pye_fileIO.readFile("read.txt") == 'demo\n'
 
     def test_write_file(self):
-        assert pye_fileIO.write_file("write.txt", "demo data") == True
+        assert pye_fileIO.writeFile("write.txt", "demo data") == True
 
     def test_clear_file(self):
-        assert pye_fileIO.clear_file("clear.txt") == True
+        assert pye_fileIO.clearFile("clear.txt") == True
 
     def test_search_list(self):
         listToTest = ["py", "pypi", "anything", "something", "python", "other", "middlepy", "notmatch", "endpy"]
@@ -71,12 +71,12 @@ class TestPyEverything(unittest.TestCase):
 
     def test_search_list_2(self):
         listToTest = ["py", "pypi", "anything", "something", "python", "other", "middlepy", "notmatch", "endpy"]
-        assert pye_search.search_list(listToTest, "py", filter="start") == ["py", "pypi", "python"]
+        assert pye_search.searchList(listToTest, "py", filter="start") == ["py", "pypi", "python"]
 
     def test_search_list_3(self):
         listToTest = ["py", "pypi", "anything", "something", "python", "other", "middlepy", "notmatch", "endpy"]
-        assert pye_search.search_list(listToTest, "py", filter="end") == ["py", "middlepy", "endpy"]
+        assert pye_search.searchList(listToTest, "py", filter="end") == ["py", "middlepy", "endpy"]
 
     def test_search_list_4(self):
         listToTest = ["py", "pypi", "anything", "something", "python", "other", "middlepy", "notmatch", "endpy"]
-        assert pye_search.search_list(listToTest, "py", filter="exact") == ["py"]
+        assert pye_search.searchList(listToTest, "py", filter="exact") == ["py"]
