@@ -9,43 +9,43 @@ amz_com_url = 'https://www.amazon.com/s?k='
 pypi_url = 'https://pypi.org/search/?q='
 rtdocs_url = 'https://readthedocs.io/search/?q='
 
-def google_search(query):
+def googleSearch(query):
     final_url = google_url + query
     webbrowser.open(final_url)
 
-def yt_search(query):
+def ytSearch(query):
     final_url = yt_url + query
     webbrowser.open(final_url)
 
-def github_search(query):
+def githubSearch(query):
     final_url = github_url + query
     webbrowser.open(final_url)
 
-def so_search(query):
+def soSearch(query):
     final_url = so_url + query
     webbrowser.open(final_url)
 
-def amz_in_search(query):
+def amz_inSearch(query):
     final_url = amz_in_url + query
     webbrowser.open(final_url)
 
-def amz_com_search(query):
+def amz_comSearch(query):
     final_url = amz_com_url + query
     webbrowser.open(final_url)
 
-def pypi_search(query):
+def pypiSearch(query):
     final_url = pypi_url + query
     webbrowser.open(final_url)
 
-def rtdocs_search(query):
+def rtdocsSearch(query):
     final_url = rtdocs_url + query
     webbrowser.open(final_url)
 
-def open_new_tab(url, query):
+def openNewTab(url, query):
     final_url = url + query
     webbrowser.open_new_tab(final_url)
 
-def open_new_window(url, query):
+def openNewWindow(url, query):
     final_url = url + query
     webbrowser.open_new(final_url)
 
@@ -56,19 +56,19 @@ class webSearchBase:
         self.github_url = 'https://github.com/search?q='
         self.so_url = 'https://stackoverflow.com/search?q='
 
-    def google_search(self, query):
+    def googleSearch(self, query):
         final_url = self.google_url + query
         webbrowser.open(final_url)
 
-    def yt_search(self, query):
+    def ytSearch(self, query):
         final_url = self.yt_url + query
         webbrowser.open(final_url)
 
-    def github_search(self, query):
+    def githubSearch(self, query):
         final_url = self.github_url + query
         webbrowser.open(final_url)
 
-    def so_search(self, query):
+    def soSearch(self, query):
         final_url = self.so_url + query
         webbrowser.open(final_url)
 
@@ -84,42 +84,42 @@ class webSearchAdvanced:
         self.pypi_url = 'https://pypi.org/search/?q='
         self.rtdocs_url = 'https://readthedocs.io/search/?q='
 
-    def google_search(self, query):
+    def googleSearch(self, query):
         final_url = self.google_url + query
         webbrowser.open(final_url)
 
-    def yt_search(self, query):
+    def ytSearch(self, query):
         final_url = self.yt_url + query
         webbrowser.open(final_url)
 
-    def github_search(self, query):
+    def githubSearch(self, query):
         final_url = self.github_url + query
         webbrowser.open(final_url)
 
-    def so_search(self, query):
+    def soSearch(self, query):
         final_url = self.so_url + query
         webbrowser.open(final_url)
 
-    def amz_in_search(self, query):
+    def amz_inSearch(self, query):
         final_url = self.amz_in_url + query
         webbrowser.open(final_url)
 
-    def amz_com_search(self, query):
+    def amz_comSearch(self, query):
         final_url = self.amz_com_url + query
         webbrowser.open(final_url)
 
-    def pypi_search(self, query):
+    def pypiSearch(self, query):
         final_url = self.pypi_url + query
         webbrowser.open(final_url)
 
-    def rtdocs_search(self, query):
+    def rtdocsSearch(self, query):
         final_url = self.rtdocs_url + query
         webbrowser.open(final_url)
 
-    def open_new_tab(self, url, query):
+    def openNewTab(self, url, query):
         final_url = url + query
         webbrowser.open_new_tab(final_url)
 
-    def open_new_window(self, url, query):
+    def openNewWindow(self, url, query):
         final_url = url + query
         webbrowser.open_new(final_url)

@@ -1,34 +1,34 @@
 import datetime
 
-def get_date():
+def getDate():
     date = datetime.date.today()
     print(date)
 
-def get_date_time():
+def getDateTime():
     dateTime = datetime.datetime.now()
     print(dateTime)
 
-def get_time():
+def getTime():
     time = datetime.datetime.now().strftime('%H:%M:%S')
     print(time)
 
-def get_custom_format(format):
+def getCustomFormat(format):
     custom = datetime.datetime.now().strftime(format)
     print(custom)
 
 class Date:
-    def get_date(self):
+    def getDate(self):
         date = datetime.date.today()
         print(date)
 
-    def get_date_time(self):
+    def getDateTime(self):
         dateTime = datetime.datetime.now()
         print(dateTime)
 
-    def get_time(self):
+    def getTime(self):
         time = datetime.datetime.now().strftime('%H:%M:%S')
         print(time)
 
-    def get_custom_format(self, format):
+    def getCustomFormat(self, format):
         custom = datetime.datetime.now().strftime(format)
         print(custom)

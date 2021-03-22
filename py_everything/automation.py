@@ -6,7 +6,7 @@ from pytube import YouTube
 import playsound
 
 
-def send_email(send_addr, password, recv_addr, body, server, port, sub='No Subject'):
+def sendEmail(send_addr, password, recv_addr, body, server, port, sub='No Subject'):
     with smtplib.SMTP(server, port) as smtp:
         smtp.ehlo()
         smtp.starttls()
@@ -23,14 +23,14 @@ def send_email(send_addr, password, recv_addr, body, server, port, sub='No Subje
         return True
 
 
-def email_address_slicer(full_addr):
+def emailAddressSlicer(full_addr):
     splitList = full_addr.split('@')
     username = splitList[0]
     domain = splitList[1]
     return username, domain
 
 
-def yt_downloader(video_url, output_path=str(os.getcwd()), filename='video'): # TODO: [ ] Use output_path and filename
+def ytDownloader(video_url, output_path=str(os.getcwd()), filename='video'): # TODO: [ ] Use output_path and filename
     yt = YouTube(video_url)
     if yt.streams.first().download():
         return True
@@ -38,7 +38,7 @@ def yt_downloader(video_url, output_path=str(os.getcwd()), filename='video'): # 
         return False
 
 
-def roll_dice(dice_1=True):
+def rollDice(dice_1=True):
     if dice_1 == True:
         rolls = [1, 2, 3, 4, 5, 6]
         return random.choice(rolls)
@@ -54,7 +54,7 @@ def timer(seconds, audio_file):
             playsound.playsound(audio_file)
         time = time - 1
 
-def start_app(drive, exe_path): # FIX: Use only 1 parameter, exe_path
+def startApp(drive, exe_path): # FIX: Use only 1 parameter, exe_path
     command = drive + ': && ' + exe_path
     if subprocess.run(command, shell=True):
         return True

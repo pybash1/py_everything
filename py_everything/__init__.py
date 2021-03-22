@@ -2,12 +2,12 @@ import os
 import subprocess
 import shutil
 
-def hello_world():
+def helloWorld():
     string = 'Hello, World!'
     print(string)
 
 
-def print_no_newline(*args):
+def printNoNewline(*args):
     for arg in args:
         print(arg, end=" ")
 
@@ -19,7 +19,7 @@ def clearPycache(path):
         return False
 
 
-def install_modules(*args):
+def installModules(*args):
     for module in args:
         command = "python -m pip install {}".format(module)
         if subprocess.run(command):

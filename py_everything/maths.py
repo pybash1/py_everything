@@ -30,12 +30,12 @@ def divide(num1, num2, type):
         return float_quotient
 
 
-def float_div(num1, num2):
+def floatDiv(num1, num2):
     quotient = num1 / num2
     return quotient
 
 
-def int_div(num1, num2):
+def intDiv(num1, num2):
     quotient = num1 // num2
     return quotient
 
@@ -50,7 +50,7 @@ def mod(num1, num2):
     return remain
 
 
-def eval_exp(exp):
+def evalExp(exp):
     solution = eval(exp)
     return solution
 
@@ -121,11 +121,11 @@ class MathsAdvanced:
             float_quotient = num1 // num2
             return float_quotient
 
-    def float_div(self, num1, num2):
+    def floatDiv(self, num1, num2):
         quotient = num1 / num2
         return quotient
 
-    def int_div(self, num1, num2):
+    def intDiv(self, num1, num2):
         quotient = num1 // num2
         return quotient
 
@@ -137,7 +137,7 @@ class MathsAdvanced:
         remain = num1 % num2
         return remain
 
-    def eval_exp(self, exp):
+    def evalExp(self, exp):
         solution = eval(exp)
         return solution
 
