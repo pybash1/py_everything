@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 readme_file = open("README.md", "r").read()
 
@@ -9,13 +9,20 @@ setup(
     description="A python module containing all the basic functions and classes for python. From simple addition to advanced file encryption.",
     long_description=readme_file,
     long_description_content_type="text/markdown",
-    author="play 4 Tutorials",
+    author="Play 4 Tutorials",
     author_email="play.4.tutotials@gmail.com",
-    packages=['py_everything'],
-    install_requires=['requests', 'pytube', 'playsound'],
+    maintainer="Play 4 Tutorials",
+    maintainer_email="play.4.tutotials@gmail.com", 
+    packages=find_packages(),
+    entry_points ={ 
+            'console_scripts': [ 
+                'setupPyGen = py_everything.setupPyGen:main'
+            ]
+    },
+    install_requires=['requests', 'pytube', 'playsound', 'cryptography', 'rsa', 'setuptools', 'wheel', 'pip'],
     license="MIT License",
-    url="https://github.com/play4Tutorials/py_everything/",
-    repository="https://github.com/play4Tutorials/py_everything",
+    url="https://py_everything.readthedocs.io/en/latest",
+    download_url="https://pypi.org/project/py-everything/#files",
     classifiers=[
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
@@ -32,6 +39,10 @@ setup(
         "Topic :: Communications :: Email",
         "Topic :: Internet :: WWW/HTTP",
         "Topic :: Scientific/Engineering :: Mathematics",
+        "Topic :: Utilities",
+        "Topic :: System :: Installation/Setup",
+        "Topic :: System :: Archiving :: Packaging",
+        "Topic :: Software Development :: Code Generators",
     ],
     python_requires='>=3.6'
 )

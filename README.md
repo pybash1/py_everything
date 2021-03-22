@@ -52,11 +52,52 @@ py_everything officially supports Python 3.6+
 # Features
 
 - You can make use of the thousands of functions and classes available to you.
+- Has an in-built CLI tool that generates a python package project structure for you. - setupPyGen
+- Good and Consistent Naming Convention. - camelCase
 - Simple and easy to use.
 - You don't have to write all of that code yourself, just call the pre-made functions.
-- You can inherit from our base class, and make your own with customizations.
 - There are two variants of most classes, a Base variant and an Advanced variant.
 - Make your own classes from our pre-provided Base variants. The Advanced ones are not for inheriting, but there is no problem in experimenting.
+
+# setupPyGen
+
+Detailed documentation can be found on [ReadTheDocs](https://py-everything.readthedocs.io/en/latest/)
+
+Basic Usage:
+
+```bash
+$ ls
+package/ new/ old/
+$ cd package/
+$ ls -a
+. ..
+$ setupPyGen -g True -t True --gitignore True
+<--Follow the prompts(packages entered - new, old)-->
+$ ls -A
+.gitignore LICENSE README.md setup.py .git/ new/ old/ tests/
+$ cat setup.py
+from setuptools import setup
+
+readme_file = open("README.md", "r").read()
+
+
+setup(
+    name="package-name",
+    version="1.0.0",
+    description="Given Project Description",
+    long_description=readme_file,
+    long_description_content_type="text/markdown",
+    author="Author Name",
+    author_email="name@example.com",
+    packages=[new, old],
+    install_requires=[],
+    license="MIT License",
+    url="https://github.com/play4Tutorials/py_everything/",
+    python_requires='>=3.5'
+)
+```
+
+NOTE: Currently setupPyGen doesn't support classifiers, and `find_packages()`. But support will be added soon.
 
 # Documentation and Usage
 
