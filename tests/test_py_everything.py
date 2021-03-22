@@ -67,7 +67,7 @@ class TestPyEverything(unittest.TestCase):
 
     def test_search_list(self):
         listToTest = ["py", "pypi", "anything", "something", "python", "other", "middlepy", "notmatch", "endpy"]
-        assert pye_search.search_list(listToTest, "py") == ["py", "pypi", "python", "middlepy", "endpy"]
+        assert pye_search.searchList(listToTest, "py") == ["py", "pypi", "python", "middlepy", "endpy"]
 
     def test_search_list_2(self):
         listToTest = ["py", "pypi", "anything", "something", "python", "other", "middlepy", "notmatch", "endpy"]
