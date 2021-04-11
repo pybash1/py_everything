@@ -2,8 +2,8 @@ blank_issues_enabled: true
 
 contact_links:
   - name: Question
-    url: https://stackoverflow.com/questions/tagged/py-everything
-    about: Have a question? Find your answer here!
+    url: https://github.com/play4Tutorials/py_everything/discussions/categories/q-a
+    about: Have a question? Find your answer on GitHub Discussions!
 
   - name: Documentation
     url: http://py_everything.readthedocs.io/
