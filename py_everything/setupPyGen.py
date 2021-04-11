@@ -5,22 +5,15 @@ def main():
     import subprocess
     import time
     import textwrap
+    from . import _data as data
 
-    ver = 'v1.0.0'
-    help_desc='''
-setupPyGen {} Help Utility
---------------------------
-Welcome to help utility for setupPyGen. setupPyGen is a command-line utility to generate a python package project structure for you. Including setup.py
-
-It has very few command-line arguments, most data is taken input after running, the command "setupPyGen" in the directory where you want to generate you python package project structure.
-
-You are currently using setupPyGen {}, with Python {}.
-'''.format(ver, ver, sys.version)
+    ver = 'v1.0.1'
+    help_desc=data.help_desc.format(ver, ver, sys.version)
 
     argparser = argparse.ArgumentParser(prog="setupPyGen", formatter_class=argparse.RawDescriptionHelpFormatter, description=textwrap.dedent(help_desc))
-    argparser.add_argument('-g', '--git', default=False, metavar='', type=bool, required=False, help="Start a git repository in the base directory(True or False).")
-    argparser.add_argument('-t', '--tests', default=False, metavar='', type=bool, required=False, help="Add tests/ folder to project directory(True or False).")
-    argparser.add_argument('--gitignore', default=False, metavar='', type=bool, required=False, help="Add .gitignore to project directory(True or False).")
+    argparser.add_argument('-g', '--git', action='store_true', required=False, help="Start a git repository in the base directory(True or False).")
+    argparser.add_argument('-t', '--tests', action='store_true', required=False, help="Add tests/ folder to project directory(True or False).")
+    argparser.add_argument('--gitignore', action='store_true', required=False, help="Add .gitignore to project directory(True or False).")
     args = argparser.parse_args()
 
     readmePath = os.path.realpath(os.getcwd()+"\\README.md")
@@ -41,7 +34,7 @@ You are currently using setupPyGen {}, with Python {}.
     
     time.sleep(3)
     
-    packageName = input("[+]Enter Package Name:")
+    packageName = input("[+]Enter Package Name: ")
     
     print("Registering Name to File...")
     
@@ -107,25 +100,7 @@ You are currently using setupPyGen {}, with Python {}.
     with open(setupFilePath, "w+") as f:
         pass
     
-    setupPyData = '''from setuptools import setup
-
-readme_file = open("{}", "r").read()
-
-setup(
-    name="{}",
-    version="{}",
-    description="{}",
-    long_description=readme_file,
-    long_description_content_type="text/markdown",
-    author="{}",
-    author_email="{}",
-    packages={},
-    install_requires={},
-    license="{}",
-    url="{}",
-    python_requires="{}"
-)
-'''.format(readmePath, packageName, packageVersion, packageDescription, packageAuthor, packageEmail, packages, depends, packageLicense, packageHomepage, pythonVersion)
+    setupPyData = data.setupPyData.format(readmePath, packageName, packageVersion, packageDescription, packageAuthor, packageEmail, packages, depends, packageLicense, packageHomepage, pythonVersion)
 
     with open(setupFilePath, "w+") as f:
         f.write(setupPyData)
