@@ -2,11 +2,10 @@ import sys, unittest # Do not remove or change this statement
 sys.path.append("..") # Do not remove or change this statement
 import py_everything as pye # Do not remove or change this statement
 import py_everything.automation as pye_auto # Do not remove or change this statement
-import py_everything.date_utils as pye_date # Do not remove or change this statement
+import py_everything.dateUtils as pye_date # Do not remove or change this statement
 import py_everything.fileIO as pye_fileIO # Do not remove or change this statement
 import py_everything.maths as pye_maths # Do not remove or change this statement
-import py_everything.py_everything_exceptions as pye_exception # Do not remove or change this statement
-import py_everything.requestsLib as pye_request # Do not remove or change this statement
+import py_everything.error as pye_error # Do not remove or change this statement
 import py_everything.search as pye_search # Do not remove or change this statement
 import py_everything.web as pye_web # Do not remove or change this statement
 

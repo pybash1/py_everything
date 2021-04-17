@@ -45,7 +45,7 @@ GitHub -
 
 py_everything is available on [PyPi](https://pypi.org/project/py-everything), and you can install it as follows:
 
-`$ python -m pip install py_everything`
+`$ python -m pip install py-everything`
 
 py_everything officially supports Python 3.6+
 

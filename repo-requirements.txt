@@ -13,6 +13,7 @@ Tools and Technologies:
 2. Command Prompt(Windows) or Cygwin(Windows) or Terminal(Unix-Based) or Git Bash(All OS)
 3. Git(& Git Bash)
 4. GitHub(Account)
+5. Any web browser
 
 Python Packages:
 1. requests
