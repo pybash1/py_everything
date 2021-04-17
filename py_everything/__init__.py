@@ -1,6 +1,8 @@
 import os
 import subprocess
 import shutil
+from . import error
+
 
 def helloWorld():
     string = 'Hello, World!'
@@ -16,7 +18,7 @@ def clearPycache(path):
     if shutil.rmtree(os.path.join(path, "__pycache__")):
         return True
     else:
-        return False
+        raise error.pycacheNotFoundError()
 
 
 def installModules(*args):
@@ -25,4 +27,4 @@ def installModules(*args):
         if subprocess.run(command):
             return True
         else:
-            return False
+            raise error.installModulesFailedError()

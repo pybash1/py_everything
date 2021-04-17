@@ -4,42 +4,43 @@ import subprocess
 import os
 from pytube import YouTube
 import playsound
+from . import error
 
 
-def sendEmail(send_addr, password, recv_addr, body, server, port, sub='No Subject'):
+def sendEmail(sendAddr, password, recvAddr, body, server, port, sub='No Subject'):
     with smtplib.SMTP(server, port) as smtp:
         smtp.ehlo()
         smtp.starttls()
         smtp.ehlo()
 
-        smtp.login(send_addr, password)
+        smtp.login(sendAddr, password)
 
-        sub_msg = 'Subject: {}'.format(sub)
-        body_msg = '\n\n {}'.format(body)
+        subMsg = 'Subject: {}'.format(sub)
+        bodyMsg = '\n\n {}'.format(body)
 
-        final_msg = sub_msg + body_msg
+        finalMsg = subMsg + bodyMsg
 
-        smtp.sendmail(send_addr, recv_addr, final_msg)
+        smtp.sendmail(sendAddr, recvAddr, finalMsg)
         return True
 
 
-def emailAddressSlicer(full_addr):
-    splitList = full_addr.split('@')
+def emailAddressSlicer(fullAddr):
+    splitList = fullAddr.split('@')
     username = splitList[0]
     domain = splitList[1]
-    return username, domain
+    return (username, domain)
 
 
-def ytDownloader(video_url, output_path=str(os.getcwd()), filename='video'): # TODO: [ ] Use output_path and filename
-    yt = YouTube(video_url)
+def ytDownloader(videoUrl, outputPath=str(os.getcwd()), filename='video'): # TODO: [ ] Use output_path and filename
+    yt = YouTube(videoUrl)
     if yt.streams.first().download():
         return True
     else:
         return False
 
 
-def rollDice(dice_1=True):
-    if dice_1 == True:
+def rollDice(dice1=True):
+    if dice1 == True:
         rolls = [1, 2, 3, 4, 5, 6]
         return random.choice(rolls)
     else:
@@ -54,7 +55,9 @@ def timer(seconds, audio_file):
             playsound.playsound(audio_file)
         time = time - 1
 
-def startApp(drive, exe_path): # FIX: Use only 1 parameter, exe_path
-    command = drive + ': && ' + exe_path
+def startApp(exe_path):
+    command = exe_path
     if subprocess.run(command, shell=True):
         return True
+    else:
+        raise error.startAppFailedError

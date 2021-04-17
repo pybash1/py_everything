@@ -8,9 +8,9 @@ def main():
     from . import _data as data
 
     ver = 'v1.0.1'
-    help_desc=data.help_desc.format(ver, ver, sys.version)
+    helpDesc=data.helpDesc.format(ver, ver, sys.version)
 
-    argparser = argparse.ArgumentParser(prog="setupPyGen", formatter_class=argparse.RawDescriptionHelpFormatter, description=textwrap.dedent(help_desc))
+    argparser = argparse.ArgumentParser(prog="setupPyGen", formatter_class=argparse.RawDescriptionHelpFormatter, description=textwrap.dedent(helpDesc))
     argparser.add_argument('-g', '--git', action='store_true', required=False, help="Start a git repository in the base directory(True or False).")
     argparser.add_argument('-t', '--tests', action='store_true', required=False, help="Add tests/ folder to project directory(True or False).")
     argparser.add_argument('--gitignore', action='store_true', required=False, help="Add .gitignore to project directory(True or False).")
@@ -66,14 +66,19 @@ def main():
         print("setupPyGen: error: cannot generate setup.py with 0 packages! quitting!")
         sys.exit()
     
-    for package in packages:
-        packagePath = os.getcwd()+"\\"+package
-        os.mkdir(packagePath)
-        os.chdir(packagePath)
-        initPath = os.getcwd()+"\\__init__.py"
-        with open(initPath, "w+") as f:
-            pass
-        os.chdir(originDir)
+    if packages[0] != 'find_packages' or 'find_packages()':
+        for package in packages:
+            packagePath = os.getcwd()+"\\"+package
+            os.mkdir(packagePath)
+            os.chdir(packagePath)
+            initPath = os.getcwd()+"\\__init__.py"
+            with open(initPath, "w+") as f:
+                pass
+            os.chdir(originDir)
+            
+        setupPyData = data.setupPyData
+    else:
+        setupPyData = data.setupPyDataAlt
     
     packageDependencies = input("[+]Enter List of Dependencies: ")
     
@@ -100,10 +105,13 @@ def main():
     with open(setupFilePath, "w+") as f:
         pass
     
-    setupPyData = data.setupPyData.format(readmePath, packageName, packageVersion, packageDescription, packageAuthor, packageEmail, packages, depends, packageLicense, packageHomepage, pythonVersion)
+    if setupPyData == data.setupPyData:
+        setupPyDataFinal = setupPyData.format(readmePath, packageName, packageVersion, packageDescription, packageAuthor, packageEmail, packages, depends, packageLicense, packageHomepage, pythonVersion)
+    else:
+        setupPyDataFinal = setupPyData.format(readmePath, packageName, packageVersion, packageDescription, packageAuthor, packageEmail, depends, packageLicense, packageHomepage, pythonVersion)
 
     with open(setupFilePath, "w+") as f:
-        f.write(setupPyData)
+        f.write(setupPyDataFinal)
         f.close()
 
     

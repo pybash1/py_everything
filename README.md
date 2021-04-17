@@ -53,6 +53,7 @@ py_everything officially supports Python 3.6+
 
 - You can make use of the thousands of functions and classes available to you.
 - Has an in-built CLI tool that generates a python package project structure for you. - setupPyGen
+- Now come with a second CLI tool - gitIt for generating GitHub friendly project structures
 - Good and Consistent Naming Convention. - camelCase
 - Simple and easy to use.
 - You don't have to write all of that code yourself, just call the pre-made functions.
@@ -98,6 +99,37 @@ setup(
 ```
 
 NOTE: Currently setupPyGen doesn't support classifiers, and `find_packages()`. But support will be added soon.
+
+# gitIt
+
+Detailed documentation can be found on [ReadTheDocs](https://py-everything.readthedocs.io/en/latest/)
+
+Basic Usage:
+
+```bash
+$ ls
+project1/ project2/
+$ cd project1/
+$ ls -a
+. ..
+$ gitIt -gh -s -i -c --greet
+<--Follow the prompts(packages entered - new, old)-->
+$ ls -A
+.github/ .gitignore LICENSE README.md .git/ 
+$ cd .github/
+$ ls -A
+SECURITY.md workflows/ ISSUE_TEMPLATE/
+$ cd workflows/
+$ ls -A
+greet.yml
+$ cd ..
+$ cd ISSUE_TEMPLATE/
+$ ls
+bug-report.md feature-or-enhancement-request.md
+$ cd ../..
+$ echo "Note that all of these files also have data in it they are not empty!"
+Note that all of these files also have data in it they are not empty!
+```
 
 # Documentation and Usage
 

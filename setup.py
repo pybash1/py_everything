@@ -2,21 +2,21 @@ from setuptools import setup, find_packages
 
 readme_file = open("README.md", "r").read()
 
-
 setup(
     name="py_everything",
     version="1.2.0",
     description="A python module containing all the basic functions and classes for python. From simple addition to advanced file encryption.",
     long_description=readme_file,
     long_description_content_type="text/markdown",
-    author="Play 4 Tutorials",
-    author_email="play.4.tutotials@gmail.com",
-    maintainer="Play 4 Tutorials",
-    maintainer_email="play.4.tutotials@gmail.com", 
+    author="PyBash",
+    author_email="pybash.code@gmail.com",
+    maintainer="PyBash",
+    maintainer_email="pybash.code@gmail.com", 
     packages=find_packages(),
-    entry_points ={ 
+    entry_points = {
             'console_scripts': [
-                'setupPyGen = py_everything.setupPyGen:main'
+                'setupPyGen = py_everything.setupPyGen:main',
+                'gitit = py_everything.gitIt:main',
             ]
     },
     install_requires=['requests', 'pytube', 'playsound', 'setuptools', 'wheel', 'pip'],

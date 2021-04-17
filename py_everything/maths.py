@@ -1,5 +1,7 @@
+from typing import Union
+import math
 
-def add(num1, num2, *args):
+def add(num1: Union[int, float], num2: Union[int, float], *args) -> Union[int, float]:
     sum = num1 + num2
     for num in args:
         sum += num
@@ -7,21 +9,21 @@ def add(num1, num2, *args):
     return sum
 
 
-def subtract(num1, num2, *args):
+def subtract(num1: Union[int, float], num2: Union[int, float], *args) -> Union[int, float]:
     sub = num1 - num2
     for num in args:
         sub -= num
     return sub
 
 
-def multiply(num1, *args):
+def multiply(num1: Union[int, float], *args) -> Union[int, float]:
     product = num1
     for num in args:
         product = product * num
     return product
 
 
-def divide(num1, num2, type):
+def divide(num1: Union[int, float], num2: Union[int, float], type: str) -> Union[int, float]:
     if type.lower() == 'int':
         int_quotient = num1 / num2
         return int_quotient
@@ -30,22 +32,22 @@ def divide(num1, num2, type):
         return float_quotient
 
 
-def floatDiv(num1, num2):
+def floatDiv(num1: Union[int, float], num2: Union[int, float]) -> Union[int, float]:
     quotient = num1 / num2
     return quotient
 
 
-def intDiv(num1, num2):
+def intDiv(num1: Union[int, float], num2: Union[int, float]) -> Union[int, float]:
     quotient = num1 // num2
     return quotient
 
 
-def expo(num1, num2):
-    expo = num1 ^ num2
+def expo(num1: Union[int, float], num2: Union[int, float]) -> Union[int, float]:
+    expo = num1 ** num2
     return expo
 
 
-def mod(num1, num2):
+def mod(num1: Union[int, float], num2: Union[int, float]) -> Union[int, float]:
     remain = num1 % num2
     return remain
 
@@ -54,7 +56,7 @@ def evalExp(exp):
     solution = eval(exp)
     return solution
 
-def avg(listOfNos):
+def avg(listOfNos) -> float:
     avg = 0
     for num in listOfNos:
         avg += num
@@ -62,58 +64,83 @@ def avg(listOfNos):
     avg = avg / len(listOfNos)
     return avg
 
-class MathsBase:
-    def __init__(self, num1=0, num2=0):
-        self.num1 = num1
-        self.num2 = num2
+def factorial(num: int) -> int:
+    factorial = 1
+    for i in range(1, num):
+        factorial = factorial * i
+        
+    return factorial
 
-    def add(self, num1, num2, *args):
+def ceil(num: int) -> int:
+    ceil = math.ceil(num)
+    return ceil
+    
+def floor(num: int) -> int:
+    floor = math.floor(num)
+    return floor
+
+class MathsBase:
+    def __init__(self):
+        pass
+    
+    def add(self, num1: Union[int, float], num2: Union[int, float], *args) -> Union[int, float]:
         sum = num1 + num2
         for num in args:
             sum += num
 
         return sum
 
-    def subtract(self, num1, num2, *args):
+    def subtract(self, num1: Union[int, float], num2: Union[int, float], *args) -> Union[int, float]:
         sub = num1 - num2
         for num in args:
             sub = sub - num
         return sub
 
-    def multiply(self, num1, *args):
+    def multiply(self, num1: Union[int, float], *args) -> Union[int, float]:
         product = num1
         for num in args:
             product = product * num
+            
+        return product
 
-    def divide(self, num1, num2):
+    def divide(self, num1: Union[int, float], num2: Union[int, float]) -> Union[int, float]:
         quotient = num1 / num2
         return quotient
+    
+    def ceil(self, num: int) -> int:
+        ceil = math.ceil(num)
+        return ceil
+    
+    def floor(self, num: int) -> int:
+        floor = math.floor(num)
+        return floor
 
 
 class MathsAdvanced:
-    def __init__(self, num1=0, num2=0):
-        self.num1 = num1
-        self.num2 = num2
+    def __init__(self):
+        pass
 
-    def add(self, num1, num2, *args):
+    def add(self, num1: Union[int, float], num2: Union[int, float], *args) -> Union[int, float]:
         sum = num1 + num2
         for num in args:
             sum += num
 
         return sum
 
-    def subtract(self, num1, num2, *args):
+    def subtract(self, num1: Union[int, float], num2: Union[int, float], *args) -> Union[int, float]:
         sub = num1 - num2
         for num in args:
             sub = sub - num
         return sub
 
-    def multiply(self, num1, *args):
+    def multiply(self, num1: Union[int, float], *args) -> Union[int, float]:
         product = num1
         for num in args:
             product = product * num
+            
+        return product
 
-    def divide(self, num1, num2, type):
+    def divide(self, num1: Union[int, float], num2: Union[int, float], type: str) -> Union[int, float]:
         if type.lower() == 'int':
             int_quotient = num1 / num2
             return int_quotient
@@ -121,19 +148,19 @@ class MathsAdvanced:
             float_quotient = num1 // num2
             return float_quotient
 
-    def floatDiv(self, num1, num2):
+    def floatDiv(self, num1: Union[int, float], num2: Union[int, float]) -> Union[int, float]:
         quotient = num1 / num2
         return quotient
 
-    def intDiv(self, num1, num2):
+    def intDiv(self, num1: Union[int, float], num2: Union[int, float]) -> Union[int, float]:
         quotient = num1 // num2
         return quotient
 
-    def expo(self, num1, num2):
-        expo = num1 ^ num2
+    def expo(self, num1: Union[int, float], num2: Union[int, float]) -> Union[int, float]:
+        expo = num1 ** num2
         return expo
 
-    def mod(self, num1, num2):
+    def mod(self, num1: Union[int, float], num2: Union[int, float]) -> Union[int, float]:
         remain = num1 % num2
         return remain
 
@@ -141,10 +168,25 @@ class MathsAdvanced:
         solution = eval(exp)
         return solution
 
-    def avg(self, listOfNos):
+    def avg(self, listOfNos) -> Union[int, float]:
         avg = 0
         for num in listOfNos:
             avg += num
 
         avg = avg / len(listOfNos)
         return avg
+    
+    def factorial(self, num: int) -> int:
+        factorial = 1
+        for i in range(1, num):
+            factorial = factorial * i
+            
+        return factorial
+
+    def ceil(self, num: int) -> int:
+        ceil = math.ceil(num)
+        return ceil
+        
+    def floor(self, num: int) -> int:
+        floor = math.floor(num)
+        return floor

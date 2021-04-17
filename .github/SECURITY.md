@@ -13,4 +13,4 @@ v1.0.x were beta releases and v1.1.0 are not supported by security updates. v1.1
 
 ## Reporting a Vulnerability
 
-Found a vulnerability? Create an issue and report it [here](https://githb.com/play4Tutorials/py_everything/issues).
+Found a vulnerability? Create an issue and report it [here](https://github.com/play4Tutorials/py_everything/issues).
