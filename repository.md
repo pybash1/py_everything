@@ -7,7 +7,7 @@
 # Git Commit Messages
 Commit Messages should follow this pattern from today(19.04.2021)
 
-Pattern - `TYPE <status> <EXTRA> >message`
+Pattern - `TYPE <status> <EXTRA> message`
 
 Example - `git commit -m "FIX <done> Issue #1"`
 
