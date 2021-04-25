@@ -1,13 +1,16 @@
 import sys, unittest # Do not remove or change this statement
 sys.path.append("..") # Do not remove or change this statement
 import py_everything as pye # Do not remove or change this statement
-import py_everything.automation as pye_auto # Do not remove or change this statement
-import py_everything.dateUtils as pye_date # Do not remove or change this statement
-import py_everything.fileIO as pye_fileIO # Do not remove or change this statement
-import py_everything.maths as pye_maths # Do not remove or change this statement
-import py_everything.error as pye_error # Do not remove or change this statement
-import py_everything.search as pye_search # Do not remove or change this statement
-import py_everything.web as pye_web # Do not remove or change this statement
+import py_everything.automation as pyeAuto # Do not remove or change this statement
+import py_everything.dateUtils as pyeDate # Do not remove or change this statement
+import py_everything.fileIO as pyeFileIO # Do not remove or change this statement
+import py_everything.maths as pyeMaths # Do not remove or change this statement
+import py_everything.error as pyeError # Do not remove or change this statement
+import py_everything.search as pyeSearch # Do not remove or change this statement
+import py_everything.web as pyeWeb # Do not remove or change this statement
+import py_everything.html as pyeHtml # Do not remove or change this statement
+import py_everything.mensuration as pyeMensuration # Do not remove or change this statement
+import py_everything.conversion as pyeConversion # Do not remove or change this statement
 
 # Do not change the filename.
 # Do not change the folder name.
@@ -23,59 +26,77 @@ import py_everything.web as pye_web # Do not remove or change this statement
 
 class TestPyEverything(unittest.TestCase):
     def test_add(self):
-        assert pye_maths.add(2, 4) == 6
+        assert pyeMaths.add(2, 4) == 6
 
     def test_subtract(self):
-        assert pye_maths.subtract(10, 5, 2) == 3
+        assert pyeMaths.subtract(10, 5, 2) == 3
 
     def test_multiply(self):
-        assert pye_maths.multiply(5, 3, 2) == 30
+        assert pyeMaths.multiply(5, 3, 2) == 30
 
     def test_divide(self):
-        assert pye_maths.divide(120, 10, "float") == 12.0
+        assert pyeMaths.divide(120, 10, "float") == 12.0
 
     def test_divide_2(self):
-        assert pye_maths.divide(120, 10, "int") == 12
+        assert pyeMaths.divide(120, 10, "int") == 12
 
     def test_float_div(self):
-        assert pye_maths.floatDiv(120, 10) == 12.0
+        assert pyeMaths.floatDiv(120, 10) == 12.0
 
     def test_int_div(self):
-        assert pye_maths.intDiv(120, 10) == 12
+        assert pyeMaths.intDiv(120, 10) == 12
 
     def test_mod(self):
-        assert pye_maths.mod(123, 2) == 1
+        assert pyeMaths.mod(123, 2) == 1
 
     def test_eval_exp(self):
-        assert pye_maths.evalExp("(2+3-1)*2") == 8
+        assert pyeMaths.evalExp("(2+3-1)*2") == 8
 
     def test_avg(self):
-        assert pye_maths.avg([2, 4, 6, 8]) == 5
+        assert pyeMaths.avg([2, 4, 6, 8]) == 5
 
     def test_install_modules(self):
         assert pye.installModules("playsound") == True
 
     def test_read_file(self):
-        assert pye_fileIO.readFile("read.txt") == 'demo\n'
+        assert pyeFileIO.readFile("read.txt") == 'demo\n'
 
     def test_write_file(self):
-        assert pye_fileIO.writeFile("write.txt", "demo data") == True
+        assert pyeFileIO.writeFile("write.txt", "demo data") == True
 
     def test_clear_file(self):
-        assert pye_fileIO.clearFile("clear.txt") == True
+        assert pyeFileIO.clearFile("clear.txt") == True
 
     def test_search_list(self):
         listToTest = ["py", "pypi", "anything", "something", "python", "other", "middlepy", "notmatch", "endpy"]
-        assert pye_search.searchList(listToTest, "py") == ["py", "pypi", "python", "middlepy", "endpy"]
+        assert pyeSearch.searchList(listToTest, "py") == ["py", "pypi", "python", "middlepy", "endpy"]
 
     def test_search_list_2(self):
         listToTest = ["py", "pypi", "anything", "something", "python", "other", "middlepy", "notmatch", "endpy"]
-        assert pye_search.searchList(listToTest, "py", filter="start") == ["py", "pypi", "python"]
+        assert pyeSearch.searchList(listToTest, "py", filter="start") == ["py", "pypi", "python"]
 
     def test_search_list_3(self):
         listToTest = ["py", "pypi", "anything", "something", "python", "other", "middlepy", "notmatch", "endpy"]
-        assert pye_search.searchList(listToTest, "py", filter="end") == ["py", "middlepy", "endpy"]
+        assert pyeSearch.searchList(listToTest, "py", filter="end") == ["py", "middlepy", "endpy"]
 
     def test_search_list_4(self):
         listToTest = ["py", "pypi", "anything", "something", "python", "other", "middlepy", "notmatch", "endpy"]
-        assert pye_search.searchList(listToTest, "py", filter="exact") == ["py"]
+        assert pyeSearch.searchList(listToTest, "py", filter="exact") == ["py"]
+        
+    def test_get_elements_by_tag(self):
+        assert pyeHtml.getElementsByTag("div", "index.html") == ['<div id="app">something</div>', '<div id="app">something</div>', '<div id=\'app\' class="app">someting</div>', "<div class='app'>somthing</div>"]
+        
+    def test_get_elements_by_id(self):
+        assert pyeHtml.getElementsById("app", "index.html") == ['<div id="app">something</div>', '<div id="app">something</div>', '<div id=\'app\' class="app">somehing</div>']
+        
+    def test_get_elements_by_class(self):
+        assert pyeHtml.getElementsByClass("app", "index.html") == ["<p class='app'>something</p>", '<div id=\'app\' class="app">something</div>', "<div class='app'>soething</div>"]
+        
+    def test_get_element_by_tag(self):
+        assert pyeHtml.getElementByTag("p", "index.html") == ['<p>something</p>']
+        
+    def test_get_element_by_id(self):
+        assert pyeHtml.getElementById("app", "index.html") == ['<div id="app">something</div>']
+        
+    def test_get_element_by_class(self):
+        assert pyeHtml.getElementByClass("app", "index.html") == ["<p class='app'>something</p>"]
