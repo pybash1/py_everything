@@ -1,6 +1,6 @@
 from typing import Union
-from . import units
-from . import _data as data
+import units
+import _data as data
 
 class Mass:
     def __init__(self, unit: Union[units.mg, units.cg, units.dg, units.g, units.dag, units.hg, units.kg], amount: Union[int, float]):

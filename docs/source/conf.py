@@ -1,26 +1,19 @@
 import sphinx
-import sphinx_rtd_theme
-
+import python_docs_theme
 
 project = 'py_everything'
-copyright = '2021, Play 4 Tutorials'
-author = 'Play 4 Tutorials'
+copyright = '2021, PyBash'
+author = 'PyBash'
 
-release = '1.1.1'
+release = '2.0.0'
 
-extensions = ['sphinx.ext.autodoc', 'sphinx_rtd_theme']
+extensions = ['sphinx.ext.autodoc', 'python_docs_theme']
 
 templates_path = ['_templates']
 
 exclude_patterns = []
 
-html_theme = 'sphinx_rtd_theme'
-
-html_theme_options = {
-    'display_version': True,
-    'prev_next_buttons_location': 'bottom',
-    'navigation_depth': 2,
-}
+html_theme = 'python_docs_theme'
 
 html_static_path = ['_static']
 

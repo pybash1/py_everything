@@ -1,6 +1,6 @@
 import os
 
-def searchFiles(keyword, path):
+def searchFiles(keyword: str , path: str) -> list[str]:
     files = []
     for root, dirs, files in os.walk(path):
         for file in files:
@@ -8,7 +8,7 @@ def searchFiles(keyword, path):
                 files.append(root + '\\' + str(file))
     return files
 
-def searchDirs(keyword, path):
+def searchDirs(keyword: str, path: str) -> list[str]:
     folders = []
     for root, dirs, files in os.walk(path):
         for dir in dirs:
@@ -16,7 +16,7 @@ def searchDirs(keyword, path):
                 folders.append(root + '\\' + str(dir))
     return folders
 
-def searchExts(ext, path):
+def searchExts(ext: str, path: str) -> list[str]:
     files = []
     for root, dirs, files in os.walk(path):
         for file in files:
@@ -24,7 +24,7 @@ def searchExts(ext, path):
                 files.append(root + '\\' + str(file))
     return files
 
-def searchList(listOfTerms, query, filter='in'):
+def searchList(listOfTerms: list[str], query: str, filter='in') -> list[str]:
     matches = []
     for item in listOfTerms:
         if filter == 'in':

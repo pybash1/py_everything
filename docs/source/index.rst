@@ -1,6 +1,4 @@
-.. sectionauthor:: Play 4 Tutorials <play.4.tutotials@gmail.com>
-
-.. _py_everything: http://github.com/play4Tutorials/py_everything
+.. _py_everything: http://github.com/pybash1/py_everything
 .. _Python: http://www.python.org/
 
 ******************************************
@@ -11,6 +9,7 @@ Welcome to the Documentation for py_everything_.
 You can find all the modules and how to use them here.
 
 py_everything_ hopes to become a Python_ package that helps you write **everything** much faster and in a easier way.
+Without importing many libraries for different tasks. Do them with the help of one.
 
 Power of py_everything_ - 
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -19,7 +18,7 @@ The basic usage for this package is given below::
 
    >>> import py_everything
    >>> from py_everything import search
-   >>> search.search_files('python', 'C:\Programming\\')
+   >>> search.searchFiles('python', 'C:\Programming\\')
    C:\Programming\python.txt
    C:\Programming\projectpython.py
    C:\Programming\py_everything-python.docx
@@ -33,7 +32,7 @@ Contributors -
 
 People who have contributed to this project - 
 
-* `Play 4 Tutorials(Creator and Maintainer) <https://github.com/play4Tutorials>`_
+* `pybash(Creator and Maintainer) <https://github.com/pybash1>`_
 
 
 .. toctree::
@@ -41,20 +40,23 @@ People who have contributed to this project -
    :maxdepth: 2
    
    index
-   Modules, Functions, and Classes
-   glossary
 
 .. toctree::
-   :caption: Functions:
+   :caption: Modules:
    :maxdepth: 2
    
    py_everything
    py_everything.automation
-   py_everything.date_utils
+   py_everything.conversion
+   py_everything.dateUtils
+   py_everything.error
    py_everything.fileIO
+   py_everything.htmlXml
    py_everything.maths
-   py_everything.requestsLib
+   py_everything.mensuration
    py_everything.search
+   py_everything.sencrypt
+   py_everything.units
    py_everything.web
 
 .. toctree::
@@ -62,7 +64,14 @@ People who have contributed to this project -
    :maxdepth: 2
 
    setupPyGen
-   setupPyGenChangelog
+   setupPyGen Changelog
+
+.. toctree::
+   :caption: gitIt:
+   :maxdepth: 2
+
+   gitIt
+   gitIt Changelog
 
 .. toctree::
    :caption: About the Project:

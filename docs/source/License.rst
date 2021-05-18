@@ -1,5 +1,3 @@
-.. sectionauthor:: Play 4 Tutorials <play.4.tutotials@gmail.com>
-
 *******
 License
 *******
@@ -30,14 +28,3 @@ Need Help?
 ==========
 Need help with anything? Join the `GitHub Discussions <https://github.com/play4Tutorials/py_everything/discussions>`_.
 
-.. toctree::
-   :caption: Basic:
-
-.. toctree::
-   :caption: Functions:
-
-.. toctree::
-   :caption: setupPyGen:
-
-.. toctree::
-   :caption: About the Project:

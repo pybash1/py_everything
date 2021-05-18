@@ -22,7 +22,7 @@ def mkDir(dirName, path):
         return True
 
 def mkFile(fileName, path):
-    with open(path+'\\'+fileName, 'w') as f: 
+    with open(path+'\\'+fileName, 'w'): 
         pass
         return True
 

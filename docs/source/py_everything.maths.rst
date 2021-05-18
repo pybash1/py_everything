@@ -1,190 +1,91 @@
 *******************
-pyEverything.maths
+py_everything.maths
 *******************
 
-Import -
---------
+.. currentmodule:: py_everything.maths
 
-How to import the module?
+This module deals with mathematical functions and operations.
 
-.. code:: python
+.. method:: add(num1, num2, *args)
 
-   >>> import pyEverything.maths as pyeMaths
+   Function for adding 2 or more numbers.
 
-Add
----
+   :param Union num1: First Number.
+   :param Union num2: Second Number.
+   :param *args: Rest numbers.
+   :returns Union: Result
 
-Function Name - add(num1, num2, \*args)
+.. method:: subtract(num1, num2, *args)
 
-No. of Parameters - infinite
+   Function for subtracting 2 or more numbers.
 
-Parameters - num1, num2, \*args
+   :param Union num1: First Number.
+   :param Union num2: Second Number.  
+   :param *args: Rest numbers.  
+   :returns Union: Result
 
-Usage -
+.. method:: multiply(num1, num2, *args)
 
-.. code:: python
+   Function for multipling 2 or more numbers.
 
-   >>> pyeMaths.add(1, 4, 3, 7, 3, 10, 13, 24)
-   65
+   :param Union num1: First Number.
+   :param Union num2: Second Number.  
+   :param *args: Rest numbers.  
+   :returns Union: Result
 
-Subtract
---------
+.. method:: divide(num1, num2, type)
 
-Function Name - subtract(num1, num2, \*args)
+   Function for dividing 2 numbers.
 
-No. of Parameters - infinite
+   :param Union num1: First Number.
+   :param Union num2: Second Number.  
+   :param str type: Integer division or float division.  
+   :returns Union: Result
 
-Parameters - num1, num2, \*args
+.. method:: floatDiv(num1, num2)
 
-Usage -
+   :param Union num1: First Number.
+   :param Union num2: Second Number.
+   :returns Union: Result
 
-.. code:: python
+.. method:: intDiv(num1, num2)
 
-   >>> pyeMaths.subtract(16, 4, 3)
-   9
+   :param Union num1: First Number.
+   :param Union num2: Second Number.
+   :returns Union: Result
 
-Multiply
---------
+.. method:: expo(num1, num2)
 
-Function Name - multiply(num1, \*args)
+   :param Union num1: First Number.
+   :param Union num2: Second Number.
+   :returns Union: Result
 
-No. of Parameters - infinite
+.. method:: mod(num1, num2)
 
-Parameters - num1, \*args
+   :param Union num1: First Number.
+   :param Union num2: Second Number.
+   :returns Union: Result
 
-Usage -
+.. method:: evalExp(exp)
 
-.. code:: python
+   :param Union exp: Mathematical Expression
 
-   >>> pyeMaths.multiply(2, 4, 3)
-   24
+.. method:: avg(listOfNos)
 
-Divide
-------
+   :param Union listOfNos: List Of Nos. for average.
+   :returns float: Average of nos.
 
-Function Name - divide(num1, num2, type)
+.. method:: factorial(num)
 
-No. of Parameters - 3
+   :param Union num: Number for Factorial.
+   :returns int: Result of factorial
 
-Parameters - num1, num2, type
+.. method:: ceil(num)
 
-Usage -
+   :param Union num: Number for rounding up.
+   :returns int: Result
 
-.. code:: python
+.. method:: floor(num)
 
-   >>> pyeMaths.divide(36, 3, 'float')
-   12.0
-   >>> pyeMaths.divide(36, 3, 'int')
-   12
-
-Float Division
---------------
-
-Function Name - floatDiv(num1, num2)
-
-No. of Parameters - 2
-
-Parameters - num1, num2
-
-Usage -
-
-.. code:: python
-
-   >>> pyeMaths.floatDiv(36, 3)
-   12.0
-
-Integer Division
-----------------
-
-Function Name - intDiv(num1, num2)
-
-No. of Parameters - 2
-
-Parameters - num1, num2
-
-Usage -
-
-.. code:: python
-
-   >>> pyeMaths.intDiv(36, 3)
-   12
-
-Exponent
---------
-
-Function Name - expo(num1, num2)
-
-No. of Parameters - 2
-
-Parameters - num1, num2
-
-Usage -
-
-.. code:: python
-
-   >>> pyeMaths.expo(2, 4)
-   16
-
-Modulus
--------
-
-Function Name - mod(num1, num2)
-
-No. of Parameters - 2
-
-Parameters - num1, num2
-
-Usage -
-
-.. code:: python
-
-   >>> pyeMaths.mod(17, 2)
-   1
-
-Evaluate Any Mathematics Expression
------------------------------------
-
-Function Name - evalExp(exp)
-
-No. of Parameters - 1
-
-Parameters - exp
-
-Usage -
-
-.. code:: python
-
-   >>> pyeMaths.expo('2 + 4 - 1 * 2')
-   10
-
-Average
--------
-
-Function Name - avg(listOfNos)
-
-No. of Parameters - 1
-
-Parameters - listOfNos
-
-Usage -
-
-.. code:: python
-
-   >>> pyeMaths.avg(['2', '3', '1', '5', '8', '4', '3'])
-   3.7142857142857144
-
-Note
-----
-These functions have not been explained seperately because they explain themselves.
-
-.. toctree::
-   :caption: Basic:
-
-.. toctree::
-   :caption: Functions:
-
-.. toctree::
-   :caption: setupPyGen:
-
-.. toctree::
-   :caption: About the Project:
+   :param Union num: Number for rounding down.
+   :returns int: Result

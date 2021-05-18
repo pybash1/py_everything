@@ -4,8 +4,8 @@ readme_file = open("README.md", "r").read()
 
 setup(
     name="py_everything",
-    version="1.2.0",
-    description="A python module containing all the basic functions and classes for python. From simple addition to advanced file encryption.",
+    version="2.0.0",
+    description="A python module containing all the basic functions and classes for python but doesn't stop at that, goes beyond advanced. From simple addition to advanced file encryption.",
     long_description=readme_file,
     long_description_content_type="text/markdown",
     author="PyBash",
@@ -21,7 +21,7 @@ setup(
     },
     install_requires=['requests', 'pytube', 'playsound', 'setuptools', 'wheel', 'pip'],
     license="MIT License",
-    url="https://py_everything.readthedocs.io/en/latest",
+    url="https://github.com/pybash1/py_everything",
     download_url="https://pypi.org/project/py-everything/#files",
     classifiers=[
         "License :: OSI Approved :: MIT License",

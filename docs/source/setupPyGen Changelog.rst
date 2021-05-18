@@ -12,15 +12,3 @@ v1.0.0
 * Add .gitignore
 * Create README.md
 * Add LICENSE
-
-.. toctree::
-   :caption: Basic:
-
-.. toctree::
-   :caption: Functions:
-
-.. toctree::
-   :caption: setupPyGen:
-
-.. toctree::
-   :caption: About the Project:

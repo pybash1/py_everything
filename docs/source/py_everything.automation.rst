@@ -1,153 +1,61 @@
-.. sectionauthor:: Play 4 Tutorials <play.4.tutotials@gmail.com>
-
 ************************
 py_everything.automation
 ************************
 
-Import -
---------
+.. currentmodule:: py_everything.automation
 
-How to import the module?
+This module contains methods that automate certain things or tasks such as sending a mail.
 
-.. code:: python
+.. method:: sendEmail(sendAddr, password, recvAddr, body, server, port, sub='No Subject')
 
-   >>> import py_everything.automation as pyeAuto
+   Sends email to ``recvAddr`` from ``sendAddr``. With ``body`` as mail body and ``sub`` as mail subject.
+   Uses ``server`` and ``port`` to send the mail.
 
-Send a mail with Python
------------------------
+   :param str sendAddr: The address you want the mail to be sent from.
+   :param str password: To login to the email account.
+   :param str recvAddr: The address to which the mail is to be sent.
+   :param str body: The main body of the email.
+   :param str server: The server through which the mail should be sent.
+   :param str port: The port at which the server is listening.
+   :param str sub: The optional subject of the mail. Defaults to 'No Subject' if not specified.
+   :returns bool: True if mail gets sent successfully.
 
-Function name - sendMail(send_addr, password, recv_addr, body, server,
-port, sub='No Subject')
+   .. note::
 
-No. of Parameters - 7
+      Less secure app access should be turned on for Gmail. IMAP/POP Forwarding should be enabled in mail settings
+      for this to work. Alos, the server and port should be correct.
 
-Parameters - send_addr, password, recv_addr, body, server, port, sub='No
-Subject'
+.. method:: emailAddressSlicer(fullAddr)
 
-Usage -
-^^^^^^^
+   Slices an email address and returns username and domain separately.
 
-.. code:: python
+   :param str fullAddr: The full address you want to slice.
+   :returns tuple: Contaning username and domain..;
 
-   >>> my_addr = "your.email@add.ress"
-   >>> my_pass = "your password"
-   >>> to_addr = "recv.er@add.ress"
-   >>> my_body = "Email body"
-   >>> my_server = "your.smtp.server"
-   >>> my_port = "123"
-   >>> my_sub = "My Subject"
-   >>> pye.sendMail(my_addr, my_pass, to_addr, my_body, my_server, my_port, my_sub)
-   True
+.. method:: ytDownloader(videoUrl)
 
+   Downloads YouTube video from ``videoUrl``.
 
-This function sends a mail to the address passed in `recv_addr`. `sub` is a optional parameter.
-The mail is sent from the value of `sent_addr`. `sent_addr` and `password` are used to authenticate with the `server`.
-The `port` is also very important. `body`, and `sub` are the Body and Subject of the email, respectively. 
+   :param str videoUrl: The full video URL.
+   :returns bool: True if download succeds else False.
 
-Note - Speacial settings must be enabled for this function to work properly. For e.g. - In Gmail you need to enable Less secure app access.
+.. method:: rollDice(dice1=True)
 
-Slice an email address
-----------------------
+   Rolls dice and returns value between 1 and 6 if dice1=True else returns value between 1 and 12.
 
-Function name - emailAddressSlicer(full_addr)
+   :param str dice1: Boolean to understand if 1 dice to roll or 2 dice.
+   :returns int: Value between 1 and 6 or 1 and 12.
 
-No. of Parameters - 1
+.. method:: timer(seconds, audioFile)
 
-Parameters - full_addr
+   Starts a timer for ``seconds`` and plays ``audioFile`` when finished.
 
-Usage -
-^^^^^^^
+   :param int seconds: How many seconds should the timer be for.
 
-.. code:: python
+.. method:: startApp(exePath)
 
-   >>> full_addr = 'long.demo.address@long-domain.com'
-   >>> pye.emailAddressSlicer(full_addr)
-   ['long.demo.address', 'long-domain.com']
+   Starts ``exePath``.
 
-This function is usefull to get the username and domain of a email
-address seperately. ``full_addr`` takes in the the full email address
-that is to sliced.
-
-Roll the Dice!
---------------
-
-Function name - rollDice(dice1=True)
-
-No. of Parameters - 1
-
-Parameters - dice_1
-
-Usage -
-^^^^^^^
-
-.. code:: python
-
-   >>> pye.rollDice(dice_1=True)
-   4
-   >>> pye.rollDice(dice_1=False)
-   8
-   >>> pye.rollDice(dice_1=True)
-   6
-   >>> pye.rollDice(dice_1=False)
-   11
-
-This function doesn't need explanation but still. If ``dice_1`` is True
-then the number will be within th range of 1 to 6 but if ``dice_1`` is
-False the range is from 1 to 12. That is ``dice_1`` signifies the no. of
-dice being rolled. If True, 1 dice, else 2 die. It is True by default.
-
-Run a timer
------------
-
-Function name - timer(seconds, audio_file)
-
-No. of Parameters - 2
-
-Parameters - seconds, audio_file
-
-Usage -
-^^^^^^^
-
-.. code:: python
-
-   >>> pye.timer(10, 'path/to/audio/file.mp3')
-   <---After 10 seconds, it plays the audio_file--->
-
-This function countsdown ``seconds`` untill it reaches 0 and then plays
-``audio_file``. Both parameters are required.
-
-Start or run a app or executable.
----------------------------------
-
-Function name - startApp(drive, app_path, exe_name)
-
-No. of Parameters - 3
-
-Parameters - drive, app_path, exe_name
-
-Usage -
-^^^^^^^
-
-.. code:: python
-
-   >>> pye.startApp('C', 'path/to/exe_file/file_name.exe')
-   True
-
-This function uses the 3 parameters to run any executable.
-
-Note - In ``exe_path``, the full path, including exe name and extension
-are to be provided, in ``drive``, only the letter is to be provided, the
-colon(:) is to be ommited. For example - startApp('C', 'C:/Program
-Files/company/exe_name.exe').
-
-... toctree::
-   :caption: Basic:
-
-.. toctree::
-   :caption: Functions:
-
-.. toctree::
-   :caption: setupPyGen:
-
-.. toctree::
-   :caption: About the Project:
+   :param str exePath: Full path to the exe to be launched.
+   :returns bool: True if exe starts successfully.
+   :raises error.startAppFailedError: This exception is raised if exe was not started successfully. Maybe due to an incorrect path.

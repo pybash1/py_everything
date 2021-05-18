@@ -30,7 +30,6 @@ def areaTriangle(base: float, height: float) -> float:
 
 def perimeterTriangle(side1: float, side2: float, base: float) -> float:
     perimeter = side1 + base + side2
-    
     return perimeter
 
 def areaCirc(radius: float) -> float:

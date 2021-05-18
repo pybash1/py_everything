@@ -5,7 +5,7 @@ __author__ = "PyBash"
 __version__ = "v1.0.0"
 '''
 import random
-from . import error
+import error
 
 BASE_LETTERS = 'abcdefghijklmnopqrstuvwxyz'
 BASE_SYMBOLS = ' 1234567890!@#$%^&*()-_=+[{]};:\'"<,>.?/`~|\\'

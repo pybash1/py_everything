@@ -2,187 +2,74 @@
 py_everything.fileIO
 ********************
 
-Import -
---------
+..currentmodule:: py_everything.fileIO
 
-How to import the module?
+This module deals with files and their input/output operations. With a wide range of functions.
 
-.. code:: python
+.. method:: readFile(fileName)
 
-   >>> import py_everything.fileIO as pyeFiles
+   This method reads data from ``fileName``.
 
-Read Data from a File
----------------------
+   :param str fileName: Full path to the file to be read.
+   :returns str: Data of the file.
 
-Function Name - readFile(filename)
+.. method:: writeFile(fileName, writeData)
 
-No. of Parameters - 1
+   This method writes new data - ``writeData`` on to ``fileName``
 
-Parameter - filename
+   :param str fileName: Full path to the file to writen to.
+   :param str writeData: Data to be written on to the file.
+   :returns bool: True if data was successfully written to file.
 
-Usage -
-^^^^^^^
+   .. note::
+      This method deletes any previous data on the file. Before writing to it.
 
-.. code:: python
+.. method:: clearFile(fileName)
 
-   >>> pyeFiles.readFile('path/to/file')
-   Data of the file is returned.
+   This method removes all data from ``fileName``.
 
-This function reads the data of ``filename`` and returns it.
+   :param str fileName: Full path to the file to be cleared.
+   :returns bool: True if file is cleared successfully.
 
-Write Data to a File
---------------------
+.. method:: mkDir(dirName, path)
 
-Function Name - writeFile(filename, writeData='')
+   Creates a new directory named ``dirName`` inside ``path``.
 
-No. of Parameters - 2
+   :param str dirName: Name of the directory to be created.
+   :param str path: Full path where directory is to be created.
+   :returns bool: True if directory is created successfully.
 
-Parameter - filename, writeData
+.. method:: mkFile(fileName, path)
 
-Usage -
-^^^^^^^
+   Creates a new file named ``fileName`` inside ``path``.
 
-.. code:: python
+   :param str fileName: Name of the file to be created.
+   :param str path: Full path where file is to be created.
+   :returns bool: True if file is created successfully.
 
-   >>> pyeFiles.writeFile('path/to/file', writeData="Data to be written to the file.")
-   True
+.. method:: delDir(path, dirName)
 
-This function reads the file given in ``filename``, then clears all its
-content and then writes ``writeData`` to the file. If these steps are
-successful, it returns True.
+   Deletes an existing directory named ``dirName`` from ``path``.
 
-Clear or Erase Contents of a File
----------------------------------
+   :param str dirName: Name of the directory to be deleted.
+   :param str path: Full path where directory is located.
+   :returns bool: True if directory is deleted successfully.
+   .. note::
 
-Function Name - writeFile(filename)
+      This function is for empty directories only, for directories containing files or subfolders, see the next method.
 
-No. of Parameters - 1
+.. method:: delDirRec(path, dirName)
 
-Parameter - filename
+   Deletes an existing directory named ``dirName`` from ``path`` recursively.
 
-Usage -
-^^^^^^^
+   :param str dirName: Name of the directory to be deleted.
+   :param str path: Full path where directory is located.
+   :returns bool: True if directory is deleted successfully.
 
-.. code:: python
+.. method:: delFile(path, fileName)
 
-   >>> pyeFiles.clearFile('path/to/file')
-   True
+   Deletes an existing file named ``fileName`` from ``path``.
 
-This function reads the file given in ``filename``, then clears all its
-contents. If the steps are successful, it returns True.
-
-Make a New :term:`directory` or Folder
---------------------------------------
-
-Function Name - mk_dir(dir_name, path)
-
-No. of Parameters - 2
-
-Parameter - dir_name, path
-
-Usage -
-^^^^^^^
-
-.. code:: python
-
-   >>> pyeFiles.mk_dir('folderName', 'path/to/folder')
-   True
-
-This function makes a new :term:`directory` named ``dir_name`` in ``path``. If
-steps are successful, returns True.
-
-Make a New File
----------------
-
-Function Name - mk_file(file_name, path)
-
-No. of Parameters - 2
-
-Parameter - file_name, path
-
-Usage -
-^^^^^^^
-
-.. code:: python
-
-   >>> pyeFiles.mk_file('fileName.txt', 'path/to/file/location')
-   True
-
-This function makes a new file named ``file_name`` in ``path``. If steps
-are successful, returns True.
-
-Delete an Empty :term:`directory`
-----------------------------------
-
-Function Name - del_dir(path, dir_name)
-
-No. of Parameters - 2
-
-Parameter - path, dir_name
-
-Usage -
-^^^^^^^
-
-.. code:: python
-
-   >>> pyeFiles.del_dir('folderName', 'path/to/folder')
-   True
-
-This function deletes an existing empty :term:`directory` named ``dir_name``
-that is in ``path``. If steps are successful, returns True. Raises error
-if :term:`directory` is not empty or does not exist.
-
-Delete a :term:`directory` with Items(Recursive Deletion)
-----------------------------------------------------------
-
-Function Name - del_dir_rec(path, dir_name)
-
-No. of Parameters - 2
-
-Parameter - path, dir_name
-
-Usage -
-^^^^^^^
-
-.. code:: python
-
-   >>> pyeFiles.del_dir_rec('folderName', 'path/to/folder')
-   True
-
-This function deletes an existing :term:`directory` named ``dir_name`` that is
-in ``path``. It deletes it regardless, it is empty or has items. If
-steps are successful, returns True. Raises error if direectory does not
-exist.
-
-Delete a File
--------------
-
-Function Name - del_file(path, file_name)
-
-No. of Parameters - 2
-
-Parameter - path, file_name
-
-Usage -
-^^^^^^^
-
-.. code:: python
-
-   >>> pyeFiles.del_file('fileName.txt', 'path/to/file/location')
-   True
-
-This function deletes an existing file named ``file_name`` that is in
-``path``. If steps are successful, returns True. Raises error if file
-does not exist.
-
-.. toctree::
-   :caption: Basic:
-
-.. toctree::
-   :caption: Functions:
-
-.. toctree::
-   :caption: setupPyGen:
-
-.. toctree::
-   :caption: About the Project:
+   :param str dirName: Name of the file to be deleted.
+   :param str path: Full path where file is located.
+   :returns bool: True if file is deleted successfully.

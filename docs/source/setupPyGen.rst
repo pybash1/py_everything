@@ -95,15 +95,3 @@ It's help utility can be accessed by using the command `$ setupPyGen -h` or `$se
 If you want to enable a flag just use "-flag True", for e.g., - `$ setupPyGen -t True`. All flags are disabled by default.
 
 Do not disable flags manually, such as `$ setupPyGen -t False`, this still generates a tests/ directory.
-
-.. toctree::
-   :caption: Basic:
-
-.. toctree::
-   :caption: Functions:
-
-.. toctree::
-   :caption: setupPyGen:
-
-.. toctree::
-   :caption: About the Project:

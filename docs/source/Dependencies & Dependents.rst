@@ -3,10 +3,6 @@
 .. _py_everything: http://github.com/play4Tutorials/py_everything
 .. _Python: http://www.python.org/
 
-*********************************************************************
-:term:`Dependencies` and :term:`Dependents`
-*********************************************************************
-
 py_everything_ depends on -
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -16,16 +12,3 @@ py_everything_ depends on -
 
 py_everything_ is depended upon by -
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-
-.. toctree::
-   :caption: Basic:
-   
-.. toctree::
-   :caption: Functions:
-
-.. toctree::
-   :caption: setupPyGen:
-
-.. toctree::
-   :caption: About the Project:

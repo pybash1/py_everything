@@ -4,7 +4,7 @@ import subprocess
 import os
 from pytube import YouTube
 import playsound
-from . import error
+import error
 
 
 def sendEmail(sendAddr, password, recvAddr, body, server, port, sub='No Subject'):
@@ -48,15 +48,15 @@ def rollDice(dice1=True):
         return random.choice(rolls)
 
 
-def timer(seconds, audio_file):
+def timer(seconds, audioFile):
     time = seconds
     for i in range(0, seconds):
         if time <= 0:
-            playsound.playsound(audio_file)
+            playsound.playsound(audioFile)
         time = time - 1
 
-def startApp(exe_path):
-    command = exe_path
+def startApp(exePath):
+    command = exePath
     if subprocess.run(command, shell=True):
         return True
     else:

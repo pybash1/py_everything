@@ -1,11 +1,11 @@
 import os
 import subprocess
 import shutil
-from . import error
+import error
 
 # Variables for the package
 __author__ = "PyBash"
-__version__ = "v1.2.0"
+__version__ = "v2.0.0"
 
 def helloWorld():
     string = 'Hello, World!'

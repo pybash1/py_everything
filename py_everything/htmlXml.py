@@ -1,4 +1,4 @@
-def getElementsByTag(tagName, fileName):
+def getElementsByTag(tagName: str, fileName: str):
     nonN = []
     with open(fileName, 'r+') as f:
         html = f.readlines()
@@ -6,7 +6,7 @@ def getElementsByTag(tagName, fileName):
             nonN.append(line.replace('\n', ''))
     
     pattern = f"<{tagName}>"
-    patternAlt = f"<{tagName} />"
+    patternAlt = f"{tagName} />"
     
     matches = []
     
@@ -18,7 +18,7 @@ def getElementsByTag(tagName, fileName):
     
     return matches
 
-def getElementsById(idName, fileName):
+def getElementsById(idName: str, fileName: str):
     nonN = []
     with open(fileName, 'r+') as f:
         html = f.readlines()
@@ -38,7 +38,7 @@ def getElementsById(idName, fileName):
     
     return matches
 
-def getElementsByClass(className, fileName):
+def getElementsByClass(className: str, fileName: str):
     nonN = []
     with open(fileName, 'r+') as f:
         html = f.readlines()
@@ -58,7 +58,7 @@ def getElementsByClass(className, fileName):
     
     return matches
 
-def getElementByTag(tagName, fileName):
+def getElementByTag(tagName: str, fileName: str):
     nonN = []
     with open(fileName, 'r+') as f:
         html = f.readlines()
@@ -80,7 +80,7 @@ def getElementByTag(tagName, fileName):
     
     return matches
 
-def getElementById(idName, fileName):
+def getElementById(idName: str, fileName: str):
     nonN = []
     with open(fileName, 'r+') as f:
         html = f.readlines()
@@ -102,7 +102,7 @@ def getElementById(idName, fileName):
     
     return matches
 
-def getElementByClass(className, fileName):
+def getElementByClass(className: str, fileName: str):
     nonN = []
     with open(fileName, 'r+') as f:
         html = f.readlines()
@@ -126,10 +126,10 @@ def getElementByClass(className, fileName):
 
 
 class HTMLObject:
-    def __init__(self, fileName):
+    def __init__(self, fileName: str):
         self.fileName = fileName
         
-    def getElementsByTag(self, tagName):
+    def getElementsByTag(self, tagName: str):
         nonN = []
         with open(self.fileName, 'r+') as f:
             html = f.readlines()
@@ -137,19 +137,16 @@ class HTMLObject:
                 nonN.append(line.replace('\n', ''))
         
         pattern = f"<{tagName}>"
-        patternAlt = f"<{tagName} />"
         
         matches = []
         
         for line in nonN:
             if pattern in line:
                 matches.append(line)
-            elif patternAlt in line:
-                matches.append(line)
         
         return matches
 
-    def getElementsById(self, idName):
+    def getElementsById(self, idName: str):
         nonN = []
         with open(self.fileName, 'r+') as f:
             html = f.readlines()
@@ -169,7 +166,7 @@ class HTMLObject:
         
         return matches
 
-    def getElementsByClass(self, className):
+    def getElementsByClass(self, className: str):
         nonN = []
         with open(self.fileName, 'r+') as f:
             html = f.readlines()
@@ -189,7 +186,7 @@ class HTMLObject:
         
         return matches
 
-    def getElementByTag(self, tagName):
+    def getElementByTag(self, tagName: str):
         nonN = []
         with open(self.fileName, 'r+') as f:
             html = f.readlines()
@@ -211,7 +208,7 @@ class HTMLObject:
         
         return matches
 
-    def getElementById(self, idName):
+    def getElementById(self, idName: str):
         nonN = []
         with open(self.fileName, 'r+') as f:
             html = f.readlines()
@@ -233,7 +230,7 @@ class HTMLObject:
         
         return matches
 
-    def getElementByClass(self, className):
+    def getElementByClass(self, className: str):
         nonN = []
         with open(self.fileName, 'r+') as f:
             html = f.readlines()
@@ -254,16 +251,3 @@ class HTMLObject:
                 break
         
         return matches
-
-# result = getElementsByTag("div", "index.html")
-# print(result)
-# result = getElementsById("app", "index.html")
-# print(result)
-# result = getElementsByClass("app", "index.html")
-# print(result)
-# result = getElementByTag("p", "index.html")
-# print(result)
-# result = getElementById("app", "index.html")
-# print(result)
-# result = getElementByClass("app", "index.html")
-# print(result)

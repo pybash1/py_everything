@@ -1,110 +1,75 @@
-.. sectionauthor:: Play 4 Tutorials <play.4.tutotials@gmail.com>
-
 *************
 py_everything
 *************
 
-Import -
---------
+.. currentmodule:: py_everything
 
-How to import the module?
+This module contains some basic functions. This is the base module of the library.
 
-.. code:: python
+.. method:: helloWorld()
 
-   >>> import py_everything as pye
+   Super Simple and Basic function that prints "Hello, World!"
 
-Your First Program using this package
--------------------------------------
+.. method:: printNoNewline(*args)
 
-What's the best way to write your first program than "Hello, World!"
+   Prints text without newlines. Very basic function.
 
-Function name - helloWorld()
+   :param *args: The text you want to print without newlines
 
-No. of Parameters - 0
+   .. note::
 
-Parameters - No parameters
+      You cannot customize what is printed instead of the newline.
 
-Usage -
-^^^^^^^
+.. method:: clearPycache(path)
 
-.. code:: python
+   Deletes *__pycache__* folder from `path`.
 
-   >>> pye.helloWorld()
-   Hello, World!
+   :param str path: Full path to the folder which contains *__pycache__*
+   :returns bool: True if *__pycache__* is deleted successfully.
+   :raises error.pycacheNotFoundError: This exception is raised if ``path`` does not contain
+                           ``__pycache__``.
 
-So, we wrote our first program. Let's move on.
+.. method:: installModules(*args)
 
-Clear pycache
--------------
+   Install modules using ``pip``, while execution.
 
-Function name - clearPycache(path)
+   :param *args: Modules you want to install.
+   :returns bool: True if all modules were installed successfully.
+   :raises error.installModulesFailedError: This exception is raised if all modules could not be
+                                             installed successfully. Occurs if package doesn't exist.
 
-No. of Parameters - 1
+.. method:: alphabet()
 
-Parameters - path
+   Get a list of all alphabets in lowercase.
 
-Usage -
-^^^^^^^
+   :returns list: List containing all alphabets in lowercase in alphabetical order.
 
-.. code:: python
+.. method:: alphabetCaps()
 
-   >>> pye.clearPycache(path\to\pycache\folder)
-   True
+   Get a list of all alphabets in uppercase.
 
-Provide the pth to the folder where the "**\__pycache_\_**" is located.
-For example - C:\Programming\Projects\Python
+   :returns list: List containing all alphabets in uppercase in alphabetical order.
 
-Note - Do not provide **\__pycache_\_** in the path. That does not clear
-it. For example - C:\Programming\Projects\Python\__pycache__. This would
-return False.
+.. method:: alphabetStr()
 
-Print without newline
----------------------
+   Get a string of all alphabets in lowercase.
 
-Function name - printNoNewline(\*args)
+   :returns str: String containing all alphabets in lowercase in alphabetical order.
 
-No. of Parameters - infinte
+.. method:: alphabetCapsStr()
 
-Parameters - \*args
+   Get a string of all alphabets in uppercase.
 
-Usage -
-^^^^^^^
+   :returns str: String containing all alphabets in uppercase in alphabetical order.
 
-.. code:: python
+.. method:: nums()
 
-   >>> pye.printNoNewline("hello", "world", "this is printed without newline", ".")
-   hello world this is printed without newline .
+   Get a list of all numbers(0-9).
 
-Pass in the words you want to get printed without newline and That will
-be printed.
+   :returns list: List containing all numbers(0-9) in ascending order.
 
-Install modules with pip
-------------------------
+.. method:: syms()
 
-Function name - installModules(\*args)
+   Get a list of all symbols.
 
-No. of Parameters - infinte
-
-Parameters - \*args
-
-Usage -
-^^^^^^^
-
-.. code:: python
-
-   >>> pye.installModules("py_everything", "requests")
-   True
-
-This function install the given modules using ``pip``. If the command is
-successful it returns True else False.
-
-.. toctree::
-   :caption: Basic:
-.. toctree::
-   :caption: Functions:
-
-.. toctree::
-   :caption: setupPyGen:
-
-.. toctree::
-   :caption: About the Project:
+   :returns list: List containing all symbols.
