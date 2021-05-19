@@ -1,6 +1,8 @@
 import os
+import sys
 import subprocess
 import shutil
+sys.path.append('.')
 import error
 
 # Variables for the package
