@@ -1,9 +1,6 @@
 import os
-import sys
 import subprocess
 import shutil
-sys.path.append('.')
-import error
 
 # Variables for the package
 __author__ = "PyBash"
@@ -23,7 +20,7 @@ def clearPycache(path):
     if shutil.rmtree(os.path.join(path, "__pycache__")):
         return True
     else:
-        raise error.pycacheNotFoundError()
+        raise pycacheNotFoundError()
 
 
 def installModules(*args):
@@ -32,7 +29,7 @@ def installModules(*args):
         if subprocess.run(command):
             return True
         else:
-            raise error.installModulesFailedError()
+            raise installModulesFailedError()
 
 def alphabet():
     theAlphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
@@ -58,3 +55,12 @@ def syms():
     symbols = ['`','~','!','@','#','$','%','^','&','*','(',')','_','-','+','=','{','[','}','}','|','\\',':',';','"','\'','<',',','>','.','?','/']
     return symbols
 
+class pycacheNotFoundError(Exception):
+    def __init__(self):
+        self.msg = "__pycache__ folder was not found!"
+        super().__init__(self.msg)
+
+class installModulesFailedError(Exception):
+    def __init__(self):
+        self.msg = "The modules could not be installed! Some error occurred!"
+        super().__init__(self.msg)
