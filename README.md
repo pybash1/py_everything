@@ -51,18 +51,18 @@ py_everything officially supports Python 3.6+
 
 # Features
 
-- You can make use of the thousands of functions and classes available to you.
+- You can make use of the huge number of functions and classes available to you.
 - Has an in-built CLI tool that generates a python package project structure for you. - setupPyGen
+- setupPyGen now comes with support for `find_packages()`
 - Now come with a second CLI tool - gitIt for generating GitHub friendly project structures
-- Good and Consistent Naming Convention. - camelCase
+- Good and Consistent Naming Convention. - Camel Case
 - Simple and easy to use.
 - You don't have to write all of that code yourself, just call the pre-made functions.
-- There are two variants of most classes, a Base variant and an Advanced variant.
-- Make your own classes from our pre-provided Base variants. The Advanced ones are not for inheriting, but there is no problem in experimenting.
+- Now comes with usefull classes.
 
 # setupPyGen
 
-Detailed documentation can be found on [ReadTheDocs](https://py-everything.readthedocs.io/en/latest/)
+Detailed documentation can be found on [ReadTheDocs](https://py-everything.readthedocs.io/en/latest/setupPyGen.html)
 
 Basic Usage:
 
@@ -98,11 +98,11 @@ setup(
 )
 ```
 
-NOTE: Currently setupPyGen doesn't support classifiers, and `find_packages()`. But support will be added soon.
+NOTE: Currently setupPyGen doesn't support classifiers. But support will be added soon. `find_packages()` support has been added.
 
 # gitIt
 
-Detailed documentation can be found on [ReadTheDocs](https://py-everything.readthedocs.io/en/latest/)
+Detailed documentation can be found on [ReadTheDocs](https://py-everything.readthedocs.io/en/latest/gitIt.html)
 
 Basic Usage:
 
