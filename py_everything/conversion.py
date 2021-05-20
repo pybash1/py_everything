@@ -1,5 +1,5 @@
 from typing import Union
-import units
+from . import units
 import _data as data
 
 class Mass:
