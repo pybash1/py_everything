@@ -4,6 +4,7 @@ import subprocess
 import os
 from pytube import YouTube
 import playsound
+from . import error
 
 
 def sendEmail(sendAddr, password, recvAddr, body, server, port, sub='No Subject'):
@@ -59,9 +60,4 @@ def startApp(exePath):
     if subprocess.run(command, shell=True):
         return True
     else:
-        raise startAppFailedError
-
-class startAppFailedError(Exception):
-    def __init__(self):
-        self.msg = "App could not be started due to some problem"
-        super().__init__(self.msg)
+        raise error.startAppFailedError

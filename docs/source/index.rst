@@ -33,6 +33,7 @@ Contributors -
 People who have contributed to this project - 
 
 * `pybash(Creator and Maintainer) <https://github.com/pybash1>`_
+* `Farid(Contributor) <https://github.com/mfaridn03>`_
 
 
 .. toctree::

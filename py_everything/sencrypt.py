@@ -5,7 +5,7 @@ __author__ = "PyBash"
 __version__ = "v1.0.0"
 '''
 import random
-import error
+from . import error
 
 BASE_LETTERS = 'abcdefghijklmnopqrstuvwxyz'
 BASE_SYMBOLS = ' 1234567890!@#$%^&*()-_=+[{]};:\'"<,>.?/`~|\\'
@@ -51,13 +51,13 @@ def checkCharKeys(keyList):
     base = "".join(baseSorted)
     
     if key1 != base:
-        raise InvalidKeyListError()
+        raise error.InvalidKeyListError()
     elif key2 != base:
-        raise InvalidKeyListError()
+        raise error.InvalidKeyListError()
     elif key3 != base:
-        raise InvalidKeyListError()
+        raise error.InvalidKeyListError()
     elif key4 != base:
-        raise InvalidKeyListError()
+        raise error.InvalidKeyListError()
     
 def checkSymKey(symKey: str): 
     sym = symKey
@@ -68,7 +68,7 @@ def checkSymKey(symKey: str):
     base = "".join(baseSorted)
     
     if sym != base:
-        raise InvalidSymbolKeyError()
+        raise error.InvalidSymbolKeyError()
 
 class SuperEncrypt():
     def __init__(self, keyCharList, keySym: str):
@@ -232,13 +232,3 @@ class SuperEncrypt():
                     decryptedSym += char.replace(char, decryptedElem)
 
         return decryptedSym
-
-class InvalidKeyListError(Exception):
-    def __init__(self):
-        self.msg = "Given Key List is Invaild"
-        super().__init__(self.msg)
-
-class InvalidSymbolKeyError(Exception):
-    def __init__(self):
-        self.msg = "The given Symbol Key is Invalid"
-        super().__init__(self.msg)
