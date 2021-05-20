@@ -83,9 +83,6 @@ class TestPyEverything(unittest.TestCase):
         listToTest = ["py", "pypi", "anything", "something", "python", "other", "middlepy", "notmatch", "endpy"]
         assert pyeSearch.searchList(listToTest, "py", filter="exact") == ["py"]
         
-    def test_get_elements_by_tag(self):
-        assert pyeHtml.getElementsByTag("div", "index.html") == ['<div id="app">something</div>', '<div id="app">something</div>', '<div id=\'app\' class="app">something</div>', "<div class='app'>something</div>"]
-        
     def test_get_elements_by_id(self):
         assert pyeHtml.getElementsById("app", "index.html") == ['<div id="app">something</div>', '<div id="app">something</div>', '<div id=\'app\' class="app">something</div>']
         
