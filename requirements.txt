@@ -6,7 +6,7 @@ myst-parser==0.14.0
 playsound==1.2.2
 pretty-errors==1.2.19
 pypiwin32==223
-pytest==5.4.3
+pytest==6.2.4
 pytube==10.4.1
 Sphinx @ file:///tmp/build/80754af9/sphinx_1594223420021/work
 sphinx-rtd-theme==0.5.1
