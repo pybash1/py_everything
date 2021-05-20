@@ -51,13 +51,13 @@ def checkCharKeys(keyList):
     base = "".join(baseSorted)
     
     if key1 != base:
-        raise error.InvalidKeyListError()
+        raise InvalidKeyListError()
     elif key2 != base:
-        raise error.InvalidKeyListError()
+        raise InvalidKeyListError()
     elif key3 != base:
-        raise error.InvalidKeyListError()
+        raise InvalidKeyListError()
     elif key4 != base:
-        raise error.InvalidKeyListError()
+        raise InvalidKeyListError()
     
 def checkSymKey(symKey: str): 
     sym = symKey
@@ -68,7 +68,7 @@ def checkSymKey(symKey: str):
     base = "".join(baseSorted)
     
     if sym != base:
-        raise error.InvalidSymbolKeyError()
+        raise InvalidSymbolKeyError()
 
 class SuperEncrypt():
     def __init__(self, keyCharList, keySym: str):
@@ -232,3 +232,13 @@ class SuperEncrypt():
                     decryptedSym += char.replace(char, decryptedElem)
 
         return decryptedSym
+
+class InvalidKeyListError(Exception):
+    def __init__(self):
+        self.msg = "Given Key List is Invaild"
+        super().__init__(self.msg)
+
+class InvalidSymbolKeyError(Exception):
+    def __init__(self):
+        self.msg = "The given Symbol Key is Invalid"
+        super().__init__(self.msg)
