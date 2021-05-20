@@ -2,6 +2,10 @@
 setupPyGen Changelog
 ********************
 
+v1.0.1
+======
+* Added support for ``find_packages()``
+
 v1.0.0
 ======
 * Initial Release
