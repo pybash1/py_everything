@@ -19,4 +19,4 @@ sphinxcontrib-serializinghtml==1.1.4
 sphinxcontrib-websupport @ file:///tmp/build/80754af9/sphinxcontrib-websupport_1593446360927/work
 twine==3.4.1
 urllib3==1.26.4
-virtualenv==20.2.2
+virtualenv==20.4.6
