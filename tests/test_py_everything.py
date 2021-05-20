@@ -8,7 +8,7 @@ import py_everything.maths as pyeMaths # Do not remove or change this statement
 import py_everything.error as pyeError # Do not remove or change this statement
 import py_everything.search as pyeSearch # Do not remove or change this statement
 import py_everything.web as pyeWeb # Do not remove or change this statement
-import py_everything.html as pyeHtml # Do not remove or change this statement
+import py_everything.htmlXml as pyeHtml # Do not remove or change this statement
 import py_everything.mensuration as pyeMensuration # Do not remove or change this statement
 import py_everything.conversion as pyeConversion # Do not remove or change this statement
 
