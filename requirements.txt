@@ -4,7 +4,7 @@ groundwork-sphinx-theme==1.1.1
 python-docs-theme==2021.5
 myst-parser==0.14.0
 playsound==1.2.2
-pretty-errors==1.2.20
+pretty-errors==1.2.21
 pypiwin32==223
 pytest==6.2.4
 pytube==10.8.2
