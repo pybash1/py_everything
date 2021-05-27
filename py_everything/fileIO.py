@@ -1,11 +1,13 @@
 import os
 import shutil
-
+from . import error
 def readFile(fileName):
     fileData = open(fileName, 'r').read()
     return fileData
 
 def writeFile(fileName, writeData):
+    if type(writeData) != type('str'):
+        raise error.TypeError(type(writeData))
     with open(fileName, 'r+') as file:
         file.truncate(0)
         file.write(writeData)
