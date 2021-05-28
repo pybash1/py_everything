@@ -1,6 +1,7 @@
 import os
 import shutil
 from . import error
+
 def readFile(filePath: str):
     fileData = open(filePath, 'r').read()
     return fileData
