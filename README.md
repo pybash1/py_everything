@@ -41,6 +41,9 @@ GitHub -
 [![GitHub watchers](https://img.shields.io/github/watchers/play4Tutorials/py_everything?style=social)](https://github.com/play4Tutorials/py_everything/pulls)
 [![GitHub repo size](https://img.shields.io/github/repo-size/play4Tutorials/py_everything?logo=github)](https://github.com/play4Tutorials/py_everything/pulls)
 
+Discord - 
+[![(https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/discord.svg)]discord.gg/DUeaUDxC7t]
+
 # Installation
 
 py_everything is available on [PyPi](https://pypi.org/project/py-everything), and you can install it as follows:
