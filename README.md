@@ -43,7 +43,7 @@ GitHub -
 
 Discord - 
 
-[(https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/discord.svg)(https://discord.gg/DUeaUDxC7t)]
+https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/discord.svg(https://discord.gg/DUeaUDxC7t)
 
 # Installation
 
