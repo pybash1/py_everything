@@ -41,6 +41,11 @@ GitHub -
 [![GitHub watchers](https://img.shields.io/github/watchers/play4Tutorials/py_everything?style=social)](https://github.com/play4Tutorials/py_everything/pulls)
 [![GitHub repo size](https://img.shields.io/github/repo-size/play4Tutorials/py_everything?logo=github)](https://github.com/play4Tutorials/py_everything/pulls)
 
+# Got Queries? Join our Discord!
+Have questions? Or find docs boring to read through? Then join our discord to get help and chat with the devs!
+
+<a href="https://discord.gg/DUeaUDxC7t"><img width="50px" height="50px" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/discord.svg"></a>
+
 # Installation
 
 py_everything is available on [PyPi](https://pypi.org/project/py-everything), and you can install it as follows:
