@@ -42,7 +42,8 @@ GitHub -
 [![GitHub repo size](https://img.shields.io/github/repo-size/play4Tutorials/py_everything?logo=github)](https://github.com/play4Tutorials/py_everything/pulls)
 
 Discord - 
-[![(https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/discord.svg)]discord.gg/DUeaUDxC7t]
+
+[(https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/discord.svg)(https://discord.gg/DUeaUDxC7t)]
 
 # Installation
 
