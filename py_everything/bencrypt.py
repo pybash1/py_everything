@@ -1,4 +1,5 @@
 from enrocrypt import *
+
 def encrypt(Data:str): #Tested OK
     '''This Function Encrypts Data That is Given. Accepts one Argument with type str'''
     value = encryption.Encrypt(bytes(Data.encode()))
