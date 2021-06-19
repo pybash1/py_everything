@@ -2,7 +2,7 @@ alabaster==0.7.12
 docutils==0.17.1
 groundwork-sphinx-theme==1.1.1
 python-docs-theme==2021.5
-myst-parser==0.15.0
+myst-parser==0.15.1
 playsound==1.2.2
 pretty-errors==1.2.21
 pypiwin32==223
