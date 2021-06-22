@@ -22,3 +22,6 @@ class InvalidSymbolKeyError(Exception):
     def __init__(self):
         self.msg = "The given Symbol Key is Invalid"
         super().__init__(self.msg)
+        
+def TypeError(current_type):
+    raise TypeError(f'Write Content Must Be Str Not {current_type}')

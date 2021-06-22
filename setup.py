@@ -19,7 +19,7 @@ setup(
                 'gitit = py_everything.gitIt:main',
             ]
     },
-    install_requires=['requests', 'pytube', 'playsound', 'setuptools', 'wheel', 'pip'],
+    install_requires=['requests', 'pytube', 'playsound', 'setuptools', 'wheel', 'pip', 'enrocrypt'],
     license="MIT License",
     url="https://github.com/pybash1/py_everything",
     download_url="https://pypi.org/project/py-everything/#files",
