@@ -23,5 +23,14 @@ class InvalidSymbolKeyError(Exception):
         self.msg = "The given Symbol Key is Invalid"
         super().__init__(self.msg)
         
-def TypeError(current_type):
-    raise TypeError(f'Write Content Must Be Str Not {current_type}')
+def TypeError(currentType):
+    raise TypeError(f'Write Content Must Be Str Not {currentType}')
+
+class InvalidOperationPerformedError(Exception):
+    def __init__(self):
+        self.msg = "Operation performed is either invalid on the type of the object or the operation is invalid"
+        super().__init__(self.msg)
+
+class UnknownPathTypeError(Exception):
+    def __init__(self):
+        self.msg = "Provided path did not match any available types - web, and local"
