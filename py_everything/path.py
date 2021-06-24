@@ -81,6 +81,3 @@ class Path:
             res = requests.get(self.path)
             
             return res.status_code
-
-test = Path(r'https://example.com')
-print(test.getRequestStatusCode())

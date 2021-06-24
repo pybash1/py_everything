@@ -28,9 +28,10 @@ def TypeError(currentType):
 
 class InvalidOperationPerformedError(Exception):
     def __init__(self):
-        self.msg = "Operation performed is either invalid on the type of the object or the operation is invalid"
+        self.msg = "The operation was performed on a local path where the operation was  for web paths or vice versa"
         super().__init__(self.msg)
 
 class UnknownPathTypeError(Exception):
     def __init__(self):
         self.msg = "Provided path did not match any available types - web, and local"
+        super().__init__(self.msg)
