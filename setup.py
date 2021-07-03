@@ -9,17 +9,15 @@ setup(
     long_description=readme_file,
     long_description_content_type="text/markdown",
     author="PyBash",
-    author_email="pybash.code@gmail.com",
     maintainer="PyBash",
-    maintainer_email="pybash.code@gmail.com", 
     packages=find_packages(),
     entry_points = {
             'console_scripts': [
                 'setupPyGen = py_everything.setupPyGen:main',
-                'gitit = py_everything.gitIt:main',
+                'gitIt = py_everything.gitIt:main',
             ]
     },
-    install_requires=['requests', 'pytube', 'playsound', 'setuptools', 'wheel', 'pip', 'enrocrypt'],
+    install_requires=['requests', 'pytube', 'playsound', 'setuptools', 'wheel', 'pip', 'enrocrypt', 'webbrowser'],
     license="MIT License",
     url="https://github.com/pybash1/py_everything",
     download_url="https://pypi.org/project/py-everything/#files",
