@@ -4,7 +4,7 @@ groundwork-sphinx-theme==1.1.1
 python-docs-theme==2021.5
 myst-parser==0.15.1
 playsound==1.2.2
-pretty-errors==1.2.22
+pretty-errors==1.2.23
 pypiwin32==223
 pytest==6.2.4
 pytube==10.8.5
@@ -18,6 +18,6 @@ sphinxcontrib-qthelp==1.0.3
 sphinxcontrib-serializinghtml==1.1.5
 sphinxcontrib-websupport
 twine==3.4.1
-urllib3==1.26.5
+urllib3==1.26.6
 virtualenv==20.4.7
-enrocrypt==1.0.5
+enrocrypt==1.0.6
