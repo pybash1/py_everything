@@ -1,21 +1,26 @@
-from enrocrypt import *
+# from enrocrypt import encryption
+# from typing import List
 
-def encrypt(Data:str):
-    value = encryption.Encrypt(bytes(Data.encode()))
-    return value
+# def encrypt(data: str):
+#     value = encryption.Encryption().Encrypt(bytes(data.encode()))
+#     return value
 
-def decrypt(Key:bytes,Data:bytes):
-    value = encryption.Decrypt(Key,Data)
-    return value
+# def decrypt(key: bytes, data: bytes):
+#     value = encryption.Encryption().Decrypt(key,data)
+#     return value
 
-def listDecrypt(List:list):
-    value = encryption.Decrypt_List(List)
-    return value
+# def listDecrypt(encryptedList: List[str]):
+#     value = encryption.Encryption().Decrypt_List(encryptedList)
+#     return value
 
-def encryptFile(Filepath:str,Keyfilepath:str):
-    encryption.FileEncryption(Filepath,Keyfilepath)
-    return None
+# def encryptFile(filepath: str, keyFilepath: str):
+#     if encryption.Encryption().FileEncryption(filepath, keyFilepath):
+#         return True
+#     else:
+#         return False
 
-def decryptFile(Filepath:str,Keyfilepath:str):
-    encryption.FileDecryption(Filepath,Keyfilepath)
-    return None
+# def decryptFile(filepath: str, keyFilepath: str):
+#     if encryption.Encryption().FileDecryption(filepath, keyFilepath):
+#         return True
+#     else:
+#         return False

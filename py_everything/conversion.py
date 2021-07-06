@@ -25,12 +25,12 @@ def convert(fromType: Union[Mass, Volume, Length], toType: Union[Mass, Volume, L
     toTypeUnit = list(toType.unit.unit)
     
     if len(fromTypeUnit) == 1:
-        fromTypeUnit = "base"
+        fromTypeUnit[0] = "b"
     else:
         pass
         
     if len(toTypeUnit) == 1:
-        toTypeUnit = "base"
+        toTypeUnit[0] = "b"
     else:
         pass
     

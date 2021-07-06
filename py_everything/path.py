@@ -1,6 +1,6 @@
 import os
 import re
-import error
+import error # type: ignore
 import webbrowser
 import requests
 
@@ -8,7 +8,7 @@ isUrl = re.compile(r'((\S*)?:\/\/(.)?)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.?[a-zA-Z0-
 isLocal = re.compile(r'^(.*/)([^/]*)$')
 
 class Path:
-    def __init__(self, path):
+    def __init__(self, path: str):
         self.path = path
         
         if isUrl.match(self.path):

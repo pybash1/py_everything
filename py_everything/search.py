@@ -1,7 +1,8 @@
+from typing import List, Any
 import os
 
 def searchFiles(keyword: str , path: str):
-    files = []
+    files: List[Any] = []
     for root, dirs, files in os.walk(path):
         for file in files:
             if keyword in file:
@@ -17,7 +18,7 @@ def searchDirs(keyword: str, path: str):
     return folders
 
 def searchExts(ext: str, path: str):
-    files = []
+    files: List[Any] = []
     for root, dirs, files in os.walk(path):
         for file in files:
             if file.endswith(ext):

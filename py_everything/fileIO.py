@@ -8,7 +8,7 @@ def readFile(filePath: str):
 
 def writeFile(filePath: str, writeData: str):
     if type(writeData) != type('str'):
-        raise error.TypeError(type(writeData))
+        raise TypeError(f'Write Content Must Be Str Not {type(writeData)}')
     with open(filePath, 'r+') as file:
         file.truncate(0)
         file.write(writeData)
@@ -21,22 +21,17 @@ def clearFile(filePath: str):
         return True
 
 def mkDir(dirName: str, path: str):
-    if os.mkdir(os.path.join(path, dirName)):
-        return True
+    os.mkdir(os.path.join(path, dirName))
 
 def mkFile(fileName: str, path: str):
     with open(path+'\\'+fileName, 'w'): 
         pass
-        return True
 
 def delDir(path: str, dirName: str):
-    if os.rmdir(os.path.join(path, dirName)):
-        return True
+    os.rmdir(os.path.join(path, dirName))
 
 def delDirRec(path: str, dirName: str):
-    if shutil.rmtree(os.path.join(path, dirName)):
-        return True
+    shutil.rmtree(os.path.join(path, dirName))
 
 def delFile(path: str, fileName: str):
-    if os.remove(os.path.join(path, fileName)):
-        return True
+    os.remove(os.path.join(path, fileName))

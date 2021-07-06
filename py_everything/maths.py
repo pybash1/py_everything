@@ -57,7 +57,7 @@ def evalExp(exp):
     return solution
 
 def avg(listOfNos) -> float:
-    avg = 0
+    avg = 0.0
     for num in listOfNos:
         avg += num
 
