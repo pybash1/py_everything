@@ -20,4 +20,4 @@ sphinxcontrib-websupport
 twine==3.4.1
 urllib3==1.26.6
 virtualenv==20.4.7
-enrocrypt==1.0.6
+enrocrypt==1.0.7
