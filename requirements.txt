@@ -7,7 +7,7 @@ playsound==1.2.2
 pretty-errors==1.2.23
 pypiwin32==223
 pytest==6.2.4
-pytube==10.8.5
+pytube==10.9.0
 Sphinx
 sphinx-rtd-theme==0.5.2
 sphinxcontrib-applehelp==1.0.2
