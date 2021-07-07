@@ -2,7 +2,6 @@ import smtplib
 import random
 import subprocess
 import os
-from pytube import YouTube # type: ignore
 import playsound # type: ignore
 from . import error
 

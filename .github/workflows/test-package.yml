@@ -33,4 +33,5 @@ jobs:
         python -m unittest discover -s . -p "test_*.py"
     - name: MYPY Typechecking
       run: |
-        mypy -p py_everything
+        mypy -p py_everything --install-types
+        
