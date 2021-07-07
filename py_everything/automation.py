@@ -30,15 +30,6 @@ def emailAddressSlicer(fullAddr):
     domain = splitList[1]
     return (username, domain)
 
-
-def ytDownloader(videoUrl, outputPath=str(os.getcwd()), filename='video'): # TODO: [ ] Use output_path and filename
-    yt = YouTube(videoUrl)
-    if yt.streams.first().download():
-        return True
-    else:
-        return False
-
-
 def rollDice(dice1=True):
     if dice1 == True:
         rolls = [1, 2, 3, 4, 5, 6]
