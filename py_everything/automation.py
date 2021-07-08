@@ -2,7 +2,6 @@ import smtplib
 import random
 import subprocess
 import os
-from pytube import YouTube # type: ignore
 import playsound # type: ignore
 from . import error
 from typing import List, Union
@@ -31,16 +30,7 @@ def emailAddressSlicer(fullAddr: str) -> tuple:
     domain: str = splitList[1]
     return (username, domain)
 
-
-def ytDownloader(videoUrl: str, outputPath: str = str(os.getcwd()), filename:str = 'video'): # TODO: [ ] Use output_path and filename
-    yt = YouTube(videoUrl)
-    if yt.streams.first().download():
-        return True
-    else:
-        return False
-
-
-def rollDice(dice1: bool = True) -> int:
+def rollDice(dice1=True):
     if dice1 == True:
         rolls: List[int] = [1, 2, 3, 4, 5, 6]
         return random.choice(rolls)
