@@ -5,9 +5,10 @@ import os
 from pytube import YouTube # type: ignore
 import playsound # type: ignore
 from . import error
+from typing import List, Union
 
 
-def sendEmail(sendAddr, password, recvAddr, body, server, port, sub='No Subject'):
+def sendEmail(sendAddr: str, password: str, recvAddr: str, body: str, server: str, port: int, sub: str = 'No Subject') -> bool:
     with smtplib.SMTP(server, port) as smtp:
         smtp.ehlo()
         smtp.starttls()
@@ -15,23 +16,23 @@ def sendEmail(sendAddr, password, recvAddr, body, server, port, sub='No Subject'
 
         smtp.login(sendAddr, password)
 
-        subMsg = 'Subject: {}'.format(sub)
-        bodyMsg = '\n\n {}'.format(body)
+        subMsg: str = 'Subject: {}'.format(sub)
+        bodyMsg: str = '\n\n {}'.format(body)
 
-        finalMsg = subMsg + bodyMsg
+        finalMsg: str = subMsg + bodyMsg
 
         smtp.sendmail(sendAddr, recvAddr, finalMsg)
         return True
 
 
-def emailAddressSlicer(fullAddr):
-    splitList = fullAddr.split('@')
-    username = splitList[0]
-    domain = splitList[1]
+def emailAddressSlicer(fullAddr: str) -> tuple:
+    splitList: List[str] = fullAddr.split('@')
+    username: str = splitList[0]
+    domain: str = splitList[1]
     return (username, domain)
 
 
-def ytDownloader(videoUrl, outputPath=str(os.getcwd()), filename='video'): # TODO: [ ] Use output_path and filename
+def ytDownloader(videoUrl: str, outputPath: str = str(os.getcwd()), filename:str = 'video'): # TODO: [ ] Use output_path and filename
     yt = YouTube(videoUrl)
     if yt.streams.first().download():
         return True
@@ -39,24 +40,24 @@ def ytDownloader(videoUrl, outputPath=str(os.getcwd()), filename='video'): # TOD
         return False
 
 
-def rollDice(dice1=True):
+def rollDice(dice1: bool = True) -> int:
     if dice1 == True:
-        rolls = [1, 2, 3, 4, 5, 6]
+        rolls: List[int] = [1, 2, 3, 4, 5, 6]
         return random.choice(rolls)
     else:
-        rolls = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+        rolls: List[int] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         return random.choice(rolls)
 
 
-def timer(seconds, audioFile):
-    time = seconds
+def timer(seconds: int, audioFile: str):
+    time: int = seconds
     for i in range(0, seconds):
         if time <= 0:
             playsound.playsound(audioFile)
-        time = time - 1
+        time: int = time - 1
 
-def startApp(exePath):
-    command = exePath
+def startApp(exePath: str):
+    command: str = exePath
     if subprocess.run(command, shell=True):
         return True
     else:
