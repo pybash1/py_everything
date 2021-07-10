@@ -1,6 +1,8 @@
+from typing import Dict, Union
+
 # setupPyGen #
 
-setupPyData = '''from setuptools import setup
+setupPyData: str = '''from setuptools import setup
 
 readme_file = open("{}", "r").read()
 
@@ -20,7 +22,7 @@ setup(
 )
 '''
 
-setupPyDataAlt = '''from setuptools import setup, find_packages
+setupPyDataAlt: str = '''from setuptools import setup, find_packages
 
 readme_file = open("{}", "r").read()
 
@@ -40,7 +42,7 @@ setup(
 )
 '''
 
-helpDesc='''
+helpDesc: str = '''
 setupPyGen {} Help Utility
 ------------------------------
 Welcome to help utility for setupPyGen. setupPyGen is a command-line utility to generate a python package project structure for you. Including setup.py
@@ -52,7 +54,7 @@ You are currently using setupPyGen {}, with Python {}.
 
 # GitIt #
 
-helpDesc2='''
+helpDesc2: str = '''
 gitIt {} Help Utility
 -------------------------
 Welcome to help utility for gitIt. gitIt is a command-line utility to generate a git repository for you.
@@ -61,14 +63,14 @@ It generates a GitHub Ready repository.
 You are currently using gitIt {}, with Python {}.
 '''
 
-readmeData = '''# {}
+readmeData: str = '''# {}
 
 {}
 
 License - {}
 '''
 
-securityData = '''# Security Policy
+securityData: str = '''# Security Policy
 
 ## Supported Versions
 
@@ -84,7 +86,7 @@ Found a vulnerability? Create an issue and report it [here](https://example.com)
 
 '''
 
-bugData = '''---
+bugData: str = '''---
 name: Bug Report
 about: Create a report to help us improve
 title: "[BUG]"
@@ -116,7 +118,7 @@ If possible or applicable, please add screenshots to help explain your problem.
 Add any other context about the problem here.
 '''
 
-featureData = '''---
+featureData: str = '''---
 name: Feature or Enhancement Request
 about: Suggest an idea for this project.
 title: "[FEATURE_OR_ENHANCEMENT]"
@@ -137,7 +139,7 @@ Want a new function or class added in, describe it here.
 Add any other context or screenshots about the feature request here.
 '''
 
-configData = '''blank_issues_enabled: true
+configData: str = '''blank_issues_enabled: true
 
 contact_links:
   - name: Question
@@ -149,7 +151,7 @@ contact_links:
     about: Can't figure out something? Check out our Documentation!
 '''
 
-greetData = '''name: Greet
+greetData: str = '''name: Greet
 
 on: [pull_request, issues]
 
@@ -166,7 +168,7 @@ jobs:
 
 # conversion.py #
 
-unitTypes = {
+unitTypes: Dict[str, Union[int, float]] = {
     "k": 1000,
     "h": 100,
     "da": 10,

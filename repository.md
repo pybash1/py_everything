@@ -3,39 +3,6 @@
 **This document contains different rules, prerequisites, etc. for cloning and editing this Repository.**
 
 > **NOTE:** The Python Packages listed below are must have. Anaconda3, Git Bash, etc. are not neccessary but is preffered to be installed. They may not be required directly, but they help, identify issues and in debugging. Visual Studio Code is recommended to use since it has a lot of potential tools built-in, such as a Debugger, Integrated Terminal, Git and GitHub Integrations, etc. And the extensions are very much optional. But few are required. Such as TODO Highlight is used in the code. Having it would help, but it is not mandatory.
-
-# Git Commit Messages
-Commit Messages should follow this pattern from today(19.04.2021)
-
-Pattern - `TYPE <status> <EXTRA> message`
-
-Example - `git commit -m "FIX <done> Issue #1"`
-
-Example 2 - `git commit -m "BUG <doing> <HELP-NEEDED> Issue #2"`
-
-All available Types:
-- FIX (Fix something)
-- BUG (Fix a bug)
-- FEATURE (Working on a new feature or module)
-- TEST (Testing something or working with tests)
-- ENHANCEMENT (Enhance something)
-- EXTRAS (Files that are extra like repository.md)
-
-All available Statuses:
-- `<started>` (Started Work)
-- `<doing>` (Work in Progress)
-- `<done>` (Completed)
-- `<finished>` (No Later Edits)
-
-All availble Extras:
-- `<HELP-NEEDED>`
-- `<REVIEW>`
-- `<DO-NOT-TOUCH>`
-
-NOTE: This is applicable only for short commit messages not long ones!
-
-P.S. - Please follow this pattern
-
 # Prerequisites (Required)
 
 ## Tools and Technologies:
@@ -47,12 +14,11 @@ P.S. - Please follow this pattern
 
 Python Packages:
 1. **requests**
-2. **pytube**
-3. **playsound**
-4. setuptools
-5. wheel
-6. pip
-7. twine (Just in case)
+2. **playsound**
+3. setuptools
+4. wheel
+5. pip
+6. twine (Just in case)
 
 Extensions (If using VS Code):
 1. **Python by Microsoft**
@@ -64,7 +30,7 @@ Tools and Technologies:
 2. GitHub CLI
 3. GitHub Desktop
 
-Code Editor(anyone):
+Code Editor:
 1. Visual Studio Code - https://code.visualstudio.com
 
 Extensions in Visual Studio Code:
@@ -82,7 +48,7 @@ Extensions in Visual Studio Code:
 Font(If using VS Code):
 1. Fira Code with Font Ligatures Enabled
 
-Settings for TODO Highlight(if using, not optioanl):
+Settings for TODO Highlight(if using, not optional):
 `{
 
     "todohighlight.keywords": [

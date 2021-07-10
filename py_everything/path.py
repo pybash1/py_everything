@@ -9,7 +9,7 @@ isLocal = re.compile(r'^(.*/)([^/]*)$')
 
 class Path:
     def __init__(self, path: str):
-        self.path = path
+        self.path: str = path
         
         if isUrl.match(self.path):
             self.type = 'web'

@@ -30,12 +30,12 @@ def emailAddressSlicer(fullAddr: str) -> tuple:
     domain: str = splitList[1]
     return (username, domain)
 
-def rollDice(dice1=True):
+def rollDice(dice1=True) -> int:
     if dice1 == True:
         rolls: List[int] = [1, 2, 3, 4, 5, 6]
         return random.choice(rolls)
     else:
-        rolls: List[int] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+        rolls = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         return random.choice(rolls)
 
 
@@ -44,7 +44,7 @@ def timer(seconds: int, audioFile: str):
     for i in range(0, seconds):
         if time <= 0:
             playsound.playsound(audioFile)
-        time: int = time - 1
+        time = time - 1
 
 def startApp(exePath: str):
     command: str = exePath

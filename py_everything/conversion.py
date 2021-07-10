@@ -1,4 +1,4 @@
-from typing import Union
+from typing import Union, List
 from . import units
 from . import _data as data
 
@@ -19,10 +19,10 @@ class Length:
 
 # Thanks to - http://bit.ly/convertSoHelp - StackOverflow
 def convert(fromType: Union[Mass, Volume, Length], toType: Union[Mass, Volume, Length]) -> Union[int, float]:
-    amount = fromType.amount
+    amount: Union[int, float] = fromType.amount
     
-    fromTypeUnit = list(fromType.unit.unit)
-    toTypeUnit = list(toType.unit.unit)
+    fromTypeUnit: List[str] = list(fromType.unit.unit)
+    toTypeUnit: List[str] = list(toType.unit.unit)
     
     if len(fromTypeUnit) == 1:
         fromTypeUnit[0] = "b"
@@ -34,9 +34,9 @@ def convert(fromType: Union[Mass, Volume, Length], toType: Union[Mass, Volume, L
     else:
         pass
     
-    fromUnit = data.unitTypes[str(fromTypeUnit[0])]
-    toUnit = data.unitTypes[str(toTypeUnit[0])]
+    fromUnit: Union[int, float] = data.unitTypes[str(fromTypeUnit[0])]
+    toUnit: Union[int, float] = data.unitTypes[str(toTypeUnit[0])]
     
-    postConversion = amount * (fromUnit / toUnit)
+    postConversion: Union[int, float] = amount * (fromUnit / toUnit)
     
     return postConversion

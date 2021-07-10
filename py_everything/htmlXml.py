@@ -1,14 +1,16 @@
-def getElementsByTag(tagName: str, fileName: str):
-    nonN = []
+from typing import List
+
+def getElementsByTag(tagName: str, fileName: str) -> List[str]:
+    nonN: List[str] = []
     with open(fileName, 'r+') as f:
-        html = f.readlines()
+        html: List[str] = f.readlines()
         for line in html:
             nonN.append(line.replace('\n', ''))
     
-    pattern = f"<{tagName}>"
-    patternAlt = f"{tagName} />"
+    pattern: str = f"<{tagName}>"
+    patternAlt: str = f"{tagName} />"
     
-    matches = []
+    matches: List[str] = []
     
     for line in nonN:
         if pattern in line:
@@ -18,17 +20,17 @@ def getElementsByTag(tagName: str, fileName: str):
     
     return matches
 
-def getElementsById(idName: str, fileName: str):
-    nonN = []
+def getElementsById(idName: str, fileName: str) -> List[str]:
+    nonN: List[str] = []
     with open(fileName, 'r+') as f:
-        html = f.readlines()
+        html: List[str] = f.readlines()
         for line in html:
             nonN.append(line.replace('\n', ''))
     
-    pattern = f"id=\"{idName}\""
-    patternAlt = f"id='{idName}'"
+    pattern: str = f"id=\"{idName}\""
+    patternAlt: str = f"id='{idName}'"
     
-    matches = []
+    matches: List[str] = []
     
     for line in nonN:
         if pattern in line:
@@ -38,17 +40,17 @@ def getElementsById(idName: str, fileName: str):
     
     return matches
 
-def getElementsByClass(className: str, fileName: str):
-    nonN = []
+def getElementsByClass(className: str, fileName: str) -> List[str]:
+    nonN: List[str] = []
     with open(fileName, 'r+') as f:
-        html = f.readlines()
+        html: List[str] = f.readlines()
         for line in html:
             nonN.append(line.replace('\n', ''))
     
-    pattern = f"class=\"{className}\""
-    patternAlt = f"class='{className}'"
+    pattern: str = f"class=\"{className}\""
+    patternAlt: str = f"class='{className}'"
     
-    matches = []
+    matches: List[str] = []
     
     for line in nonN:
         if pattern in line:
@@ -58,39 +60,17 @@ def getElementsByClass(className: str, fileName: str):
     
     return matches
 
-def getElementByTag(tagName: str, fileName: str):
-    nonN = []
+def getElementByTag(tagName: str, fileName: str) -> List[str]:
+    nonN: List[str] = []
     with open(fileName, 'r+') as f:
-        html = f.readlines()
+        html: List[str] = f.readlines()
         for line in html:
             nonN.append(line.replace('\n', ''))
     
-    pattern = f"<{tagName}>"
-    patternAlt = f"<{tagName} />"
+    pattern: str = f"<{tagName}>"
+    patternAlt: str = f"<{tagName} />"
     
-    matches = []
-    
-    for line in nonN:
-        if pattern in line:
-            matches.append(line)
-            break
-        elif patternAlt in line:
-            matches.append(line)
-            break
-    
-    return matches
-
-def getElementById(idName: str, fileName: str):
-    nonN = []
-    with open(fileName, 'r+') as f:
-        html = f.readlines()
-        for line in html:
-            nonN.append(line.replace('\n', ''))
-    
-    pattern = f"id=\"{idName}\""
-    patternAlt = f"id='{idName}'"
-    
-    matches = []
+    matches: List[str] = []
     
     for line in nonN:
         if pattern in line:
@@ -102,17 +82,39 @@ def getElementById(idName: str, fileName: str):
     
     return matches
 
-def getElementByClass(className: str, fileName: str):
-    nonN = []
+def getElementById(idName: str, fileName: str) -> List[str]:
+    nonN: List[str] = []
     with open(fileName, 'r+') as f:
-        html = f.readlines()
+        html: List[str] = f.readlines()
         for line in html:
             nonN.append(line.replace('\n', ''))
     
-    pattern = f"class=\"{className}\""
-    patternAlt = f"class='{className}'"
+    pattern: str = f"id=\"{idName}\""
+    patternAlt: str = f"id='{idName}'"
     
-    matches = []
+    matches: List[str] = []
+    
+    for line in nonN:
+        if pattern in line:
+            matches.append(line)
+            break
+        elif patternAlt in line:
+            matches.append(line)
+            break
+    
+    return matches
+
+def getElementByClass(className: str, fileName: str) -> List[str]:
+    nonN: List[str] = []
+    with open(fileName, 'r+') as f:
+        html: List[str] = f.readlines()
+        for line in html:
+            nonN.append(line.replace('\n', ''))
+    
+    pattern: str = f"class=\"{className}\""
+    patternAlt: str = f"class='{className}'"
+    
+    matches: List[str] = []
     
     for line in nonN:
         if pattern in line:
@@ -129,16 +131,16 @@ class HTMLObject:
     def __init__(self, fileName: str):
         self.fileName = fileName
         
-    def getElementsByTag(self, tagName: str):
-        nonN = []
+    def getElementsByTag(self, tagName: str) -> List[str]:
+        nonN: List[str] = []
         with open(self.fileName, 'r+') as f:
-            html = f.readlines()
+            html: List[str] = f.readlines()
             for line in html:
                 nonN.append(line.replace('\n', ''))
         
-        pattern = f"<{tagName}>"
+        pattern: str = f"<{tagName}>"
         
-        matches = []
+        matches: List[str] = []
         
         for line in nonN:
             if pattern in line:
@@ -146,37 +148,17 @@ class HTMLObject:
         
         return matches
 
-    def getElementsById(self, idName: str):
-        nonN = []
+    def getElementsById(self, idName: str) -> List[str]:
+        nonN: List[str] = []
         with open(self.fileName, 'r+') as f:
-            html = f.readlines()
+            html: List[str] = f.readlines()
             for line in html:
                 nonN.append(line.replace('\n', ''))
         
-        pattern = f"id=\"{idName}\""
-        patternAlt = f"id='{idName}'"
+        pattern: str = f"id=\"{idName}\""
+        patternAlt: str = f"id='{idName}'"
         
-        matches = []
-        
-        for line in nonN:
-            if pattern in line:
-                matches.append(line)
-            elif patternAlt in line:
-                matches.append(line)
-        
-        return matches
-
-    def getElementsByClass(self, className: str):
-        nonN = []
-        with open(self.fileName, 'r+') as f:
-            html = f.readlines()
-            for line in html:
-                nonN.append(line.replace('\n', ''))
-        
-        pattern = f"class=\"{className}\""
-        patternAlt = f"class='{className}'"
-        
-        matches = []
+        matches: List[str] = []
         
         for line in nonN:
             if pattern in line:
@@ -186,17 +168,37 @@ class HTMLObject:
         
         return matches
 
-    def getElementByTag(self, tagName: str):
-        nonN = []
+    def getElementsByClass(self, className: str) -> List[str]:
+        nonN: List[str] = []
         with open(self.fileName, 'r+') as f:
-            html = f.readlines()
+            html: List[str] = f.readlines()
             for line in html:
                 nonN.append(line.replace('\n', ''))
         
-        pattern = f"<{tagName}>"
-        patternAlt = f"<{tagName} />"
+        pattern: str = f"class=\"{className}\""
+        patternAlt: str = f"class='{className}'"
         
-        matches = []
+        matches: List[str] = []
+        
+        for line in nonN:
+            if pattern in line:
+                matches.append(line)
+            elif patternAlt in line:
+                matches.append(line)
+        
+        return matches
+
+    def getElementByTag(self, tagName: str) -> List[str]:
+        nonN: List[str] = []
+        with open(self.fileName, 'r+') as f:
+            html: List[str] = f.readlines()
+            for line in html:
+                nonN.append(line.replace('\n', ''))
+        
+        pattern: str = f"<{tagName}>"
+        patternAlt: str = f"<{tagName} />"
+        
+        matches: List[str] = []
         
         for line in nonN:
             if pattern in line:
@@ -208,17 +210,17 @@ class HTMLObject:
         
         return matches
 
-    def getElementById(self, idName: str):
-        nonN = []
+    def getElementById(self, idName: str) -> List[str]:
+        nonN: List[str] = []
         with open(self.fileName, 'r+') as f:
-            html = f.readlines()
+            html: List[str] = f.readlines()
             for line in html:
                 nonN.append(line.replace('\n', ''))
         
-        pattern = f"id=\"{idName}\""
-        patternAlt = f"id='{idName}'"
+        pattern: str = f"id=\"{idName}\""
+        patternAlt: str = f"id='{idName}'"
         
-        matches = []
+        matches: List[str] = []
         
         for line in nonN:
             if pattern in line:
@@ -230,17 +232,17 @@ class HTMLObject:
         
         return matches
 
-    def getElementByClass(self, className: str):
-        nonN = []
+    def getElementByClass(self, className: str) -> List[str]:
+        nonN: List[str] = []
         with open(self.fileName, 'r+') as f:
-            html = f.readlines()
+            html: List[str] = f.readlines()
             for line in html:
                 nonN.append(line.replace('\n', ''))
         
-        pattern = f"class=\"{className}\""
-        patternAlt = f"class='{className}'"
+        pattern: str = f"class=\"{className}\""
+        patternAlt: str = f"class='{className}'"
         
-        matches = []
+        matches: List[str] = []
         
         for line in nonN:
             if pattern in line:

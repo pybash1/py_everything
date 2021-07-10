@@ -1,8 +1,9 @@
-from typing import Union
+from typing import Union, List
 import math
+from . import error
 
 def add(num1: Union[int, float], num2: Union[int, float], *args) -> Union[int, float]:
-    sum = num1 + num2
+    sum: Union[int, float] = num1 + num2
     for num in args:
         sum += num
 
@@ -10,14 +11,14 @@ def add(num1: Union[int, float], num2: Union[int, float], *args) -> Union[int, f
 
 
 def subtract(num1: Union[int, float], num2: Union[int, float], *args) -> Union[int, float]:
-    sub = num1 - num2
+    sub: Union[int, float] = num1 - num2
     for num in args:
         sub -= num
     return sub
 
 
 def multiply(num1: Union[int, float], *args) -> Union[int, float]:
-    product = num1
+    product: Union[int, float] = num1
     for num in args:
         product = product * num
     return product
@@ -25,39 +26,41 @@ def multiply(num1: Union[int, float], *args) -> Union[int, float]:
 
 def divide(num1: Union[int, float], num2: Union[int, float], type: str) -> Union[int, float]:
     if type.lower() == 'int':
-        int_quotient = num1 / num2
+        int_quotient: Union[int, float] = num1 / num2
         return int_quotient
-    else:
-        float_quotient = num1 // num2
+    elif type.lower() == 'float':
+        float_quotient: Union[int, float] = num1 // num2
         return float_quotient
+    else:
+        raise error.UnknownDivisionTypeError(type)
 
 
 def floatDiv(num1: Union[int, float], num2: Union[int, float]) -> Union[int, float]:
-    quotient = num1 / num2
+    quotient: Union[int, float] = num1 / num2
     return quotient
 
 
 def intDiv(num1: Union[int, float], num2: Union[int, float]) -> Union[int, float]:
-    quotient = num1 // num2
+    quotient: Union[int, float] = num1 // num2
     return quotient
 
 
 def expo(num1: Union[int, float], num2: Union[int, float]) -> Union[int, float]:
-    expo = num1 ** num2
+    expo: Union[int, float] = num1 ** num2
     return expo
 
 
 def mod(num1: Union[int, float], num2: Union[int, float]) -> Union[int, float]:
-    remain = num1 % num2
+    remain: Union[int, float] = num1 % num2
     return remain
 
 
 def evalExp(exp):
-    solution = eval(exp)
+    solution: Union[int, float] = eval(exp)
     return solution
 
-def avg(listOfNos) -> float:
-    avg = 0.0
+def avg(listOfNos: Union[List[int], List[float]]) -> float:
+    avg: float = 0.0
     for num in listOfNos:
         avg += num
 
@@ -65,16 +68,16 @@ def avg(listOfNos) -> float:
     return avg
 
 def factorial(num: int) -> int:
-    factorial = 1
+    factorial: int = 1
     for i in range(1, num):
         factorial = factorial * i
         
     return factorial
 
 def ceil(num: int) -> int:
-    ceil = math.ceil(num)
+    ceil: int = math.ceil(num)
     return ceil
     
 def floor(num: int) -> int:
-    floor = math.floor(num)
+    floor: int = math.floor(num)
     return floor

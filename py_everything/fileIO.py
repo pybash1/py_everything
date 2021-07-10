@@ -1,12 +1,11 @@
 import os
 import shutil
-from . import error
 
-def readFile(filePath: str):
-    fileData = open(filePath, 'r').read()
+def readFile(filePath: str) -> str:
+    fileData: str = open(filePath, 'r').read()
     return fileData
 
-def writeFile(filePath: str, writeData: str):
+def writeFile(filePath: str, writeData: str) -> bool:
     if type(writeData) != type('str'):
         raise TypeError(f'Write Content Must Be Str Not {type(writeData)}')
     with open(filePath, 'r+') as file:
@@ -15,7 +14,7 @@ def writeFile(filePath: str, writeData: str):
         file.close()
         return True
 
-def clearFile(filePath: str):
+def clearFile(filePath: str) -> bool:
     with open(filePath, 'r+') as file:
         file.truncate(0)
         return True

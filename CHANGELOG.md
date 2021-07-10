@@ -15,7 +15,7 @@
 - Added Advanced Class Variant for `fileIO`
 
 # 1.1.0
-Fisrt Release - Production/Stable
+First Release - Production/Stable
 
 # 1.0.3
 Third Release - Beta
@@ -24,4 +24,4 @@ Third Release - Beta
 Second Release - Beta
 
 # 1.0.1
-First Release
+First Release - Alpha

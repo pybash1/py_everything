@@ -1,8 +1,8 @@
 # Mass
 class mg:
     def __init__(self):
-        self.name = 'MilliGram'
-        self.unit = 'mg'
+        self.name: str = 'MilliGram'
+        self.unit: str = 'mg'
     
     def __repr__(self) -> str:
         return f'mg(name={self.name}, unit={self.unit})'
@@ -12,8 +12,8 @@ class mg:
 
 class cg:
     def __init__(self):
-        self.name = 'CentiGram'
-        self.unit = 'cg'
+        self.name: str = 'CentiGram'
+        self.unit: str = 'cg'
     
     def __repr__(self) -> str:
         return f'cg(name={self.name}, unit={self.unit})'
@@ -23,8 +23,8 @@ class cg:
 
 class dg:
     def __init__(self):
-        self.name = 'DeciGram'
-        self.unit = 'dg'
+        self.name: str = 'DeciGram'
+        self.unit: str = 'dg'
     
     def __repr__(self) -> str:
         return f'dg(name={self.name}, unit={self.unit})'
@@ -34,8 +34,8 @@ class dg:
 
 class g:
     def __init__(self):
-        self.name = 'Gram'
-        self.unit = 'g'
+        self.name: str = 'Gram'
+        self.unit: str = 'g'
     
     def __repr__(self) -> str:
         return f'g(name={self.name}, unit={self.unit})'
@@ -45,8 +45,8 @@ class g:
 
 class dag:
     def __init__(self):
-        self.name = 'DekaGram'
-        self.unit = 'dag'
+        self.name: str = 'DekaGram'
+        self.unit: str = 'dag'
     
     def __repr__(self) -> str:
         return f'dag(name={self.name}, unit={self.unit})'
@@ -56,8 +56,8 @@ class dag:
 
 class hg:
     def __init__(self):
-        self.name = 'HectoGram'
-        self.unit = 'hg'
+        self.name: str = 'HectoGram'
+        self.unit: str = 'hg'
     
     def __repr__(self) -> str:
         return f'hg(name={self.name}, unit={self.unit})'
@@ -67,8 +67,8 @@ class hg:
 
 class kg:
     def __init__(self):
-        self.name = 'KiloGram'
-        self.unit = 'kg'
+        self.name: str = 'KiloGram'
+        self.unit: str = 'kg'
     
     def __repr__(self) -> str:
         return f'kg(name={self.name}, unit={self.unit})'
@@ -79,8 +79,8 @@ class kg:
 # Volume
 class ml:
     def __init__(self):
-        self.name = 'MilliLiter'
-        self.unit = 'ml'
+        self.name: str = 'MilliLiter'
+        self.unit: str = 'ml'
     
     def __repr__(self) -> str:
         return f'ml(name={self.name}, unit={self.unit})'
@@ -90,8 +90,8 @@ class ml:
 
 class cl:
     def __init__(self):
-        self.name = 'CentiLiter'
-        self.unit = 'cl'
+        self.name: str = 'CentiLiter'
+        self.unit: str = 'cl'
     
     def __repr__(self) -> str:
         return f'cl(name={self.name}, unit={self.unit})'
@@ -101,8 +101,8 @@ class cl:
 
 class dl:
     def __init__(self):
-        self.name = 'DeciLiter'
-        self.unit = 'dl'
+        self.name: str = 'DeciLiter'
+        self.unit: str = 'dl'
     
     def __repr__(self) -> str:
         return f'dl(name={self.name}, unit={self.unit})'
@@ -112,8 +112,8 @@ class dl:
 
 class l:
     def __init__(self):
-        self.name = 'Liter'
-        self.unit = 'l'
+        self.name: str = 'Liter'
+        self.unit: str = 'l'
     
     def __repr__(self) -> str:
         return f'l(name={self.name}, unit={self.unit})'
@@ -123,8 +123,8 @@ class l:
 
 class dal:
     def __init__(self):
-        self.name = 'DekaLiter'
-        self.unit = 'da'
+        self.name: str = 'DekaLiter'
+        self.unit: str = 'da'
     
     def __repr__(self) -> str:
         return f'da(name={self.name}, unit={self.unit})'
@@ -134,8 +134,8 @@ class dal:
 
 class hl:
     def __init__(self):
-        self.name = 'HectoLiter'
-        self.unit = 'hl'
+        self.name: str = 'HectoLiter'
+        self.unit: str = 'hl'
     
     def __repr__(self) -> str:
         return f'hl(name={self.name}, unit={self.unit})'
@@ -145,8 +145,8 @@ class hl:
 
 class kl:
     def __init__(self):
-        self.name = 'KiloLiter'
-        self.unit = 'kl'
+        self.name: str = 'KiloLiter'
+        self.unit: str = 'kl'
     
     def __repr__(self) -> str:
         return f'kl(name={self.name}, unit={self.unit})'
@@ -157,8 +157,8 @@ class kl:
 # Length
 class mm:
     def __init__(self):
-        self.name = 'MilliMeter'
-        self.unit = 'mm'
+        self.name: str = 'MilliMeter'
+        self.unit: str = 'mm'
     
     def __repr__(self) -> str:
         return f'mm(name={self.name}, unit={self.unit})'
@@ -168,8 +168,8 @@ class mm:
 
 class cm:
     def __init__(self):
-        self.name = 'CentiMeter'
-        self.unit = 'cm'
+        self.name: str = 'CentiMeter'
+        self.unit: str = 'cm'
     
     def __repr__(self) -> str:
         return f'cm(name={self.name}, unit={self.unit})'
@@ -179,8 +179,8 @@ class cm:
 
 class dm:
     def __init__(self):
-        self.name = 'DeciMeter'
-        self.unit = 'dm'
+        self.name: str = 'DeciMeter'
+        self.unit: str = 'dm'
     
     def __repr__(self) -> str:
         return f'dm(name={self.name}, unit={self.unit})'
@@ -190,8 +190,8 @@ class dm:
 
 class m:
     def __init__(self):
-        self.name = 'Meter'
-        self.unit = 'm'
+        self.name: str = 'Meter'
+        self.unit: str = 'm'
     
     def __repr__(self) -> str:
         return f'm(name={self.name}, unit={self.unit})'
@@ -201,8 +201,8 @@ class m:
 
 class dam:
     def __init__(self):
-        self.name = 'DekaMeter'
-        self.unit = 'dam'
+        self.name: str = 'DekaMeter'
+        self.unit: str = 'dam'
     
     def __repr__(self) -> str:
         return f'dam(name={self.name}, unit={self.unit})'
@@ -212,8 +212,8 @@ class dam:
 
 class hm:
     def __init__(self):
-        self.name = 'HectoMeter'
-        self.unit = 'hm'
+        self.name: str = 'HectoMeter'
+        self.unit: str = 'hm'
     
     def __repr__(self) -> str:
         return f'hm(name={self.name}, unit={self.unit})'
@@ -223,8 +223,8 @@ class hm:
 
 class km:
     def __init__(self):
-        self.name = 'KiloMeter'
-        self.unit = 'km'
+        self.name: str = 'KiloMeter'
+        self.unit: str = 'km'
     
     def __repr__(self) -> str:
         return f'km(name={self.name}, unit={self.unit})'

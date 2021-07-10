@@ -15,20 +15,24 @@ class startAppFailedError(Exception):
 
 class InvalidKeyListError(Exception):
     def __init__(self):
-        self.msg = "Given Key List is Invaild"
+        self.msg: str = "Given Key List is Invaild"
         super().__init__(self.msg)
 
 class InvalidSymbolKeyError(Exception):
     def __init__(self):
-        self.msg = "The given Symbol Key is Invalid"
+        self.msg: str = "The given Symbol Key is Invalid"
         super().__init__(self.msg)
 
 class InvalidOperationPerformedError(Exception):
     def __init__(self):
-        self.msg = "The operation was performed on a local path where the operation was  for web paths or vice versa"
+        self.msg: str = "The operation was performed on a local path where the operation was  for web paths or vice versa"
         super().__init__(self.msg)
 
 class UnknownPathTypeError(Exception):
     def __init__(self):
-        self.msg = "Provided path did not match any available types - web, and local"
+        self.msg: str = "Provided path did not match any available types - web, and local"
         super().__init__(self.msg)
+
+class UnknownDivisionTypeError(Exception):
+    def __init__(self, type: str):
+        self.msg: str = f'Unknown division type \'{type}\''

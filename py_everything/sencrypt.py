@@ -1,3 +1,5 @@
+from typing import List
+
 '''
 Super Encrypt - Encryption Algorithm with 4 key encryption and decryption
 
@@ -7,11 +9,11 @@ __version__ = "v1.0.0"
 import random
 from . import error
 
-BASE_LETTERS = 'abcdefghijklmnopqrstuvwxyz'
-BASE_SYMBOLS = ' 1234567890!@#$%^&*()-_=+[{]};:\'"<,>.?/`~|\\'
+BASE_LETTERS: str = 'abcdefghijklmnopqrstuvwxyz'
+BASE_SYMBOLS: str = ' 1234567890!@#$%^&*()-_=+[{]};:\'"<,>.?/`~|\\'
 
-def genCharKeys():
-    base = list(BASE_LETTERS)
+def genCharKeys() -> List[str]:
+    base: List[str] = list(BASE_LETTERS)
     random.shuffle(base)
     key1 = ''.join(base)
     random.shuffle(base)
@@ -20,30 +22,30 @@ def genCharKeys():
     key3 = ''.join(base)
     random.shuffle(base)
     key4 = ''.join(base)
-    keyList = []
+    keyList: List[str] = []
     keyList.append(key1)
     keyList.append(key2)
     keyList.append(key3)
     keyList.append(key4)
     return keyList
 
-def genSymKey():
-    base = list(BASE_SYMBOLS)
+def genSymKey() -> str:
+    base: List[str] = list(BASE_SYMBOLS)
     random.shuffle(base)
-    key = ''.join(base)
+    key: str = ''.join(base)
     return key
 
-def checkCharKeys(keyList):
+def checkCharKeys(keyList: List[str]):
     key1 = keyList[0].replace("\n", '')
     key2 = keyList[1].replace("\n", '')
     key3 = keyList[2].replace("\n", '')
     key4 = keyList[3].replace("\n", '')
     base = BASE_LETTERS
-    key1Sorted = sorted(key1)
-    key2Sorted = sorted(key2)
-    key3Sorted = sorted(key3)
-    key4Sorted = sorted(key4)
-    baseSorted = sorted(base)
+    key1Sorted: List[str] = sorted(key1)
+    key2Sorted: List[str] = sorted(key2)
+    key3Sorted: List[str] = sorted(key3)
+    key4Sorted: List[str] = sorted(key4)
+    baseSorted: List[str] = sorted(base)
     key1 = "".join(key1Sorted)
     key2 = "".join(key2Sorted)
     key3 = "".join(key3Sorted)
@@ -60,10 +62,10 @@ def checkCharKeys(keyList):
         raise error.InvalidKeyListError()
     
 def checkSymKey(symKey: str): 
-    sym = symKey
-    base = BASE_SYMBOLS
-    symSorted = sorted(sym)
-    baseSorted = sorted(base)
+    sym: str = symKey
+    base: str = BASE_SYMBOLS
+    symSorted: List[str] = sorted(sym)
+    baseSorted: List[str] = sorted(base)
     sym = "".join(symSorted)
     base = "".join(baseSorted)
     
@@ -71,32 +73,32 @@ def checkSymKey(symKey: str):
         raise error.InvalidSymbolKeyError()
 
 class SuperEncrypt():
-    def __init__(self, keyCharList, keySym: str):
-        self.keyCharList = keyCharList
+    def __init__(self, keyCharList: List[str], keySym: str):
+        self.keyCharList: List[str] = keyCharList
         self.key1 = self.keyCharList[0]
         self.key2 = self.keyCharList[1]
         self.key3 = self.keyCharList[2]
         self.key4 = self.keyCharList[3]
-        self.key5 = keySym
+        self.key5: str = keySym
 
     def encrypt(self, msg: str) -> str:
-        encrypted1 = ''
-        encrypted2 = ''
-        encrypted3 = ''
-        encrypted4 = ''
-        encryptedSym = ''
+        encrypted1: str = ''
+        encrypted2: str = ''
+        encrypted3: str = ''
+        encrypted4: str = ''
+        encryptedSym: str = ''
         
         checkCharKeys(self.keyCharList)
         checkSymKey(self.key5)
         
         for char in msg:
-            actualChars = BASE_LETTERS
-            encryptedChars = self.key1
+            actualChars: str = BASE_LETTERS
+            encryptedChars: str = self.key1
             if char.lower() not in actualChars:
                 encrypted1 += char.replace(char, char)
             else:
-                charIndex = actualChars.find(char.lower())
-                encryptedElem = encryptedChars[charIndex]
+                charIndex: int = actualChars.find(char.lower())
+                encryptedElem: str = encryptedChars[charIndex]
                 if char.isupper():
                     encrypted1 += char.replace(char, encryptedElem.upper())
                 else:
@@ -157,23 +159,23 @@ class SuperEncrypt():
         return encryptedSym
 
     def decrypt(self, msg: str) -> str:
-        decrypted4 = ''
-        decrypted3 = ''
-        decrypted2 = ''
-        decrypted1 = ''
-        decryptedSym = ''
+        decrypted4: str = ''
+        decrypted3: str = ''
+        decrypted2: str = ''
+        decrypted1: str = ''
+        decryptedSym: str = ''
         
         checkCharKeys(self.keyCharList)
         checkSymKey(self.key5)
         
         for char in msg:
             actualChars = self.key4
-            decryptedChars = BASE_LETTERS
+            decryptedChars: str = BASE_LETTERS
             if char.lower() not in actualChars:
                 decrypted4 += char.replace(char, char)
             else:
                 charIndex = actualChars.find(char.lower())
-                decryptedElem = decryptedChars[charIndex]
+                decryptedElem: str = decryptedChars[charIndex]
                 if char.isupper():
                     decrypted4 += char.replace(char, decryptedElem.upper())
                 else:
