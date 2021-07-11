@@ -1,8 +1,10 @@
-************************
-py_everything.conversion
-************************
+********************************
+:mod:`py_everything.conversion`
+********************************
 
-.. currentmodule:: py_everything.conversion
+.. module:: py_everything.conversion
+
+**Source code:** `py_everything/conversion.py <https://github.com/pybash1/py_everything/blob/master/py_everything/conversion.py>`_
 
 This module conatins classes for conversion like, Mass, Length, etc.
 And it deals with conversion of units.
@@ -70,7 +72,7 @@ And it deals with conversion of units.
 
         Even though amount is given input to both Length classes, the amount in fromType is only used.
 
-.. method:: convert(fromType, toType)
+.. function:: convert(fromType, toType)
 
     Converts value from unit to another.
 

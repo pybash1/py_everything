@@ -35,6 +35,7 @@ People who have contributed to this project -
 * `pybash(Creator and Maintainer) <https://github.com/pybash1>`_
 * `Farid(Contributor) <https://github.com/mfaridn03>`_
 * `Morgan-Phoenix(Contributor and Collaborator) <https://github.com/Morgan-Phoenix>`_
+* `tsukuyomm(Contributor) <https://github.com/tsukuyomm>`_
 
 
 .. toctree::
@@ -49,6 +50,7 @@ People who have contributed to this project -
    
    py_everything
    py_everything.automation
+   py_everything.bencrypt
    py_everything.conversion
    py_everything.dateUtils
    py_everything.error
@@ -56,6 +58,7 @@ People who have contributed to this project -
    py_everything.htmlXml
    py_everything.maths
    py_everything.mensuration
+   py_everything.path
    py_everything.search
    py_everything.sencrypt
    py_everything.units

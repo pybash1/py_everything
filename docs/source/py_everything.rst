@@ -1,16 +1,18 @@
-*************
-py_everything
-*************
+*********************
+:mod:`py_everything`
+*********************
 
-.. currentmodule:: py_everything
+.. module:: py_everything
+
+**Source code:** `py_everything/__init__.py <https://github.com/pybash1/py_everything/blob/master/py_everything/__init__.py>`_
 
 This module contains some basic functions. This is the base module of the library.
 
-.. method:: helloWorld()
+.. function:: helloWorld()
 
    Super Simple and Basic function that prints "Hello, World!"
 
-.. method:: printNoNewline(*args)
+.. function:: printNoNewline(*args)
 
    Prints text without newlines. Very basic function.
 
@@ -20,7 +22,7 @@ This module contains some basic functions. This is the base module of the librar
 
       You cannot customize what is printed instead of the newline.
 
-.. method:: clearPycache(path)
+.. function:: clearPycache(path)
 
    Deletes *__pycache__* folder from `path`.
 
@@ -29,7 +31,7 @@ This module contains some basic functions. This is the base module of the librar
    :raises error.pycacheNotFoundError: This exception is raised if ``path`` does not contain
                            ``__pycache__``.
 
-.. method:: installModules(*args)
+.. function:: installModules(*args)
 
    Install modules using ``pip``, while execution.
 
@@ -38,37 +40,37 @@ This module contains some basic functions. This is the base module of the librar
    :raises error.installModulesFailedError: This exception is raised if all modules could not be
                                              installed successfully. Occurs if package doesn't exist.
 
-.. method:: alphabet()
+.. function:: alphabet()
 
    Get a list of all alphabets in lowercase.
 
    :returns list: List containing all alphabets in lowercase in alphabetical order.
 
-.. method:: alphabetCaps()
+.. function:: alphabetCaps()
 
    Get a list of all alphabets in uppercase.
 
    :returns list: List containing all alphabets in uppercase in alphabetical order.
 
-.. method:: alphabetStr()
+.. function:: alphabetStr()
 
    Get a string of all alphabets in lowercase.
 
    :returns str: String containing all alphabets in lowercase in alphabetical order.
 
-.. method:: alphabetCapsStr()
+.. function:: alphabetCapsStr()
 
    Get a string of all alphabets in uppercase.
 
    :returns str: String containing all alphabets in uppercase in alphabetical order.
 
-.. method:: nums()
+.. function:: nums()
 
    Get a list of all numbers(0-9).
 
    :returns list: List containing all numbers(0-9) in ascending order.
 
-.. method:: syms()
+.. function:: syms()
 
    Get a list of all symbols.
 

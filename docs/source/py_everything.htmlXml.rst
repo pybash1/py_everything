@@ -1,8 +1,10 @@
-**********************
-py_everything.htmlXml
-**********************
+*****************************
+:mod:`py_everything.htmlXml`
+*****************************
 
-.. currentmodule:: py_everything.htmlXml
+.. module:: py_everything.htmlXml
+
+**Source code:** `py_everything/htmlXml.py <https://github.com/pybash1/py_everything/blob/master/py_everything/htmlXml.py>`_
 
 This module deals with HTML/XML Files. This module will be extended in later releases.
 With functions that fetch tags from document for you to a class allowing all methods in one!
@@ -30,7 +32,7 @@ certain tag is not closed. This module was added in version 2.0.0
     :param fileName: A string containing full path to HTML/XML file.
     :type fileName: str
 
-    .. method:: getElementsByTag(tagName)
+    .. function:: getElementsByTag(tagName)
 
         Searches HTML/XML file for given ``tagName``.
 
@@ -41,7 +43,7 @@ certain tag is not closed. This module was added in version 2.0.0
 
             The whole line is returned if a match is found. And the tag is not validated.
 
-    .. method:: getElementsById(idName)
+    .. function:: getElementsById(idName)
 
         Searches HTML/XML file for given tags with the id of ``idName``.
 
@@ -52,7 +54,7 @@ certain tag is not closed. This module was added in version 2.0.0
 
             The whole line is returned if a match is found. And the tag is not validated.
 
-    .. method:: getElementsByClass(className)
+    .. function:: getElementsByClass(className)
 
         Searches HTML/XML file for given tags with the class of ``className``.
 
@@ -63,7 +65,7 @@ certain tag is not closed. This module was added in version 2.0.0
 
             The whole line is returned if a match is found. And the tag is not validated.
 
-    .. method:: getElementByTag(tagName)
+    .. function:: getElementByTag(tagName)
 
         Searches HTML/XML file for given ``tagName``. And returns only the first match.
 
@@ -74,7 +76,7 @@ certain tag is not closed. This module was added in version 2.0.0
 
             The whole line is returned if a match is found. And the tag is not validated.
 
-    .. method:: getElementById(idName)
+    .. function:: getElementById(idName)
 
         Searches HTML/XML file for given tags with the id of ``idName``. And returns only the first match.
 
@@ -85,7 +87,7 @@ certain tag is not closed. This module was added in version 2.0.0
 
             The whole line is returned if a match is found. And the tag is not validated.
 
-    .. method:: getElementByClass(className)
+    .. function:: getElementByClass(className)
 
         Searches HTML/XML file for given tags with the class of ``className``. And returns only the first match.
 
@@ -100,7 +102,7 @@ certain tag is not closed. This module was added in version 2.0.0
 
 
 
-.. method:: getElementsByTag(tagName, fileName)
+.. function:: getElementsByTag(tagName, fileName)
 
     Searches HTML/XML file ``fileName`` for given ``tagName``.
 
@@ -112,7 +114,7 @@ certain tag is not closed. This module was added in version 2.0.0
 
         The whole line is returned if a match is found. And the tag is not validated.
 
-.. method:: getElementsById(idName, fileName)
+.. function:: getElementsById(idName, fileName)
 
     Searches HTML/XML file ``fileName`` for given tags with the id of ``idName``.
 
@@ -124,7 +126,7 @@ certain tag is not closed. This module was added in version 2.0.0
 
         The whole line is returned if a match is found. And the tag is not validated.
 
-.. method:: getElementsByClass(className, fileName)
+.. function:: getElementsByClass(className, fileName)
 
     Searches HTML/XML file ``fileName`` for given tags with the class of ``className``.
 
@@ -136,7 +138,7 @@ certain tag is not closed. This module was added in version 2.0.0
 
         The whole line is returned if a match is found. And the tag is not validated.
 
-.. method:: getElementByTag(tagName, fileName)
+.. function:: getElementByTag(tagName, fileName)
 
     Searches HTML/XML file ``fileName`` for given ``tagName``. And returns only the first match.
 
@@ -148,7 +150,7 @@ certain tag is not closed. This module was added in version 2.0.0
 
         The whole line is returned if a match is found. And the tag is not validated.
 
-.. method:: getElementById(idName, fileName)
+.. function:: getElementById(idName, fileName)
 
     Searches HTML/XML file ``fileName`` for given tags with the id of ``idName``. And returns only the first match.
 
@@ -160,7 +162,7 @@ certain tag is not closed. This module was added in version 2.0.0
 
         The whole line is returned if a match is found. And the tag is not validated.
 
-.. method:: getElementByClass(className, fileName)
+.. function:: getElementByClass(className, fileName)
 
     Searches HTML/XML file ``fileName`` for given tags with the class of ``className``. And returns only the first match.
 

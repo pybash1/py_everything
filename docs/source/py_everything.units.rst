@@ -1,8 +1,10 @@
-*******************
-py_everything.units
-*******************
+***************************
+:mod:`py_everything.units`
+***************************
 
-.. currentmodule:: py_everything.units
+.. module:: py_everything.units
+
+**Source code:** `py_everything/units.py <https://github.com/pybash1/py_everything/blob/master/py_everything/units.py>`_
 
 .. class:: mg()
 

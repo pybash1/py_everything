@@ -4,10 +4,3 @@ groundwork-sphinx-theme
 python-docs-theme
 Sphinx
 sphinx-rtd-theme
-sphinxcontrib-applehelp
-sphinxcontrib-devhelp
-sphinxcontrib-htmlhelp
-sphinxcontrib-jsmath
-sphinxcontrib-qthelp
-sphinxcontrib-serializinghtml
-sphinxcontrib-websupport

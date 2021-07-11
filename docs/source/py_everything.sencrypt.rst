@@ -1,33 +1,35 @@
-***********************
-py_everything.sencrypt
-***********************
+******************************
+:mod:`py_everything.sencrypt`
+******************************
 
-.. currentmodule:: py_everything.sencrypt
+.. module:: py_everything.sencrypt
+
+**Source code:** `py_everything/sencrypt.py <https://github.com/pybash1/py_everything/blob/master/py_everything/sencrypt.py>`_
 
 This module deals with Encryption. Currently only string
 encryption is supported but file encryption will be supported soon.
 
-.. method:: genCharKeys()
+.. function:: genCharKeys()
 
     This generates 4 character keys and returns the list
     containing them. These keys are required for encryption.
 
     :returns list: List of keys for encryption
 
-.. method:: genSymKey()
+.. function:: genSymKey()
 
     This generates a symbol key and returns the same. These keys are required for encryption.
 
     :returns str: Symbol key for encryption
 
-.. method:: checkCharKeys(keyList)
+.. function:: checkCharKeys(keyList)
 
     Checks if character keys are valid.
 
     :param keyList: List of keys
     :raises error.InvalidKeyListError: Raised when ``keyList`` contains invalid.
 
-.. method:: checkSymKey(symKey)
+.. function:: checkSymKey(symKey)
 
     Checks if symbol key is valid.
 
@@ -56,14 +58,14 @@ encryption is supported but file encryption will be supported soon.
     :param keyCharList: List of character keys
     :param str keySym: Symbolkeys
 
-    .. method:: encrypt(msg)
+    .. function:: encrypt(msg)
 
         Encrypts ``msg`` using provided keys.
 
         :param str msg: Text to be encrypted.
         :returns str: Encrypted string.
 
-    .. method:: decrypt(msg)
+    .. function:: decrypt(msg)
 
         Decrypts ``msg`` using provided keys.
 

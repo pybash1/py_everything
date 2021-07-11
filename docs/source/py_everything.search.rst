@@ -1,12 +1,14 @@
-********************
-py_everything.search
-********************
+****************************
+:mod:`py_everything.search`
+****************************
 
-.. currentmodule:: py_everything.search
+.. module:: py_everything.search
+
+**Source code:** `py_everything/search.py <https://github.com/pybash1/py_everything/blob/master/py_everything/search.py>`_
 
 This module deals with search operations, like files, lists, etc.
 
-.. method:: searchFiles(keyword, path)
+.. function:: searchFiles(keyword, path)
 
    Searches ``path`` for files matching with ``keyword``.
 
@@ -14,7 +16,7 @@ This module deals with search operations, like files, lists, etc.
    :param str path: Full path to directory to search in
    :returns list: List of matches
 
-.. method:: searchDirs(keyword, path)
+.. function:: searchDirs(keyword, path)
 
    Searches ``path`` for directories matching with ``keyword``.
 
@@ -22,7 +24,7 @@ This module deals with search operations, like files, lists, etc.
    :param str path: Full path to directory to search in
    :returns list: List of matches
 
-.. method:: searchExts(keyword, path)
+.. function:: searchExts(keyword, path)
 
    Searches ``path`` for file extensions matching with ``keyword``.
 
@@ -30,7 +32,7 @@ This module deals with search operations, like files, lists, etc.
    :param str path: Full path to directory to search in
    :returns list: List of matches
 
-.. method:: searchList(listOfTerms, query, filter='in)
+.. function:: searchList(listOfTerms, query, filter='in)
 
    Searches ``listOfTerms`` for terms matching with ``query``.
 

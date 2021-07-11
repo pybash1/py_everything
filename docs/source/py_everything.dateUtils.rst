@@ -1,18 +1,20 @@
-************************
-py_everything.dateUtils
-************************
+********************************
+:mod:`py_everything.dateUtils`
+********************************
 
-.. currentmodule:: py_everything.dateUtils
+.. module:: py_everything.dateUtils
+
+**Source code:** `py_everything/dateUrils.py <https://github.com/pybash1/py_everything/blob/master/py_everything/dateUtils.py>`_
 
 This module deals date and time. Like, fetching current date, time, etc.
 
-.. method:: getDate()
+.. function:: getDate()
 
    This method fetches the date the program is being executed on.
 
    :returns: The date program is being executed on.
 
-.. method:: getDateTime()
+.. function:: getDateTime()
 
    This method fetches the date and time the program is being executed on.
 
@@ -22,13 +24,13 @@ This module deals date and time. Like, fetching current date, time, etc.
 
       This method returns a float for seconds of the time, like, 12 seconds would be 12.45365. It is very precise.
 
-.. method:: getTime()
+.. function:: getTime()
 
    This method fetches the time the program is being executed on.
 
    :returns: The time program is being executed on.
 
-.. method:: getCustomFormat(format)
+.. function:: getCustomFormat(format)
 
    This method fetches the date and/or time in a custom format.
 
