@@ -1,3 +1,14 @@
+# 2.1.0 (Type Era Update)
+- Added Type hinss to whole library
+- 2 new modules(`path` and `bencrypt`)
+- Better overall documentation
+- Better IDE Support
+- Typechecking
+- Bug fixes
+- Remove bad code
+- Removed unneccessary deep dependencies
+- Fixed dependencies
+
 # 2.0.0 (New Era Update)
 - Fixed few bugs
 - Removed `requestsLib` Module
@@ -7,6 +18,7 @@
 - All new documentation complete.
 - New CLI - gitIt
 - comes with setupPyGen v1.0.1
+
 
 # 1.1.2 (Production/Stable)
 - Fixed `requestsLib` functions with data parameter
