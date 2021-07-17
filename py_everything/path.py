@@ -1,6 +1,6 @@
 import os
 import re
-import error # type: ignore
+from . import error # type: ignore
 import webbrowser
 import requests
 
