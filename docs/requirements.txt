@@ -1,6 +1,2 @@
-alabaster
-docutils
-groundwork-sphinx-theme
-python-docs-theme
 Sphinx
-sphinx-rtd-theme
+python-docs-theme

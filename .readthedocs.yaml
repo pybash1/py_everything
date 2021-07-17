@@ -1,8 +1,7 @@
-# .readthedocs.yaml
-# Read the Docs configuration file
-# See https://docs.readthedocs.io/en/stable/config-file/v2.html for details
+# .readthedocs.yaml - Configuration file for readthedocs
+# See https://docs.readthedocs.io/en/stable/config-file/v2.html
 
-# Version is Required
+# Version (required)
 version: 2
 
 # Sphinx Configuration
@@ -15,7 +14,7 @@ formats:
     - pdf
     - epub
 
-# Python configuration
+# Python configuration and requirements
 python:
     version: 3.8
     install:

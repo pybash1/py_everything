@@ -1,10 +1,5 @@
-alabaster==0.7.12
-docutils==0.17.1
-groundwork-sphinx-theme==1.1.1
+Sphinx
 python-docs-theme==2021.5
 playsound==1.2.2
-Sphinx
-sphinx-rtd-theme==0.5.2
-twine==3.4.1
-virtualenv==20.6.0
 enrocrypt==1.0.7
+twine==3.4.1
