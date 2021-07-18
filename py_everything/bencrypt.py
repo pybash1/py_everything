@@ -7,11 +7,11 @@ def encrypt(data: str):
 
 def decrypt(key: bytes, data: bytes):
     value: bytes = encryption.Encryption().Decrypt(key, data)
-    return value
+    return str(value)
 
 def listDecrypt(encryptedList: List[str]):
     value: bytes = encryption.Encryption().Decrypt_List(encryptedList)
-    return value
+    return str(value)
 
 def encryptFile(filepath: str, keyFilepath: str):
     if encryption.Encryption().FileEncryption(filepath, keyFilepath):
