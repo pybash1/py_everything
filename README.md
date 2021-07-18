@@ -28,6 +28,7 @@ PyPI -
 Status - 
 
 [![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/pypi/py-everything/1.1.1)](https://libraries.io/pypi/py-everything)
+[![Libraries.io SourceRank](https://img.shields.io/librariesio/sourcerank/pypi/py-everything)](https://libraries.io/pypi/py-everything)
 [![GitHub issues](https://img.shields.io/github/issues/play4Tutorials/py_everything)](https://github.com/play4Tutorials/py_everything/issues)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/play4Tutorials/py_everything)](https://github.com/play4Tutorials/py_everything/pulls)
 [![GitHub branch checks state](https://img.shields.io/github/checks-status/play4Tutorials/py_everything/master)](https://github.com/play4Tutorials/py_everything)
@@ -44,7 +45,7 @@ GitHub -
 # Got Queries? Join our Discord!
 Have questions? Or find docs boring to read through? Then join our discord to get help and chat with the devs!
 
-<a href="https://discord.gg/DUeaUDxC7t"><img width="50px" height="50px" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/discord.svg"></a>
+[![Discord](https://img.shields.io/discord/838378704673308683)](https://discord.gg/DUeaUDxC7t)
 
 # Installation
 
