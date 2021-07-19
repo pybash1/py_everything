@@ -55,9 +55,6 @@ class TestPyEverything(unittest.TestCase):
     def test_avg(self):
         assert pyeMaths.avg([2, 4, 6, 8]) == 5
 
-    def test_install_modules(self):
-        assert pye.installModules("playsound") == True
-
     def test_read_file(self):
         assert pyeFileIO.readFile("read.txt") == 'demo\n'
 
