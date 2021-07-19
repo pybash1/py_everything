@@ -34,6 +34,7 @@ Status -
 [![GitHub branch checks state](https://img.shields.io/github/checks-status/play4Tutorials/py_everything/master)](https://github.com/play4Tutorials/py_everything)
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/play4Tutorials/py_everything/Test%20Package)](https://github.com/play4Tutorials/py_everything)
 [![Documentation Status](https://readthedocs.org/projects/py-everything/badge/?version=latest)](https://py-everything.readthedocs.io/en/latest/?badge=latest)
+[![Codecov](https://img.shields.io/codecov/c/github/pybash1/py_everything)]()
 
 GitHub - 
 
@@ -54,6 +55,7 @@ py_everything is available on [PyPi](https://pypi.org/project/py-everything), an
 `$ python -m pip install py-everything`
 
 py_everything officially supports Python 3.6+
+**NOTE: Currently `py_everything.bencrypt` requires you to have python 3.8+ due to a dpependency. Rest of the module requires python 3.6+**
 
 # Features
 
