@@ -1,4 +1,4 @@
-name: Workflow for Codecov
+name: Code Coverage
 on: [push]
 jobs:
   run:
@@ -16,7 +16,7 @@ jobs:
       run: |
         pip install coverage
         cd tests/
-        coverage run tests.py
+        coverage run test_py_everything.py
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v1
       with:
