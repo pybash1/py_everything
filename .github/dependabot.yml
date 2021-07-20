@@ -4,3 +4,9 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    milestone: 4
+    asignees:
+      - "Morgan-Phoenix"
+    labels:
+      - "dependencies"
+    
