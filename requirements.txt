@@ -2,4 +2,4 @@ Sphinx
 python-docs-theme==2021.5
 playsound==1.2.2
 enrocrypt==1.1.1
-twine==3.4.1
+twine==3.4.2
