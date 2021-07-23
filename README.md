@@ -54,9 +54,6 @@ py_everything is available on [PyPi](https://pypi.org/project/py-everything), an
 
 `$ python -m pip install py-everything`
 
-py_everything officially supports Python 3.6+
-**NOTE: Currently `py_everything.bencrypt` requires you to have python 3.8+ due to a dpependency. Rest of the module requires python 3.6+**
-
 # Features
 
 - You can make use of the huge number of functions and classes available to you.
