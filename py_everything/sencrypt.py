@@ -51,14 +51,14 @@ def checkCharKeys(keyList: List[str]):
     key3 = "".join(key3Sorted)
     key4 = "".join(key4Sorted)
     base = "".join(baseSorted)
-    
+
     if key1 != base:
         raise error.InvalidKeyListError()
-    elif key2 != base:
+    if key2 != base:
         raise error.InvalidKeyListError()
-    elif key3 != base:
+    if key3 != base:
         raise error.InvalidKeyListError()
-    elif key4 != base:
+    if key4 != base:
         raise error.InvalidKeyListError()
     
 def checkSymKey(symKey: str): 

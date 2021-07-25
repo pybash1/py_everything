@@ -27,57 +27,46 @@ class Path:
     def getRealPath(self):
         if self.type == 'web':
             raise error.InvalidOperationPerformedError()
-        else:
-            return os.path.realpath(self.path)
-            
+        return os.path.realpath(self.path)
     def isFile(self):
         if self.type == 'web':
             raise error.InvalidOperationPerformedError()
-        else:
-            return os.path.isfile(self.path)
+        return os.path.isfile(self.path)
         
     def isDir(self):
         if self.type == 'web':
             raise error.InvalidOperationPerformedError()
-        else:
-            return os.path.isdir(self.path)
+        return os.path.isdir(self.path)
         
     def getRelativePath(self):
         if self.type == 'web':
             raise error.InvalidOperationPerformedError()
-        else:
-            return os.path.relpath(self.path)
+        return os.path.relpath(self.path)
         
     def getLastAccessTime(self):
         if self.type == 'web':
             raise error.InvalidOperationPerformedError()
-        else:
-            return os.path.getatime(self.path)
+        return os.path.getatime(self.path)
         
     def getLastModifiedTime(self):
         if self.type == 'web':
             raise error.InvalidOperationPerformedError()
-        else:
-            return os.path.getmtime(self.path)
+        return os.path.getmtime(self.path)
 
     def openInBrowser(self):
         if self.type == 'local':
             raise error.InvalidOperationPerformedError()
-        else:
-            webbrowser.open(self.path)
+        webbrowser.open(self.path)
         
     def getRequest(self):
         if self.type == 'local':
             raise error.InvalidOperationPerformedError()
-        else:
-            res = requests.get(self.path)
-            
-            return res
-            
+        res = requests.get(self.path)
+
+        return res
     def getRequestStatusCode(self):
         if self.type == 'local':
             raise error.InvalidOperationPerformedError()
-        else:
-            res = requests.get(self.path)
-            
-            return res.status_code
+        res = requests.get(self.path)
+
+        return res.status_code
