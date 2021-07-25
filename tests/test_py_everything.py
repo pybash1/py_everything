@@ -59,10 +59,10 @@ class TestPyEverything(unittest.TestCase):
         assert pyeFileIO.readFile("read.txt") == 'demo\n'
 
     def test_write_file(self):
-        assert pyeFileIO.writeFile("write.txt", "demo data") == True
+        assert pyeFileIO.writeFile("write.txt", "demo data") is True
 
     def test_clear_file(self):
-        assert pyeFileIO.clearFile("clear.txt") == True
+        assert pyeFileIO.clearFile("clear.txt") is True
 
     def test_search_list(self):
         listToTest = ["py", "pypi", "anything", "something", "python", "other", "middlepy", "notmatch", "endpy"]
