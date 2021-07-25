@@ -5,7 +5,7 @@ updates:
     schedule:
       interval: "daily"
     milestone: 4
-    asignees:
+    assignees:
       - "Morgan-Phoenix"
     labels:
       - "dependencies"

@@ -1,6 +1,6 @@
 <p align="center">
 
-<img width="170px" height="170px" src="https://raw.githubusercontent.com/play4Tutorials/py_everything/master/extra/logo.png" alt="Logo">
+<img width="170px" height="170px" src="https://raw.githubusercontent.com/pybash1/py_everything/master/extra/logo.png" alt="Logo">
 
 </p>
 
@@ -27,21 +27,22 @@ PyPI -
 
 Status - 
 
-[![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/pypi/py-everything/1.1.1)](https://libraries.io/pypi/py-everything)
+[![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/pypi/py-everything)](https://libraries.io/pypi/py-everything)
 [![Libraries.io SourceRank](https://img.shields.io/librariesio/sourcerank/pypi/py-everything)](https://libraries.io/pypi/py-everything)
-[![GitHub issues](https://img.shields.io/github/issues/play4Tutorials/py_everything)](https://github.com/play4Tutorials/py_everything/issues)
-[![GitHub pull requests](https://img.shields.io/github/issues-pr/play4Tutorials/py_everything)](https://github.com/play4Tutorials/py_everything/pulls)
-[![GitHub branch checks state](https://img.shields.io/github/checks-status/play4Tutorials/py_everything/master)](https://github.com/play4Tutorials/py_everything)
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/play4Tutorials/py_everything/Test%20Package)](https://github.com/play4Tutorials/py_everything)
+[![GitHub issues](https://img.shields.io/github/issues/pybash1/py_everything)](https://github.com/pybash1/py_everything/issues)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/pybash1/py_everything)](https://github.com/pybash1/py_everything/pulls)
+[![GitHub branch checks state](https://img.shields.io/github/checks-status/pybash1/py_everything/master)](https://github.com/pybash1/py_everything)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/pybash1/py_everything/Test%20Package)](https://github.com/pybash1/py_everything)
 [![Documentation Status](https://readthedocs.org/projects/py-everything/badge/?version=latest)](https://py-everything.readthedocs.io/en/latest/?badge=latest)
 [![Codecov](https://img.shields.io/codecov/c/github/pybash1/py_everything)]()
+[![DeepSource](https://deepsource.io/gh/pybash1/py_everything.svg/?label=active+issues&show_trend=true)](https://deepsource.io/gh/pybash1/py_everything/?ref=repository-badge)
 
 GitHub - 
 
-[![GitHub forks](https://img.shields.io/github/forks/play4Tutorials/py_everything?style=social)](https://github.com/play4Tutorials/py_everything/pulls)
-[![GitHub Repo stars](https://img.shields.io/github/stars/play4Tutorials/py_everything?style=social)](https://github.com/play4Tutorials/py_everything/pulls)
-[![GitHub watchers](https://img.shields.io/github/watchers/play4Tutorials/py_everything?style=social)](https://github.com/play4Tutorials/py_everything/pulls)
-[![GitHub repo size](https://img.shields.io/github/repo-size/play4Tutorials/py_everything?logo=github)](https://github.com/play4Tutorials/py_everything/pulls)
+[![GitHub forks](https://img.shields.io/github/forks/pybash1/py_everything?style=social)](https://github.com/pybash1/py_everything/network)
+[![GitHub Repo stars](https://img.shields.io/github/stars/pybash1/py_everything?style=social)](https://github.com/pybash1/py_everything/stargazers)
+[![GitHub watchers](https://img.shields.io/github/watchers/pybash1/py_everything?style=social)](https://github.com/pybash1/py_everything)
+[![GitHub repo size](https://img.shields.io/github/repo-size/pybash1/py_everything?logo=github)](https://github.com/pybash1/py_everything)
 
 # Got Queries? Join our Discord!
 Have questions? Or find docs boring to read through? Then join our discord to get help and chat with the devs!
@@ -53,9 +54,6 @@ Have questions? Or find docs boring to read through? Then join our discord to ge
 py_everything is available on [PyPi](https://pypi.org/project/py-everything), and you can install it as follows:
 
 `$ python -m pip install py-everything`
-
-py_everything officially supports Python 3.6+
-**NOTE: Currently `py_everything.bencrypt` requires you to have python 3.8+ due to a dpependency. Rest of the module requires python 3.6+**
 
 # Features
 
