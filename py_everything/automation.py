@@ -31,7 +31,7 @@ def emailAddressSlicer(fullAddr: str) -> tuple:
     return (username, domain)
 
 def rollDice(dice1=True) -> int:
-    if dice1 == True:
+    if dice1 is True:
         rolls: List[int] = [1, 2, 3, 4, 5, 6]
         return random.choice(rolls)
     else:
