@@ -34,9 +34,8 @@ def rollDice(dice1=True) -> int:
     if dice1 is True:
         rolls: List[int] = [1, 2, 3, 4, 5, 6]
         return random.choice(rolls)
-    else:
-        rolls = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-        return random.choice(rolls)
+    rolls = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    return random.choice(rolls)
 
 
 def timer(seconds: int, audioFile: str):
@@ -50,5 +49,4 @@ def startApp(exePath: str):
     command: str = exePath
     if subprocess.run(command, shell=True):
         return True
-    else:
-        raise error.startAppFailedError
+    raise error.startAppFailedError
