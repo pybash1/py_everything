@@ -36,3 +36,4 @@ class UnknownPathTypeError(Exception):
 class UnknownDivisionTypeError(Exception):
     def __init__(self, type: str):
         self.msg: str = f'Unknown division type \'{type}\''
+        super().__init__(self.msg)
