@@ -16,11 +16,9 @@ def listDecrypt(encryptedList: List[str]):
 def encryptFile(filepath: str, keyFilepath: str):
     if encryption.Encryption().FileEncryption(filepath, keyFilepath):
         return True
-    else:
-        return False
+    return False
 
 def decryptFile(filepath: str, keyFilepath: str):
     if encryption.Encryption().FileDecryption(filepath, keyFilepath):
         return True
-    else:
-        return False
+    return False
