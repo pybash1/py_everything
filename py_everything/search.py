@@ -28,17 +28,13 @@ def searchExts(ext: str, path: str):
 def searchList(listOfTerms, query: str, filter='in'):
     matches = []
     for item in listOfTerms:
-        if filter == 'in':
-            if query in item:
-                matches.append(item)
-        elif filter == 'start':
-            if item.startswith(query):
-                matches.append(item)
-        elif filter == 'end':
-            if item.endswith(query):
-                matches.append(item)
-        elif filter == 'exact':
-            if item == query:
-                matches.append(item)
+        if filter == 'in' and query in item:
+            matches.append(item)
+        elif filter == 'start' and item.startswith(query):
+            matches.append(item)
+        elif filter == 'end' and item.endswith(query):
+            matches.append(item)
+        elif filter == 'exact' and item == query:
+            matches.append(item)
 
     return matches
