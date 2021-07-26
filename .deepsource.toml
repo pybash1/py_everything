@@ -5,6 +5,10 @@ test_patterns = [
   "test_*.py"
 ]
 
+exclude_patterns = [
+  "docs/source/**"
+]
+
 [[analyzers]]
 name = "python"
 enabled = true
