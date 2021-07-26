@@ -28,11 +28,10 @@ def divide(num1: Union[int, float], num2: Union[int, float], type: str) -> Union
     if type.lower() == 'int':
         int_quotient: Union[int, float] = num1 / num2
         return int_quotient
-    elif type.lower() == 'float':
+    if type.lower() == 'float':
         float_quotient: Union[int, float] = num1 // num2
         return float_quotient
-    else:
-        raise error.UnknownDivisionTypeError(type)
+    raise error.UnknownDivisionTypeError(type)
 
 
 def floatDiv(num1: Union[int, float], num2: Union[int, float]) -> Union[int, float]:
