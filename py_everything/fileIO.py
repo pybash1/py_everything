@@ -2,7 +2,8 @@ import os
 import shutil
 
 def readFile(filePath: str) -> str:
-    fileData: str = open(filePath, 'r').read()
+    with open(filePath, 'r') as f:
+        fileData: str = f.read()
     return fileData
 
 def writeFile(filePath: str, writeData: str) -> bool:
