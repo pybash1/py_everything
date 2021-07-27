@@ -28,6 +28,7 @@ class Path:
         if self.type == 'web':
             raise error.InvalidOperationPerformedError()
         return os.path.realpath(self.path)
+    
     def isFile(self):
         if self.type == 'web':
             raise error.InvalidOperationPerformedError()
@@ -64,6 +65,7 @@ class Path:
         res = requests.get(self.path)
 
         return res
+    
     def getRequestStatusCode(self):
         if self.type == 'local':
             raise error.InvalidOperationPerformedError()
