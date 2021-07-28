@@ -134,6 +134,7 @@ def getElementByClass(className: str, fileName: str) -> List[str]:
 
 
 class HTMLObject:
+    '''Class for HTML Object'''
     def __init__(self, fileName: str):
         self.fileName = fileName
         
