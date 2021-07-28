@@ -2,7 +2,7 @@ from typing import Dict, Union
 
 # setupPyGen #
 
-setupPyData: str = '''from setuptools import setup
+setupPyData: str = """from setuptools import setup
 
 readme_file = open("{}", "r").read()
 
@@ -20,9 +20,9 @@ setup(
     url="{}",
     python_requires="{}"
 )
-'''
+"""
 
-setupPyDataAlt: str = '''from setuptools import setup, find_packages
+setupPyDataAlt: str = """from setuptools import setup, find_packages
 
 readme_file = open("{}", "r").read()
 
@@ -40,9 +40,9 @@ setup(
     url="{}",
     python_requires="{}"
 )
-'''
+"""
 
-helpDesc: str = '''
+helpDesc: str = """
 setupPyGen {} Help Utility
 ------------------------------
 Welcome to help utility for setupPyGen. setupPyGen is a command-line utility to generate a python package project structure for you. Including setup.py
@@ -50,27 +50,27 @@ Welcome to help utility for setupPyGen. setupPyGen is a command-line utility to 
 It has very few command-line arguments, most data is taken input after running, the command "setupPyGen" in the directory where you want to generate you python package project structure.
 
 You are currently using setupPyGen {}, with Python {}.
-'''
+"""
 
 # GitIt #
 
-helpDesc2: str = '''
+helpDesc2: str = """
 gitIt {} Help Utility
 -------------------------
 Welcome to help utility for gitIt. gitIt is a command-line utility to generate a git repository for you.
 It generates a GitHub Ready repository.
 
 You are currently using gitIt {}, with Python {}.
-'''
+"""
 
-readmeData: str = '''# {}
+readmeData: str = """# {}
 
 {}
 
 License - {}
-'''
+"""
 
-securityData: str = '''# Security Policy
+securityData: str = """# Security Policy
 
 ## Supported Versions
 
@@ -84,9 +84,9 @@ v1.0.0 is currently supported by security updates.
 
 Found a vulnerability? Create an issue and report it [here](https://example.com).
 
-'''
+"""
 
-bugData: str = '''---
+bugData: str = """---
 name: Bug Report
 about: Create a report to help us improve
 title: "[BUG]"
@@ -116,9 +116,9 @@ If possible or applicable, please add screenshots to help explain your problem.
 
 **Additional context**
 Add any other context about the problem here.
-'''
+"""
 
-featureData: str = '''---
+featureData: str = """---
 name: Feature or Enhancement Request
 about: Suggest an idea for this project.
 title: "[FEATURE_OR_ENHANCEMENT]"
@@ -137,9 +137,9 @@ Want a new function or class added in, describe it here.
 
 **Additional context**
 Add any other context or screenshots about the feature request here.
-'''
+"""
 
-configData: str = '''blank_issues_enabled: true
+configData: str = """blank_issues_enabled: true
 
 contact_links:
   - name: Question
@@ -149,9 +149,9 @@ contact_links:
   - name: Documentation
     url: https://example.com/
     about: Can't figure out something? Check out our Documentation!
-'''
+"""
 
-greetData: str = '''name: Greet
+greetData: str = """name: Greet
 
 on: [pull_request, issues]
 
@@ -164,7 +164,7 @@ jobs:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         issue-message: "Thanks for opening the issue. Hope, it get's fixed soon."
         pr-message: 'Thanks for contributing to $GITHUB_REPOSITORY.'
-'''
+"""
 
 # conversion.py #
 

@@ -1,5 +1,6 @@
 # Mass
 class mg:
+    """Milligram class"""
     def __init__(self):
         self.name: str = 'MilliGram'
         self.unit: str = 'mg'
@@ -11,6 +12,7 @@ class mg:
         return f'{self.unit}' 
 
 class cg:
+    """Centigram class"""
     def __init__(self):
         self.name: str = 'CentiGram'
         self.unit: str = 'cg'
@@ -22,6 +24,7 @@ class cg:
         return f'{self.unit}' 
 
 class dg:
+    """Decigram class"""
     def __init__(self):
         self.name: str = 'DeciGram'
         self.unit: str = 'dg'
@@ -33,6 +36,7 @@ class dg:
         return f'{self.unit}' 
 
 class g:
+    """Gram class"""
     def __init__(self):
         self.name: str = 'Gram'
         self.unit: str = 'g'
@@ -44,6 +48,7 @@ class g:
         return f'{self.unit}' 
 
 class dag:
+    """Decagram class"""
     def __init__(self):
         self.name: str = 'DekaGram'
         self.unit: str = 'dag'
@@ -55,6 +60,7 @@ class dag:
         return f'{self.unit}' 
 
 class hg:
+    """Hectagram class"""
     def __init__(self):
         self.name: str = 'HectoGram'
         self.unit: str = 'hg'
@@ -66,6 +72,7 @@ class hg:
         return f'{self.unit}' 
 
 class kg:
+    """Kilogram class"""
     def __init__(self):
         self.name: str = 'KiloGram'
         self.unit: str = 'kg'
@@ -78,6 +85,7 @@ class kg:
 
 # Volume
 class ml:
+    """Millilitre class"""
     def __init__(self):
         self.name: str = 'MilliLiter'
         self.unit: str = 'ml'
@@ -89,6 +97,7 @@ class ml:
         return f'{self.unit}' 
 
 class cl:
+    """Centilitre class"""
     def __init__(self):
         self.name: str = 'CentiLiter'
         self.unit: str = 'cl'
@@ -100,6 +109,7 @@ class cl:
         return f'{self.unit}' 
 
 class dl:
+    """Decilitre class"""
     def __init__(self):
         self.name: str = 'DeciLiter'
         self.unit: str = 'dl'
@@ -111,6 +121,7 @@ class dl:
         return f'{self.unit}' 
 
 class l:
+    """Litre class"""
     def __init__(self):
         self.name: str = 'Liter'
         self.unit: str = 'l'
@@ -122,6 +133,7 @@ class l:
         return f'{self.unit}' 
 
 class dal:
+    """Decalitre class"""
     def __init__(self):
         self.name: str = 'DekaLiter'
         self.unit: str = 'da'
@@ -133,6 +145,7 @@ class dal:
         return f'{self.unit}' 
 
 class hl:
+    """Hectalitre class"""
     def __init__(self):
         self.name: str = 'HectoLiter'
         self.unit: str = 'hl'
@@ -144,6 +157,7 @@ class hl:
         return f'{self.unit}' 
 
 class kl:
+    """Kilolitre class"""
     def __init__(self):
         self.name: str = 'KiloLiter'
         self.unit: str = 'kl'
@@ -156,6 +170,7 @@ class kl:
 
 # Length
 class mm:
+    """Millimeter class"""
     def __init__(self):
         self.name: str = 'MilliMeter'
         self.unit: str = 'mm'
@@ -167,6 +182,7 @@ class mm:
         return f'{self.unit}' 
 
 class cm:
+    """Centimeter class"""
     def __init__(self):
         self.name: str = 'CentiMeter'
         self.unit: str = 'cm'
@@ -178,6 +194,7 @@ class cm:
         return f'{self.unit}' 
 
 class dm:
+    """Decimeter class"""
     def __init__(self):
         self.name: str = 'DeciMeter'
         self.unit: str = 'dm'
@@ -189,6 +206,7 @@ class dm:
         return f'{self.unit}' 
 
 class m:
+    """Meter class"""
     def __init__(self):
         self.name: str = 'Meter'
         self.unit: str = 'm'
@@ -200,6 +218,7 @@ class m:
         return f'{self.unit}' 
 
 class dam:
+    """Decameter class"""
     def __init__(self):
         self.name: str = 'DekaMeter'
         self.unit: str = 'dam'
@@ -211,6 +230,7 @@ class dam:
         return f'{self.unit}' 
 
 class hm:
+    """Hectameter class"""
     def __init__(self):
         self.name: str = 'HectoMeter'
         self.unit: str = 'hm'
@@ -222,6 +242,7 @@ class hm:
         return f'{self.unit}' 
 
 class km:
+    """Kilometer class"""
     def __init__(self):
         self.name: str = 'KiloMeter'
         self.unit: str = 'km'
