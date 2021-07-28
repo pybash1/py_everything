@@ -1,5 +1,5 @@
 from typing import Union, List
-import math
+import math,  ast
 from . import error
 
 def add(num1: Union[int, float], num2: Union[int, float], *args) -> Union[int, float]:
@@ -64,7 +64,7 @@ def mod(num1: Union[int, float], num2: Union[int, float]) -> Union[int, float]:
 
 def evalExp(exp):
     """Evaluates given mathematical expression"""
-    solution: Union[int, float] = eval(exp)
+    solution: Union[int, float] = ast.literal_eval(exp)
     return solution
 
 def avg(listOfNos: Union[List[int], List[float]]) -> float:
