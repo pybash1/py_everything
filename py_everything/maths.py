@@ -1,6 +1,6 @@
 from typing import Union, List
 import math,  ast
-from . import error
+from error import *
 
 def add(num1: Union[int, float], num2: Union[int, float], *args) -> Union[int, float]:
     """Adds given numbers"""
@@ -35,7 +35,7 @@ def divide(num1: Union[int, float], num2: Union[int, float], type: str) -> Union
     if type.lower() == 'float':
         float_quotient: Union[int, float] = num1 // num2
         return float_quotient
-    raise error.UnknownDivisionTypeError(type)
+    raise UnknownDivisionTypeError(type)
 
 
 def floatDiv(num1: Union[int, float], num2: Union[int, float]) -> Union[int, float]:
@@ -64,8 +64,8 @@ def mod(num1: Union[int, float], num2: Union[int, float]) -> Union[int, float]:
 
 def evalExp(exp):
     """Evaluates given mathematical expression"""
-    solution: Union[int, float] = ast.literal_eval(exp)
-    return solution
+    solution: Union[int, float] = exp
+    return ast.literal_eval(str(solution))
 
 def avg(listOfNos: Union[List[int], List[float]]) -> float:
     """Return average of given numbers"""
