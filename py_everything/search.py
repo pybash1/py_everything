@@ -2,7 +2,7 @@ from typing import List, Any
 import os
 
 def searchFiles(keyword: str , path: str):
-    '''Search for files'''
+    """Search for files"""
     files: List[Any] = []
     for root, dirs, files in os.walk(path):
         for file in files:
@@ -11,7 +11,7 @@ def searchFiles(keyword: str , path: str):
     return files
 
 def searchDirs(keyword: str, path: str):
-    '''Search for folders'''
+    """Search for folders"""
     folders = []
     for root, dirs, files in os.walk(path):
         for dir in dirs:
@@ -20,7 +20,7 @@ def searchDirs(keyword: str, path: str):
     return folders
 
 def searchExts(ext: str, path: str):
-    '''Search for extensions'''
+    """Search for extensions"""
     files: List[Any] = []
     for root, dirs, files in os.walk(path):
         for file in files:
@@ -29,7 +29,7 @@ def searchExts(ext: str, path: str):
     return files
 
 def searchList(listOfTerms, query: str, filter='in'):
-    '''Search within a list'''
+    """Search within a list"""
     matches = []
     for item in listOfTerms:
         if filter == 'in' and query in item:

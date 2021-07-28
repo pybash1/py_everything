@@ -1,7 +1,7 @@
 from typing import List
 
 def getElementsByTag(tagName: str, fileName: str) -> List[str]:
-    '''Returns all matching tags from an HTML/XML document'''
+    """Returns all matching tags from an HTML/XML document"""
     nonN: List[str] = []
     with open(fileName, 'r+') as f:
         html: List[str] = f.readlines()
@@ -22,7 +22,7 @@ def getElementsByTag(tagName: str, fileName: str) -> List[str]:
     return matches
 
 def getElementsById(idName: str, fileName: str) -> List[str]:
-    '''Returns all matching tags from an HTML/XML document'''
+    """Returns all matching tags from an HTML/XML document"""
     nonN: List[str] = []
     with open(fileName, 'r+') as f:
         html: List[str] = f.readlines()
@@ -43,7 +43,7 @@ def getElementsById(idName: str, fileName: str) -> List[str]:
     return matches
 
 def getElementsByClass(className: str, fileName: str) -> List[str]:
-    '''Returns all matching tags from an HTML/XML document'''
+    """Returns all matching tags from an HTML/XML document"""
     nonN: List[str] = []
     with open(fileName, 'r+') as f:
         html: List[str] = f.readlines()
@@ -64,7 +64,7 @@ def getElementsByClass(className: str, fileName: str) -> List[str]:
     return matches
 
 def getElementByTag(tagName: str, fileName: str) -> List[str]:
-    '''Returns first matching tag from an HTML/XML document'''
+    """Returns first matching tag from an HTML/XML document"""
     nonN: List[str] = []
     with open(fileName, 'r+') as f:
         html: List[str] = f.readlines()
@@ -87,7 +87,7 @@ def getElementByTag(tagName: str, fileName: str) -> List[str]:
     return matches
 
 def getElementById(idName: str, fileName: str) -> List[str]:
-    '''Returns first matching tag from an HTML/XML document'''
+    """Returns first matching tag from an HTML/XML document"""
     nonN: List[str] = []
     with open(fileName, 'r+') as f:
         html: List[str] = f.readlines()
@@ -110,7 +110,7 @@ def getElementById(idName: str, fileName: str) -> List[str]:
     return matches
 
 def getElementByClass(className: str, fileName: str) -> List[str]:
-    '''Returns first matching tag from an HTML/XML document'''
+    """Returns first matching tag from an HTML/XML document"""
     nonN: List[str] = []
     with open(fileName, 'r+') as f:
         html: List[str] = f.readlines()
@@ -138,7 +138,7 @@ class HTMLObject:
         self.fileName = fileName
         
     def getElementsByTag(self, tagName: str) -> List[str]:
-        '''Returns all matching tags from an HTML/XML document'''
+        """Returns all matching tags from an HTML/XML document"""
         nonN: List[str] = []
         with open(self.fileName, 'r+') as f:
             html: List[str] = f.readlines()
@@ -156,7 +156,7 @@ class HTMLObject:
         return matches
 
     def getElementsById(self, idName: str) -> List[str]:
-        '''Returns all matching tags from an HTML/XML document'''
+        """Returns all matching tags from an HTML/XML document"""
         nonN: List[str] = []
         with open(self.fileName, 'r+') as f:
             html: List[str] = f.readlines()
@@ -177,7 +177,7 @@ class HTMLObject:
         return matches
 
     def getElementsByClass(self, className: str) -> List[str]:
-        '''Returns all matching tags from an HTML/XML document'''
+        """Returns all matching tags from an HTML/XML document"""
         nonN: List[str] = []
         with open(self.fileName, 'r+') as f:
             html: List[str] = f.readlines()
@@ -198,7 +198,7 @@ class HTMLObject:
         return matches
 
     def getElementByTag(self, tagName: str) -> List[str]:
-        '''Returns all matching tags from an HTML/XML document'''
+        """Returns all matching tags from an HTML/XML document"""
         nonN: List[str] = []
         with open(self.fileName, 'r+') as f:
             html: List[str] = f.readlines()
@@ -221,7 +221,7 @@ class HTMLObject:
         return matches
 
     def getElementById(self, idName: str) -> List[str]:
-        '''Returns first matching tag from an HTML/XML document'''
+        """Returns first matching tag from an HTML/XML document"""
         nonN: List[str] = []
         with open(self.fileName, 'r+') as f:
             html: List[str] = f.readlines()
@@ -244,7 +244,7 @@ class HTMLObject:
         return matches
 
     def getElementByClass(self, className: str) -> List[str]:
-        '''Returns first matching tag from an HTML/XML document'''
+        """Returns first matching tag from an HTML/XML document"""
         nonN: List[str] = []
         with open(self.fileName, 'r+') as f:
             html: List[str] = f.readlines()
