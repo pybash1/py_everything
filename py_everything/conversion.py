@@ -22,7 +22,7 @@ class Length:
 
 # Thanks to - http://bit.ly/convertSoHelp - StackOverflow
 def convert(fromType: Union[Mass, Volume, Length], toType: Union[Mass, Volume, Length]) -> Union[int, float]:
-    """converts from one unit to another"""
+    """Converts from one unit to another"""
     amount: Union[int, float] = fromType.amount
     
     fromTypeUnit: List[str] = list(fromType.unit.unit)
