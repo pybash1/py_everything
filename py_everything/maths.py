@@ -1,6 +1,6 @@
 from typing import Union, List
 import math,  ast
-from error import *
+from . import error
 
 def add(num1: Union[int, float], num2: Union[int, float], *args) -> Union[int, float]:
     """Adds given numbers"""
@@ -35,7 +35,7 @@ def divide(num1: Union[int, float], num2: Union[int, float], type: str) -> Union
     if type.lower() == 'float':
         float_quotient: Union[int, float] = num1 // num2
         return float_quotient
-    raise UnknownDivisionTypeError(type)
+    raise error.UnknownDivisionTypeError(type)
 
 
 def floatDiv(num1: Union[int, float], num2: Union[int, float]) -> Union[int, float]:
