@@ -1,4 +1,5 @@
-from typing import Union, List
+from typing import Union, List, Dict
+from py_expression_eval import Parser
 import math
 from . import error
 
@@ -62,9 +63,9 @@ def mod(num1: Union[int, float], num2: Union[int, float]) -> Union[int, float]:
     return remain
 
 
-def evalExp(exp):
+def evalExp(exp: str, vars: Dict[str, int] = {}):
     """Evaluates given mathematical expression"""
-    solution: Union[int, float] = eval(exp)
+    solution: Union[int, float] = Parser.parse(exp).evaluate(vars)
     return solution
 
 def avg(listOfNos: Union[List[int], List[float]]) -> float:
