@@ -63,9 +63,10 @@ def mod(num1: Union[int, float], num2: Union[int, float]) -> Union[int, float]:
     return remain
 
 
-def evalExp(exp: str, vars: Dict[str, int] = {}):
+def evalExp(exp: str, vars_: Dict[str, int] = {}):
     """Evaluates given mathematical expression"""
-    solution: Union[int, float] = Parser.parse(exp).evaluate(vars)
+    parser = Parser()
+    solution: Union[int, float] = parser.parse(exp).evaluate(vars_)
     return solution
 
 def avg(listOfNos: Union[List[int], List[float]]) -> float:
