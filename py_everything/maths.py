@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 from typing import Union, List, Dict
 from py_expression_eval import Parser
 import math
-=======
-from typing import Union, List
-import math,  ast
->>>>>>> b8ee35466b49ba82e6e78d7b80ae33dc5b027bd7
 from . import error
 
 def add(num1: Union[int, float], num2: Union[int, float], *args) -> Union[int, float]:
