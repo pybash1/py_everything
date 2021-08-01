@@ -1,5 +1,5 @@
 from typing import Union, List, Dict
-from py_expression_eval import Parser
+from py_expression_eval import Parser # type: ignore
 import math
 from . import error
 
