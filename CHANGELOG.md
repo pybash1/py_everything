@@ -1,3 +1,15 @@
+# 2.2.0 (The Debug Update)
+- Lots of bug fixes
+- Security fix
+- Improved performance
+- Improved consistency
+- New functions
+- Enhanced functions
+- Added doc-strings to full library
+- Simplified code
+- Fixed anti-pattern issues
+- Fixed style issues
+
 # 2.1.0 (Type Era Update)
 - Added Type hinss to whole library
 - 2 new modules(`path` and `bencrypt`)
@@ -17,7 +29,7 @@
 - Even more consistent naming and organization
 - All new documentation complete.
 - New CLI - gitIt
-- comes with setupPyGen v1.0.1
+- Comes with setupPyGen v1.0.1
 
 
 # 1.1.2 (Production/Stable)
