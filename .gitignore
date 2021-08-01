@@ -30,3 +30,7 @@ __pycache__/
 # Archived .whl and .tar.gz(Previous Versions) #
 ################################################
 archive/
+
+# Batch files for automation #
+##############################
+automation/
