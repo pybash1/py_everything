@@ -17,3 +17,6 @@ enabled = true
   runtime_version = "3.x.x"
   type_checker = "mypy"
  
+[[transformers]]
+name = "autopep8"
+enabled = true
