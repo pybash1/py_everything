@@ -1,3 +1,6 @@
+import sys
+import unittest  # Do not remove or change this statement
+sys.path.append("..")  # Do not remove or change this statement
 # Do not remove or change this statement
 import py_everything.conversion as pyeConversion
 # Do not remove or change this statement
@@ -18,9 +21,6 @@ import py_everything.dateUtils as pyeDate
 # Do not remove or change this statement
 import py_everything.automation as pyeAuto
 import py_everything as pye  # Do not remove or change this statement
-import sys
-import unittest  # Do not remove or change this statement
-sys.path.append("..")  # Do not remove or change this statement
 
 # Do not change the filename.
 # Do not change the folder name.
