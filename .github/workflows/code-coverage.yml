@@ -14,7 +14,7 @@ jobs:
         python-version: 3.8
     - name: Generate coverage report
       run: |
-        pip install coverage playsound enrocrypt pip --upgrade
+        pip install coverage playsound enrocrypt pip py_expression_eval--upgrade
         cd tests/
         coverage run test_py_everything.py
     - name: Upload coverage to Codecov
