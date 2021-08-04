@@ -11,13 +11,14 @@ setup(
     author="PyBash",
     maintainer="PyBash",
     packages=find_packages(),
-    entry_points = {
+    entry_points={
             'console_scripts': [
                 'setupPyGen = py_everything.setupPyGen:main',
                 'gitIt = py_everything.gitIt:main',
             ]
     },
-    install_requires=['requests', 'playsound', 'setuptools', 'wheel', 'pip', 'enrocrypt', 'py-expression-eval'],
+    install_requires=['requests', 'playsound', 'setuptools',
+                      'wheel', 'pip', 'enrocrypt', 'py-expression-eval'],
     license="MIT License",
     url="https://github.com/pybash1/py_everything",
     download_url="https://pypi.org/project/py-everything/#files",

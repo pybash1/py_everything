@@ -1,16 +1,26 @@
-import sys, unittest # Do not remove or change this statement
-sys.path.append("..") # Do not remove or change this statement
-import py_everything as pye # Do not remove or change this statement
-import py_everything.automation as pyeAuto # Do not remove or change this statement
-import py_everything.dateUtils as pyeDate # Do not remove or change this statement
-import py_everything.fileIO as pyeFileIO # Do not remove or change this statement
-import py_everything.maths as pyeMaths # Do not remove or change this statement
-import py_everything.error as pyeError # Do not remove or change this statement
-import py_everything.search as pyeSearch # Do not remove or change this statement
-import py_everything.web as pyeWeb # Do not remove or change this statement
-import py_everything.htmlXml as pyeHtml # Do not remove or change this statement
-import py_everything.mensuration as pyeMensuration # Do not remove or change this statement
-import py_everything.conversion as pyeConversion # Do not remove or change this statement
+# Do not remove or change this statement
+import py_everything.conversion as pyeConversion
+# Do not remove or change this statement
+import py_everything.mensuration as pyeMensuration
+# Do not remove or change this statement
+import py_everything.htmlXml as pyeHtml
+import py_everything.web as pyeWeb  # Do not remove or change this statement
+# Do not remove or change this statement
+import py_everything.search as pyeSearch
+# Do not remove or change this statement
+import py_everything.error as pyeError
+# Do not remove or change this statement
+import py_everything.maths as pyeMaths
+# Do not remove or change this statement
+import py_everything.fileIO as pyeFileIO
+# Do not remove or change this statement
+import py_everything.dateUtils as pyeDate
+# Do not remove or change this statement
+import py_everything.automation as pyeAuto
+import py_everything as pye  # Do not remove or change this statement
+import sys
+import unittest  # Do not remove or change this statement
+sys.path.append("..")  # Do not remove or change this statement
 
 # Do not change the filename.
 # Do not change the folder name.
@@ -20,7 +30,7 @@ import py_everything.conversion as pyeConversion # Do not remove or change this 
 # class TestPyEverything(unittest.TestCase):
 #     def test_[function_name]():
 #         code to test goes here
-#         example given below - 
+#         example given below -
 #         assert py_everything.maths.add(2, 4) == 6
 
 
@@ -65,35 +75,48 @@ class TestPyEverything(unittest.TestCase):
         assert pyeFileIO.clearFile("clear.txt") is True
 
     def test_search_list(self):
-        listToTest = ["py", "pypi", "anything", "something", "python", "other", "middlepy", "notmatch", "endpy"]
-        assert pyeSearch.searchList(listToTest, "py") == ["py", "pypi", "python", "middlepy", "endpy"]
+        listToTest = ["py", "pypi", "anything", "something",
+                      "python", "other", "middlepy", "notmatch", "endpy"]
+        assert pyeSearch.searchList(listToTest, "py") == [
+            "py", "pypi", "python", "middlepy", "endpy"]
 
     def test_search_list_2(self):
-        listToTest = ["py", "pypi", "anything", "something", "python", "other", "middlepy", "notmatch", "endpy"]
-        assert pyeSearch.searchList(listToTest, "py", filter="start") == ["py", "pypi", "python"]
+        listToTest = ["py", "pypi", "anything", "something",
+                      "python", "other", "middlepy", "notmatch", "endpy"]
+        assert pyeSearch.searchList(listToTest, "py", filter="start") == [
+            "py", "pypi", "python"]
 
     def test_search_list_3(self):
-        listToTest = ["py", "pypi", "anything", "something", "python", "other", "middlepy", "notmatch", "endpy"]
-        assert pyeSearch.searchList(listToTest, "py", filter="end") == ["py", "middlepy", "endpy"]
+        listToTest = ["py", "pypi", "anything", "something",
+                      "python", "other", "middlepy", "notmatch", "endpy"]
+        assert pyeSearch.searchList(listToTest, "py", filter="end") == [
+            "py", "middlepy", "endpy"]
 
     def test_search_list_4(self):
-        listToTest = ["py", "pypi", "anything", "something", "python", "other", "middlepy", "notmatch", "endpy"]
+        listToTest = ["py", "pypi", "anything", "something",
+                      "python", "other", "middlepy", "notmatch", "endpy"]
         assert pyeSearch.searchList(listToTest, "py", filter="exact") == ["py"]
-        
+
     def test_get_elements_by_id(self):
-        assert pyeHtml.getElementsById("app", "index.html") == ['<div id="app">something</div>', '<div id="app">something</div>', '<div id=\'app\' class="app">something</div>']
-        
+        assert pyeHtml.getElementsById("app", "index.html") == [
+            '<div id="app">something</div>', '<div id="app">something</div>', '<div id=\'app\' class="app">something</div>']
+
     def test_get_elements_by_class(self):
-        assert pyeHtml.getElementsByClass("app", "index.html") == ["<p class='app'>something</p>", '<div id=\'app\' class="app">something</div>', "<div class='app'>something</div>"]
-        
+        assert pyeHtml.getElementsByClass("app", "index.html") == [
+            "<p class='app'>something</p>", '<div id=\'app\' class="app">something</div>', "<div class='app'>something</div>"]
+
     def test_get_element_by_tag(self):
-        assert pyeHtml.getElementByTag("p", "index.html") == ['<p>something</p>']
-        
+        assert pyeHtml.getElementByTag("p", "index.html") == [
+            '<p>something</p>']
+
     def test_get_element_by_id(self):
-        assert pyeHtml.getElementById("app", "index.html") == ['<div id="app">something</div>']
-        
+        assert pyeHtml.getElementById("app", "index.html") == [
+            '<div id="app">something</div>']
+
     def test_get_element_by_class(self):
-        assert pyeHtml.getElementByClass("app", "index.html") == ["<p class='app'>something</p>"]
+        assert pyeHtml.getElementByClass("app", "index.html") == [
+            "<p class='app'>something</p>"]
+
 
 if __name__ == '__main__':
     unittest.main()

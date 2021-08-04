@@ -2,7 +2,7 @@ import smtplib
 import random
 import subprocess
 import os
-import playsound # type: ignore
+import playsound  # type: ignore
 from . import error
 from typing import List, Union
 
@@ -32,6 +32,7 @@ def emailAddressSlicer(fullAddr: str) -> tuple:
     domain: str = splitList[1]
     return (username, domain)
 
+
 def rollDice(dice1=True) -> int:
     """Returns random number between 1 and 6 or 1 and 12 depending on if dice1 is Treu or False"""
     if dice1 is True:
@@ -48,6 +49,7 @@ def timer(seconds: int, audioFile: str):
         if time <= 0:
             playsound.playsound(audioFile)
         time = time - 1
+
 
 def startApp(exePath: str):
     """Starts an executable given its path"""
