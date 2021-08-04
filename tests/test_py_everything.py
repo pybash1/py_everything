@@ -1,26 +1,26 @@
+import py_everything as pye  # Do not remove or change this statement
+import py_everything.automation as pyeAuto
+import py_everything.dateUtils as pyeDate
+import py_everything.fileIO as pyeFileIO
+import py_everything.maths as pyeMaths
+import py_everything.error as pyeError
+import py_everything.search as pyeSearch
+import py_everything.web as pyeWeb  # Do not remove or change this statement
+import py_everything.htmlXml as pyeHtml
+import py_everything.mensuration as pyeMensuration
+import py_everything.conversion as pyeConversion
 import sys
 import unittest  # Do not remove or change this statement
 sys.path.append("..")  # Do not remove or change this statement
 # Do not remove or change this statement
-import py_everything.conversion as pyeConversion
 # Do not remove or change this statement
-import py_everything.mensuration as pyeMensuration
 # Do not remove or change this statement
-import py_everything.htmlXml as pyeHtml
-import py_everything.web as pyeWeb  # Do not remove or change this statement
 # Do not remove or change this statement
-import py_everything.search as pyeSearch
 # Do not remove or change this statement
-import py_everything.error as pyeError
 # Do not remove or change this statement
-import py_everything.maths as pyeMaths
 # Do not remove or change this statement
-import py_everything.fileIO as pyeFileIO
 # Do not remove or change this statement
-import py_everything.dateUtils as pyeDate
 # Do not remove or change this statement
-import py_everything.automation as pyeAuto
-import py_everything as pye  # Do not remove or change this statement
 
 # Do not change the filename.
 # Do not change the folder name.
