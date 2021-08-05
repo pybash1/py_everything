@@ -1,7 +1,8 @@
 from typing import Union, List, Dict
-from py_expression_eval import Parser # type: ignore
+from py_expression_eval import Parser  # type: ignore
 import math
 from . import error
+
 
 def add(num1: Union[int, float], num2: Union[int, float], *args) -> Union[int, float]:
     """Adds given numbers"""
@@ -69,6 +70,7 @@ def evalExp(exp: str, vars_: Dict[str, int] = {}):
     solution: Union[int, float] = parser.parse(exp).evaluate(vars_)
     return solution
 
+
 def avg(listOfNos: Union[List[int], List[float]]) -> float:
     """Return average of given numbers"""
     avg: float = 0.0
@@ -78,19 +80,22 @@ def avg(listOfNos: Union[List[int], List[float]]) -> float:
     avg = avg / len(listOfNos)
     return avg
 
+
 def factorial(num: int) -> int:
     """Returns factorial of a number"""
     factorial: int = 1
     for i in range(1, num):
         factorial = factorial * i
-        
+
     return factorial
+
 
 def ceil(num: int) -> int:
     """Returns the number rounded up"""
     ceil: int = math.ceil(num)
     return ceil
-    
+
+
 def floor(num: int) -> int:
     """Returns the number rounded down"""
     floor: int = math.floor(num)

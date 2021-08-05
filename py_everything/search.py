@@ -1,7 +1,8 @@
 from typing import List, Any
 import os
 
-def searchFiles(keyword: str , path: str):
+
+def searchFiles(keyword: str, path: str):
     """Search for files"""
     files: List[Any] = []
     for root, dirs, files in os.walk(path):
@@ -9,6 +10,7 @@ def searchFiles(keyword: str , path: str):
             if keyword in file:
                 files.append(root + '\\' + str(file))
     return files
+
 
 def searchDirs(keyword: str, path: str):
     """Search for folders"""
@@ -19,6 +21,7 @@ def searchDirs(keyword: str, path: str):
                 folders.append(root + '\\' + str(dir))
     return folders
 
+
 def searchExts(ext: str, path: str):
     """Search for extensions"""
     files: List[Any] = []
@@ -27,6 +30,7 @@ def searchExts(ext: str, path: str):
             if file.endswith(ext):
                 files.append(root + '\\' + str(file))
     return files
+
 
 def searchList(listOfTerms, query: str, filter='in'):
     """Search within a list"""

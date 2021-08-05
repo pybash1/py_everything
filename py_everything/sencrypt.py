@@ -12,6 +12,7 @@ from . import error
 BASE_LETTERS: str = 'abcdefghijklmnopqrstuvwxyz'
 BASE_SYMBOLS: str = ' 1234567890!@#$%^&*()-_=+[{]};:\'"<,>.?/`~|\\'
 
+
 def genCharKeys() -> List[str]:
     """Generates character keys"""
     base: List[str] = list(BASE_LETTERS)
@@ -30,12 +31,14 @@ def genCharKeys() -> List[str]:
     keyList.append(key4)
     return keyList
 
+
 def genSymKey() -> str:
     """Generates symbol key"""
     base: List[str] = list(BASE_SYMBOLS)
     random.shuffle(base)
     key: str = ''.join(base)
     return key
+
 
 def checkCharKeys(keyList: List[str]):
     """Validates character keys"""
@@ -63,8 +66,9 @@ def checkCharKeys(keyList: List[str]):
         raise error.InvalidKeyListError()
     if key4 != base:
         raise error.InvalidKeyListError()
-    
-def checkSymKey(symKey: str): 
+
+
+def checkSymKey(symKey: str):
     """Validates symbol key"""
     sym: str = symKey
     base: str = BASE_SYMBOLS
@@ -72,12 +76,14 @@ def checkSymKey(symKey: str):
     baseSorted: List[str] = sorted(base)
     sym = "".join(symSorted)
     base = "".join(baseSorted)
-    
+
     if sym != base:
         raise error.InvalidSymbolKeyError()
 
+
 class SuperEncrypt():
     """Class for performing operations"""
+
     def __init__(self, keyCharList: List[str], keySym: str):
         self.keyCharList: List[str] = keyCharList
         self.key1 = self.keyCharList[0]
@@ -93,10 +99,10 @@ class SuperEncrypt():
         encrypted3: str = ''
         encrypted4: str = ''
         encryptedSym: str = ''
-        
+
         checkCharKeys(self.keyCharList)
         checkSymKey(self.key5)
-        
+
         for char in msg:
             actualChars: str = BASE_LETTERS
             encryptedChars: str = self.key1
@@ -109,7 +115,7 @@ class SuperEncrypt():
                     encrypted1 += char.replace(char, encryptedElem.upper())
                 else:
                     encrypted1 += char.replace(char, encryptedElem)
-        
+
         for char in encrypted1:
             actualChars = BASE_LETTERS
             encryptedChars = self.key2
@@ -122,7 +128,7 @@ class SuperEncrypt():
                     encrypted2 += char.replace(char, encryptedElem.upper())
                 else:
                     encrypted2 += char.replace(char, encryptedElem)
-        
+
         for char in encrypted2:
             actualChars = BASE_LETTERS
             encryptedChars = self.key3
@@ -135,7 +141,7 @@ class SuperEncrypt():
                     encrypted3 += char.replace(char, encryptedElem.upper())
                 else:
                     encrypted3 += char.replace(char, encryptedElem)
-        
+
         for char in encrypted3:
             actualChars = BASE_LETTERS
             encryptedChars = self.key4
@@ -148,7 +154,7 @@ class SuperEncrypt():
                     encrypted4 += char.replace(char, encryptedElem.upper())
                 else:
                     encrypted4 += char.replace(char, encryptedElem)
-        
+
         for char in encrypted4:
             actualChars = BASE_SYMBOLS
             encryptedChars = self.key5
@@ -161,7 +167,7 @@ class SuperEncrypt():
                     encryptedSym += char.replace(char, encryptedElem.upper())
                 else:
                     encryptedSym += char.replace(char, encryptedElem)
-        
+
         return encryptedSym
 
     def decrypt(self, msg: str) -> str:
@@ -171,10 +177,10 @@ class SuperEncrypt():
         decrypted2: str = ''
         decrypted1: str = ''
         decryptedSym: str = ''
-        
+
         checkCharKeys(self.keyCharList)
         checkSymKey(self.key5)
-        
+
         for char in msg:
             actualChars = self.key4
             decryptedChars: str = BASE_LETTERS
@@ -187,7 +193,7 @@ class SuperEncrypt():
                     decrypted4 += char.replace(char, decryptedElem.upper())
                 else:
                     decrypted4 += char.replace(char, decryptedElem)
-        
+
         for char in decrypted4:
             actualChars = self.key3
             decryptedChars = BASE_LETTERS
@@ -200,7 +206,7 @@ class SuperEncrypt():
                     decrypted3 += char.replace(char, decryptedElem.upper())
                 else:
                     decrypted3 += char.replace(char, decryptedElem)
-        
+
         for char in decrypted3:
             actualChars = self.key2
             decryptedChars = BASE_LETTERS
@@ -213,7 +219,7 @@ class SuperEncrypt():
                     decrypted2 += char.replace(char, decryptedElem.upper())
                 else:
                     decrypted2 += char.replace(char, decryptedElem)
-        
+
         for char in decrypted2:
             actualChars = self.key1
             decryptedChars = BASE_LETTERS
@@ -226,7 +232,7 @@ class SuperEncrypt():
                     decrypted1 += char.replace(char, decryptedElem.upper())
                 else:
                     decrypted1 += char.replace(char, decryptedElem)
-        
+
         for char in decrypted1:
             actualChars = self.key5
             decryptedChars = BASE_SYMBOLS
