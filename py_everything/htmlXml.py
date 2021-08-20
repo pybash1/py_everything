@@ -45,7 +45,6 @@ def getElementsById(idName: str, fileName: str) -> List[Tuple[int, str]]:
         elif patternAlt in line:
             lineNo = nonN.index(line)+1
             matches.append((int(lineNo), line))
-            
 
     return matches
 
