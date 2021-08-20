@@ -38,14 +38,14 @@ def installModules(*args):
 def alphabet() -> List[str]:
     """Returns all alphabets as a list"""
     theAlphabet: List[str] = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
-                              'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+                            'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
     return theAlphabet
 
 
 def alphabetCaps() -> List[str]:
     """Returns all capital alphabets as a list"""
     theAlphabetCaps: List[str] = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
-                                  'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+                                'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
     return theAlphabetCaps
 
 
@@ -70,7 +70,7 @@ def nums() -> List[int]:
 def syms() -> List[str]:
     """Returns all speacial characters as a list"""
     symbols: List[str] = ['`', '~', '!', '@', '#', '$', '%', '^', '&', '*',
-                          '(', ')', '_', '-', '+', '=', '{', '[', '}', '}', '|', '\\', ':', ';', '"', '\'', '<', ',', '>', '.', '?', '/']
+                        '(', ')', '_', '-', '+', '=', '{', '[', '}', '}', '|', '\\', ':', ';', '"', '\'', '<', ',', '>', '.', '?', '/']
     return symbols
 
 
