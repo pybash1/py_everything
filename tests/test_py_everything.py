@@ -81,19 +81,19 @@ class TestPyEverything(unittest.TestCase):
         assert pyeSearch.searchList(listToTest, "py", filter="exact") == ["py"]
         
     def test_get_elements_by_id(self):
-        assert pyeHtml.getElementsById("app", "index.html") == ['<div id="app">something</div>', '<div id="app">something</div>', '<div id=\'app\' class="app">something</div>']
+        assert pyeHtml.getElementsById("app", "index.html") == [(10, '<div id="app">something</div>'), (15, '<div id="app">something</div>'), (20, '<div id=\'app\' class="app">something</div>')]
         
     def test_get_elements_by_class(self):
-        assert pyeHtml.getElementsByClass("app", "index.html") == ["<p class='app'>something</p>", '<div id=\'app\' class="app">something</div>', "<div class='app'>something</div>"]
+        assert pyeHtml.getElementsByClass("app", "index.html") == [(16, "<p class='app'>something</p>"), (20, '<div id=\'app\' class="app">something</div>'), (25, "<div class='app'>something</div>")]
         
     def test_get_element_by_tag(self):
-        assert pyeHtml.getElementByTag("p", "index.html") == ['<p>something</p>']
+        assert pyeHtml.getElementByTag("p", "index.html") == [(18, '<p>something</p>')]
         
     def test_get_element_by_id(self):
-        assert pyeHtml.getElementById("app", "index.html") == ['<div id="app">something</div>']
+        assert pyeHtml.getElementById("app", "index.html") == [(10, '<div id="app">something</div>')]
         
     def test_get_element_by_class(self):
-        assert pyeHtml.getElementByClass("app", "index.html") == ["<p class='app'>something</p>"]
+        assert pyeHtml.getElementByClass("app", "index.html") == [(16, "<p class='app'>something</p>")]
 
 if __name__ == '__main__':
     unittest.main()
