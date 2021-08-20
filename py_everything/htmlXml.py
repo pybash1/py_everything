@@ -1,7 +1,7 @@
-from typing import List
+from typing import List, Tuple
 
 
-def getElementsByTag(tagName: str, fileName: str) -> List[str]:
+def getElementsByTag(tagName: str, fileName: str) -> List[Tuple[int, str]]:
     """Returns all matching tags from an HTML/XML document"""
     nonN: List[str] = []
     with open(fileName, 'r+') as f:
@@ -12,18 +12,20 @@ def getElementsByTag(tagName: str, fileName: str) -> List[str]:
     pattern: str = f"<{tagName}>"
     patternAlt: str = f"{tagName} />"
 
-    matches: List[str] = []
+    matches: List[Tuple[int, str]] = []
 
     for line in nonN:
         if pattern in line:
-            matches.append(line)
+            lineNo = nonN.index(line)+1
+            matches.append((int(lineNo), line))
         elif patternAlt in line:
-            matches.append(line)
+            lineNo = nonN.index(line)+1
+            matches.append((int(lineNo), line))
 
     return matches
 
 
-def getElementsById(idName: str, fileName: str) -> List[str]:
+def getElementsById(idName: str, fileName: str) -> List[Tuple[int, str]]:
     """Returns all matching tags from an HTML/XML document"""
     nonN: List[str] = []
     with open(fileName, 'r+') as f:
@@ -34,18 +36,21 @@ def getElementsById(idName: str, fileName: str) -> List[str]:
     pattern: str = f"id=\"{idName}\""
     patternAlt: str = f"id='{idName}'"
 
-    matches: List[str] = []
+    matches: List[Tuple[int, str]] = []
 
     for line in nonN:
         if pattern in line:
-            matches.append(line)
+            lineNo = nonN.index(line)+1
+            matches.append((int(lineNo), line))
         elif patternAlt in line:
-            matches.append(line)
+            lineNo = nonN.index(line)+1
+            matches.append((int(lineNo), line))
+            
 
     return matches
 
 
-def getElementsByClass(className: str, fileName: str) -> List[str]:
+def getElementsByClass(className: str, fileName: str) -> List[Tuple[int, str]]:
     """Returns all matching tags from an HTML/XML document"""
     nonN: List[str] = []
     with open(fileName, 'r+') as f:
@@ -56,18 +61,20 @@ def getElementsByClass(className: str, fileName: str) -> List[str]:
     pattern: str = f"class=\"{className}\""
     patternAlt: str = f"class='{className}'"
 
-    matches: List[str] = []
+    matches: List[Tuple[int, str]] = []
 
     for line in nonN:
         if pattern in line:
-            matches.append(line)
+            lineNo = nonN.index(line)+1
+            matches.append((int(lineNo), line))
         elif patternAlt in line:
-            matches.append(line)
+            lineNo = nonN.index(line)+1
+            matches.append((int(lineNo), line))
 
     return matches
 
 
-def getElementByTag(tagName: str, fileName: str) -> List[str]:
+def getElementByTag(tagName: str, fileName: str) -> List[Tuple[int, str]]:
     """Returns first matching tag from an HTML/XML document"""
     nonN: List[str] = []
     with open(fileName, 'r+') as f:
@@ -78,20 +85,22 @@ def getElementByTag(tagName: str, fileName: str) -> List[str]:
     pattern: str = f"<{tagName}>"
     patternAlt: str = f"<{tagName} />"
 
-    matches: List[str] = []
+    matches: List[Tuple[int, str]] = []
 
     for line in nonN:
         if pattern in line:
-            matches.append(line)
+            lineNo = nonN.index(line)+1
+            matches.append((int(lineNo), line))
             break
         elif patternAlt in line:
-            matches.append(line)
+            lineNo = nonN.index(line)+1
+            matches.append((int(lineNo), line))
             break
 
     return matches
 
 
-def getElementById(idName: str, fileName: str) -> List[str]:
+def getElementById(idName: str, fileName: str) -> List[Tuple[int, str]]:
     """Returns first matching tag from an HTML/XML document"""
     nonN: List[str] = []
     with open(fileName, 'r+') as f:
@@ -102,20 +111,22 @@ def getElementById(idName: str, fileName: str) -> List[str]:
     pattern: str = f"id=\"{idName}\""
     patternAlt: str = f"id='{idName}'"
 
-    matches: List[str] = []
+    matches: List[Tuple[int, str]] = []
 
     for line in nonN:
         if pattern in line:
-            matches.append(line)
+            lineNo = nonN.index(line)+1
+            matches.append((int(lineNo), line))
             break
         elif patternAlt in line:
-            matches.append(line)
+            lineNo = nonN.index(line)+1
+            matches.append((int(lineNo), line))
             break
 
     return matches
 
 
-def getElementByClass(className: str, fileName: str) -> List[str]:
+def getElementByClass(className: str, fileName: str) -> List[Tuple[int, str]]:
     """Returns first matching tag from an HTML/XML document"""
     nonN: List[str] = []
     with open(fileName, 'r+') as f:
@@ -126,14 +137,16 @@ def getElementByClass(className: str, fileName: str) -> List[str]:
     pattern: str = f"class=\"{className}\""
     patternAlt: str = f"class='{className}'"
 
-    matches: List[str] = []
+    matches: List[Tuple[int, str]] = []
 
     for line in nonN:
         if pattern in line:
-            matches.append(line)
+            lineNo = nonN.index(line)+1
+            matches.append((int(lineNo), line))
             break
         elif patternAlt in line:
-            matches.append(line)
+            lineNo = nonN.index(line)+1
+            matches.append((int(lineNo), line))
             break
 
     return matches
@@ -145,7 +158,7 @@ class HTMLObject:
     def __init__(self, fileName: str):
         self.fileName = fileName
 
-    def getElementsByTag(self, tagName: str) -> List[str]:
+    def getElementsByTag(self, tagName: str) -> List[Tuple[int, str]]:
         """Returns all matching tags from an HTML/XML document"""
         nonN: List[str] = []
         with open(self.fileName, 'r+') as f:
@@ -155,15 +168,16 @@ class HTMLObject:
 
         pattern: str = f"<{tagName}>"
 
-        matches: List[str] = []
+        matches: List[Tuple[int, str]] = []
 
         for line in nonN:
             if pattern in line:
-                matches.append(line)
+                lineNo = nonN.index(line)+1
+                matches.append((int(lineNo), line))
 
         return matches
 
-    def getElementsById(self, idName: str) -> List[str]:
+    def getElementsById(self, idName: str) -> List[Tuple[int, str]]:
         """Returns all matching tags from an HTML/XML document"""
         nonN: List[str] = []
         with open(self.fileName, 'r+') as f:
@@ -174,17 +188,19 @@ class HTMLObject:
         pattern: str = f"id=\"{idName}\""
         patternAlt: str = f"id='{idName}'"
 
-        matches: List[str] = []
+        matches: List[Tuple[int, str]] = []
 
         for line in nonN:
             if pattern in line:
-                matches.append(line)
+                lineNo = nonN.index(line)+1
+                matches.append((int(lineNo), line))
             elif patternAlt in line:
-                matches.append(line)
+                lineNo = nonN.index(line)+1
+                matches.append((int(lineNo), line))
 
         return matches
 
-    def getElementsByClass(self, className: str) -> List[str]:
+    def getElementsByClass(self, className: str) -> List[Tuple[int, str]]:
         """Returns all matching tags from an HTML/XML document"""
         nonN: List[str] = []
         with open(self.fileName, 'r+') as f:
@@ -195,17 +211,19 @@ class HTMLObject:
         pattern: str = f"class=\"{className}\""
         patternAlt: str = f"class='{className}'"
 
-        matches: List[str] = []
+        matches: List[Tuple[int, str]] = []
 
         for line in nonN:
             if pattern in line:
-                matches.append(line)
+                lineNo = nonN.index(line)+1
+                matches.append((int(lineNo), line))
             elif patternAlt in line:
-                matches.append(line)
+                lineNo = nonN.index(line)+1
+                matches.append((int(lineNo), line))
 
         return matches
 
-    def getElementByTag(self, tagName: str) -> List[str]:
+    def getElementByTag(self, tagName: str) -> List[Tuple[int, str]]:
         """Returns all matching tags from an HTML/XML document"""
         nonN: List[str] = []
         with open(self.fileName, 'r+') as f:
@@ -216,19 +234,21 @@ class HTMLObject:
         pattern: str = f"<{tagName}>"
         patternAlt: str = f"<{tagName} />"
 
-        matches: List[str] = []
+        matches: List[Tuple[int, str]] = []
 
         for line in nonN:
             if pattern in line:
-                matches.append(line)
+                lineNo = nonN.index(line)+1
+                matches.append((int(lineNo), line))
                 break
             elif patternAlt in line:
-                matches.append(line)
+                lineNo = nonN.index(line)+1
+                matches.append((int(lineNo), line))
                 break
 
         return matches
 
-    def getElementById(self, idName: str) -> List[str]:
+    def getElementById(self, idName: str) -> List[Tuple[int, str]]:
         """Returns first matching tag from an HTML/XML document"""
         nonN: List[str] = []
         with open(self.fileName, 'r+') as f:
@@ -239,19 +259,21 @@ class HTMLObject:
         pattern: str = f"id=\"{idName}\""
         patternAlt: str = f"id='{idName}'"
 
-        matches: List[str] = []
+        matches: List[Tuple[int, str]] = []
 
         for line in nonN:
             if pattern in line:
-                matches.append(line)
+                lineNo = nonN.index(line)+1
+                matches.append((int(lineNo), line))
                 break
             elif patternAlt in line:
-                matches.append(line)
+                lineNo = nonN.index(line)+1
+                matches.append((int(lineNo), line))
                 break
 
         return matches
 
-    def getElementByClass(self, className: str) -> List[str]:
+    def getElementByClass(self, className: str) -> List[Tuple[int, str]]:
         """Returns first matching tag from an HTML/XML document"""
         nonN: List[str] = []
         with open(self.fileName, 'r+') as f:
@@ -262,14 +284,16 @@ class HTMLObject:
         pattern: str = f"class=\"{className}\""
         patternAlt: str = f"class='{className}'"
 
-        matches: List[str] = []
+        matches: List[Tuple[int, str]] = []
 
         for line in nonN:
             if pattern in line:
-                matches.append(line)
+                lineNo = nonN.index(line)+1
+                matches.append((int(lineNo), line))
                 break
             elif patternAlt in line:
-                matches.append(line)
+                lineNo = nonN.index(line)+1
+                matches.append((int(lineNo), line))
                 break
 
         return matches
