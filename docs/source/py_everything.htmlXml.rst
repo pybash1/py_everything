@@ -11,6 +11,9 @@ With functions that fetch tags from document for you to a class allowing all met
 This module doesn't check if the HTML/XML file is valid or not. It will return matches if a
 certain tag is not closed. This module was added in version 2.0.0
 
+.. versionchanged:: 2.3.0
+    All functions in this module return a tuple ``(lineNo, line)``
+
 .. class:: HTMLObject(fileName)
 
     This class access to all methods without having to give the fileName everytime.
@@ -37,7 +40,7 @@ certain tag is not closed. This module was added in version 2.0.0
         Searches HTML/XML file for given ``tagName``.
 
         :param str tagName: The tag you want to search for.
-        :returns list: A list containing all matches in str.
+        :returns tuple: A tuple containg line number and the line in following order - ``(lineNo, line)``
 
         .. note::
 
@@ -48,7 +51,7 @@ certain tag is not closed. This module was added in version 2.0.0
         Searches HTML/XML file for given tags with the id of ``idName``.
 
         :param str idName: The id you want to search for.
-        :returns list: A list containing all matches in str.
+        :returns tuple: A tuple containg line number and the line in following order - ``(lineNo, line)``
 
         .. note::
 
@@ -59,7 +62,7 @@ certain tag is not closed. This module was added in version 2.0.0
         Searches HTML/XML file for given tags with the class of ``className``.
 
         :param str className: The class you want to search for.
-        :returns list: A list containing all matches in str.
+        :returns tuple: A tuple containg line number and the line in following order - ``(lineNo, line)``
 
         .. note::
 
@@ -108,7 +111,7 @@ certain tag is not closed. This module was added in version 2.0.0
 
     :param str tagName: The tag you want to search for.
     :param str fileName: A string containing full path to HTML/XML file.
-    :returns list: A list containing all matches in str.
+    :returns tuple: A tuple containg line number and the line in following order - ``(lineNo, line)``
 
     .. note::
 
@@ -120,7 +123,7 @@ certain tag is not closed. This module was added in version 2.0.0
 
     :param str idName: The id you want to search for.
     :param str fileName: A string containing full path to HTML/XML file.
-    :returns list: A list containing all matches in str.
+    :returns tuple: A tuple containg line number and the line in following order - ``(lineNo, line)``
 
     .. note::
 
@@ -132,7 +135,7 @@ certain tag is not closed. This module was added in version 2.0.0
 
     :param str className: The class you want to search for.
     :param str fileName: A string containing full path to HTML/XML file.
-    :returns list: A list containing all matches in str.
+    :returns tuple: A tuple containg line number and the line in following order - ``(lineNo, line)``
 
     .. note::
 

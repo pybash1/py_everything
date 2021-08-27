@@ -58,6 +58,8 @@ People who have contributed to this project -
    py_everything.htmlXml
    py_everything.maths
    py_everything.mensuration
+   py_everything.rand
+   py_everything.regex
    py_everything.path
    py_everything.search
    py_everything.sencrypt
