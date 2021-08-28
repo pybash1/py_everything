@@ -1,3 +1,9 @@
+# 2.3.0 (The Check And Generate Update)
+- Bug fixes
+- Documentation updates
+- New Modules
+- Improvded consistency
+
 # 2.2.0 (The Debug Update)
 - Lots of bug fixes
 - Security fix

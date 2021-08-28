@@ -4,7 +4,7 @@ readme_file = open("README.md", "r").read()
 
 setup(
     name="py_everything",
-    version="2.2.0",
+    version="2.3.0",
     description="A python module containing all the basic functions and classes for python but doesn't stop at that, goes beyond advanced. From simple addition to advanced file encryption.",
     long_description=readme_file,
     long_description_content_type="text/markdown",
