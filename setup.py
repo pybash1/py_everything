@@ -23,9 +23,9 @@ setup(
     license="MIT License",
     url="https://github.com/pybash1/py_everything",
     download_url="https://pypi.org/project/py-everything/#files",
-    project_urls={'Documentation':'https://py_everything.readthedocs.io/en/stable/',
-                  'Issues':'https://github.com/pybash1/py_everything/issues',
-                  'Code':'https://github.com/pybash1/py_everything/'
+    project_urls={'Documentation': 'https://py_everything.readthedocs.io/en/stable/',
+                  'Issues': 'https://github.com/pybash1/py_everything/issues',
+                  'Code': 'https://github.com/pybash1/py_everything/'
                   },
     classifiers=[
         "License :: OSI Approved :: MIT License",
