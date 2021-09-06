@@ -5,7 +5,7 @@ import os
 def searchFiles(keyword: str, path: str):
     """Search for files"""
     files: List[Any] = []
-    for root, dirs, files in os.walk(path):
+    for root, _, files in os.walk(path):
         for file in files:
             if keyword in file:
                 files.append(root + '\\' + str(file))
@@ -15,7 +15,7 @@ def searchFiles(keyword: str, path: str):
 def searchDirs(keyword: str, path: str):
     """Search for folders"""
     folders = []
-    for root, dirs, files in os.walk(path):
+    for root, dirs, _ in os.walk(path):
         for dir in dirs:
             if keyword in dir:
                 folders.append(root + '\\' + str(dir))
@@ -25,7 +25,7 @@ def searchDirs(keyword: str, path: str):
 def searchExts(ext: str, path: str):
     """Search for extensions"""
     files: List[Any] = []
-    for root, dirs, files in os.walk(path):
+    for root, _, files in os.walk(path):
         for file in files:
             if file.endswith(ext):
                 files.append(root + '\\' + str(file))

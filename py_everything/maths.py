@@ -77,7 +77,7 @@ def avg(listOfNos: Union[List[int], List[float]]) -> float:
     for num in listOfNos:
         avg += num
 
-    avg = avg / len(listOfNos)
+    avg /= len(listOfNos)
     return avg
 
 
@@ -85,7 +85,7 @@ def factorial(num: int) -> int:
     """Returns factorial of a number"""
     factorial: int = 1
     for i in range(1, num):
-        factorial = factorial * i
+        factorial *= i
 
     return factorial
 

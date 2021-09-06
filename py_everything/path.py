@@ -76,11 +76,9 @@ class Path:
         """Returns data returned by path on get request"""
         if self.type == 'local':
             raise error.InvalidOperationPerformedError()
-        res = requests.get(self.path)
+        return requests.get(self.path)
 
-        return res
-
-    def getRequestStatusCode(self):
+    def requestStatusCode(self):
         """Returns status code for request to path"""
         if self.type == 'local':
             raise error.InvalidOperationPerformedError()

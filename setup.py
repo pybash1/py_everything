@@ -2,6 +2,7 @@ from setuptools import setup, find_packages
 
 readme_file = open("README.md", "r").read()
 
+
 setup(
     name="py_everything",
     version="2.3.0",
@@ -22,6 +23,10 @@ setup(
     license="MIT License",
     url="https://github.com/pybash1/py_everything",
     download_url="https://pypi.org/project/py-everything/#files",
+    project_urls={'Documentation':'https://py_everything.readthedocs.io/en/stable/',
+                  'Issues':'https://github.com/pybash1/py_everything/issues',
+                  'Code':'https://github.com/pybash1/py_everything/'
+                  },
     classifiers=[
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",

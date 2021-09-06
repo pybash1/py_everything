@@ -15,13 +15,9 @@ def getElementsByTag(tagName: str, fileName: str) -> List[Tuple[int, str]]:
     matches: List[Tuple[int, str]] = []
 
     for line in nonN:
-        if pattern in line:
+        if pattern in line or patternAlt in line:
             lineNo = nonN.index(line)+1
             matches.append((int(lineNo), line))
-        elif patternAlt in line:
-            lineNo = nonN.index(line)+1
-            matches.append((int(lineNo), line))
-
     return matches
 
 
@@ -39,14 +35,9 @@ def getElementsById(idName: str, fileName: str) -> List[Tuple[int, str]]:
     matches: List[Tuple[int, str]] = []
 
     for line in nonN:
-        if pattern in line:
+        if pattern in line or patternAlt in line:
             lineNo = nonN.index(line)+1
             matches.append((int(lineNo), line))
-        elif patternAlt in line:
-            lineNo = nonN.index(line)+1
-            matches.append((int(lineNo), line))
-            
-
     return matches
 
 
@@ -64,13 +55,9 @@ def getElementsByClass(className: str, fileName: str) -> List[Tuple[int, str]]:
     matches: List[Tuple[int, str]] = []
 
     for line in nonN:
-        if pattern in line:
+        if pattern in line or patternAlt in line:
             lineNo = nonN.index(line)+1
             matches.append((int(lineNo), line))
-        elif patternAlt in line:
-            lineNo = nonN.index(line)+1
-            matches.append((int(lineNo), line))
-
     return matches
 
 
@@ -88,15 +75,10 @@ def getElementByTag(tagName: str, fileName: str) -> List[Tuple[int, str]]:
     matches: List[Tuple[int, str]] = []
 
     for line in nonN:
-        if pattern in line:
+        if pattern in line or patternAlt in line:
             lineNo = nonN.index(line)+1
             matches.append((int(lineNo), line))
             break
-        elif patternAlt in line:
-            lineNo = nonN.index(line)+1
-            matches.append((int(lineNo), line))
-            break
-
     return matches
 
 
@@ -114,15 +96,10 @@ def getElementById(idName: str, fileName: str) -> List[Tuple[int, str]]:
     matches: List[Tuple[int, str]] = []
 
     for line in nonN:
-        if pattern in line:
+        if pattern in line or patternAlt in line:
             lineNo = nonN.index(line)+1
             matches.append((int(lineNo), line))
             break
-        elif patternAlt in line:
-            lineNo = nonN.index(line)+1
-            matches.append((int(lineNo), line))
-            break
-
     return matches
 
 
@@ -140,15 +117,10 @@ def getElementByClass(className: str, fileName: str) -> List[Tuple[int, str]]:
     matches: List[Tuple[int, str]] = []
 
     for line in nonN:
-        if pattern in line:
+        if pattern in line or patternAlt in line:
             lineNo = nonN.index(line)+1
             matches.append((int(lineNo), line))
             break
-        elif patternAlt in line:
-            lineNo = nonN.index(line)+1
-            matches.append((int(lineNo), line))
-            break
-
     return matches
 
 
@@ -191,13 +163,9 @@ class HTMLObject:
         matches: List[Tuple[int, str]] = []
 
         for line in nonN:
-            if pattern in line:
+            if pattern in line or patternAlt in line:
                 lineNo = nonN.index(line)+1
                 matches.append((int(lineNo), line))
-            elif patternAlt in line:
-                lineNo = nonN.index(line)+1
-                matches.append((int(lineNo), line))
-
         return matches
 
     def getElementsByClass(self, className: str) -> List[Tuple[int, str]]:
@@ -214,13 +182,9 @@ class HTMLObject:
         matches: List[Tuple[int, str]] = []
 
         for line in nonN:
-            if pattern in line:
+            if pattern in line or patternAlt in line:
                 lineNo = nonN.index(line)+1
                 matches.append((int(lineNo), line))
-            elif patternAlt in line:
-                lineNo = nonN.index(line)+1
-                matches.append((int(lineNo), line))
-
         return matches
 
     def getElementByTag(self, tagName: str) -> List[Tuple[int, str]]:
@@ -237,15 +201,10 @@ class HTMLObject:
         matches: List[Tuple[int, str]] = []
 
         for line in nonN:
-            if pattern in line:
+            if pattern in line or patternAlt in line:
                 lineNo = nonN.index(line)+1
                 matches.append((int(lineNo), line))
                 break
-            elif patternAlt in line:
-                lineNo = nonN.index(line)+1
-                matches.append((int(lineNo), line))
-                break
-
         return matches
 
     def getElementById(self, idName: str) -> List[Tuple[int, str]]:
@@ -262,15 +221,10 @@ class HTMLObject:
         matches: List[Tuple[int, str]] = []
 
         for line in nonN:
-            if pattern in line:
+            if pattern in line or patternAlt in line:
                 lineNo = nonN.index(line)+1
                 matches.append((int(lineNo), line))
                 break
-            elif patternAlt in line:
-                lineNo = nonN.index(line)+1
-                matches.append((int(lineNo), line))
-                break
-
         return matches
 
     def getElementByClass(self, className: str) -> List[Tuple[int, str]]:
@@ -287,13 +241,8 @@ class HTMLObject:
         matches: List[Tuple[int, str]] = []
 
         for line in nonN:
-            if pattern in line:
+            if pattern in line or patternAlt in line:
                 lineNo = nonN.index(line)+1
                 matches.append((int(lineNo), line))
                 break
-            elif patternAlt in line:
-                lineNo = nonN.index(line)+1
-                matches.append((int(lineNo), line))
-                break
-
         return matches

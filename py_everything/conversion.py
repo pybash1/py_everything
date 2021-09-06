@@ -1,6 +1,6 @@
 from typing import Union, List
 from . import units
-from . import _data as data
+from . import __data as data
 
 
 class Mass:

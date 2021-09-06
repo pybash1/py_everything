@@ -5,7 +5,7 @@ def main():
     import subprocess
     import time
     import textwrap
-    from . import _data as data
+    from . import __data as data
 
     ver = 'v1.0.1'
     helpDesc = data.helpDesc.format(ver, ver, sys.version)

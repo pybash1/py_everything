@@ -22,13 +22,9 @@ def listDecrypt(encryptedList: List[str]):
 
 def encryptFile(filepath: str, keyFilepath: str):
     """Encrypts File"""
-    if encryption.Encryption().FileEncryption(filepath, keyFilepath):
-        return True
-    return False
+    return bool(encryption.Encryption().FileEncryption(filepath, keyFilepath))
 
 
 def decryptFile(filepath: str, keyFilepath: str):
     """Decrypts File"""
-    if encryption.Encryption().FileDecryption(filepath, keyFilepath):
-        return True
-    return False
+    return bool(encryption.Encryption().FileDecryption(filepath, keyFilepath))

@@ -3,23 +3,19 @@ import datetime
 
 def getDate():
     """Returns date"""
-    date = datetime.date.today()
-    return date
+    return datetime.date.today()
 
 
 def getDateTime():
     """Returns date and time"""
-    dateTime = datetime.datetime.now()
-    return dateTime
+    return datetime.datetime.now()
 
 
 def getTime():
     """Returns time"""
-    time = datetime.datetime.now().strftime('%H:%M:%S')
-    return time
+    return datetime.datetime.now().strftime('%H:%M:%S')
 
 
 def getCustomFormat(format):
     """Returns date and/or time in custom format"""
-    custom = datetime.datetime.now().strftime(format)
-    return custom
+    return datetime.datetime.now().strftime(format)

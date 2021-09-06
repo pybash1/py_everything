@@ -1,5 +1,5 @@
 import random
-from typing import List
+from typing import List, Tuple
 
 
 def randhex() -> str:
@@ -7,7 +7,7 @@ def randhex() -> str:
     return "#" + "".join(random.choices("ABCDEF123456", k=6))
 
 
-def randRGB() -> tuple:
+def randRGB() -> Tuple[int, int, int]:
     """Returns a tuple containing an random RGB value"""
     r = random.randint(0, 255)
     g = random.randint(0, 255)
@@ -30,10 +30,7 @@ def randfloat(start: float, end: float) -> float:
     """Returns a random float between `start` and `end`"""
     start = int(start * 10000000)
     end = int(end * 10000000)
-    resultList = []
-
-    for i in range(start, end):
-        resultList.append(i/10000000)
+    resultList = [i/10000000 for i in range(start, end)]
 
     return random.choice(resultList)
 
@@ -47,7 +44,7 @@ def randboolList(len: int) -> List[bool]:
     """Returns a list of booleans generated randomly with length `len`"""
     finalList: List[bool] = []
 
-    for i in range(len):
+    for _ in range(len):
         finalList.append(random.choice([True, False]))
 
     return finalList

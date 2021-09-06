@@ -5,7 +5,7 @@ def main():
     import subprocess
     import time
     import textwrap
-    from . import _data as data
+    from . import __data as data
 
     ver = 'v1.0.0'
     helpDesc = data.helpDesc2.format(ver, ver, sys.version)
@@ -53,12 +53,6 @@ def main():
     repoLicense = input("[+]Enter Repository LICENSE: ")
 
     readmeData = data.readmeData.format(repoName, repoDescription, repoLicense)
-    securityData = data.securityData
-    bugData = data.bugData
-    featureData = data.featureData
-    configData = data.configData
-    greetData = data.greetData
-
     time.sleep(1)
 
     print("Initializing Repository...")
@@ -82,31 +76,35 @@ def main():
 
             if args.security == True:
                 print("Creating SECURITY.md")
+                securityData = data.securityData
                 with open(securityPath, 'w+') as f:
                     f.write(securityData)
 
             if args.issue == True:
                 print('Creating issue temlpates...')
                 os.mkdir(issuePath)
+                bugData = data.bugData
                 with open(bugPath, 'w+') as f:
                     f.write(bugData)
 
+                featureData = data.featureData
                 with open(featurePath, 'w+') as f:
                     f.write(featureData)
 
                 if args.config == True:
                     print("Creating config.yml")
+                    configData = data.configData
                     with open(configPath, 'w+') as f:
                         f.write(configData)
 
             if args.greet == True:
                 print("Generating greet workflow!")
                 os.mkdir(workflowPath)
+                greetData = data.greetData
+
                 with open(greetPath, 'w+') as f:
                     f.write(greetData)
-            print("Finished gitIt!")
-        else:
-            print("Finished gitIt!")
+        print("Finished gitIt!")
     else:
         print("Failed to initialize repository!")
         sys.exit()
