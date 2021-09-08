@@ -9,21 +9,21 @@ __version__ = "v1.0.0"
 import random
 from . import error
 
-BASE_LETTERS: str = 'abcdefghijklmnopqrstuvwxyz'
-BASE_SYMBOLS: str = ' 1234567890!@#$%^&*()-_=+[{]};:\'"<,>.?/`~|\\'
+BASE_LETTERS: str = "abcdefghijklmnopqrstuvwxyz"
+BASE_SYMBOLS: str = " 1234567890!@#$%^&*()-_=+[{]};:'\"<,>.?/`~|\\"
 
 
 def genCharKeys() -> List[str]:
     """Generates character keys"""
     base: List[str] = list(BASE_LETTERS)
     random.shuffle(base)
-    key1 = ''.join(base)
+    key1 = "".join(base)
     random.shuffle(base)
-    key2 = ''.join(base)
+    key2 = "".join(base)
     random.shuffle(base)
-    key3 = ''.join(base)
+    key3 = "".join(base)
     random.shuffle(base)
-    key4 = ''.join(base)
+    key4 = "".join(base)
     keyList: List[str] = []
     keyList.append(key1)
     keyList.append(key2)
@@ -36,16 +36,16 @@ def genSymKey() -> str:
     """Generates symbol key"""
     base: List[str] = list(BASE_SYMBOLS)
     random.shuffle(base)
-    key: str = ''.join(base)
+    key: str = "".join(base)
     return key
 
 
 def checkCharKeys(keyList: List[str]):
     """Validates character keys"""
-    key1 = keyList[0].replace("\n", '')
-    key2 = keyList[1].replace("\n", '')
-    key3 = keyList[2].replace("\n", '')
-    key4 = keyList[3].replace("\n", '')
+    key1 = keyList[0].replace("\n", "")
+    key2 = keyList[1].replace("\n", "")
+    key3 = keyList[2].replace("\n", "")
+    key4 = keyList[3].replace("\n", "")
     base = BASE_LETTERS
     key1Sorted: List[str] = sorted(key1)
     key2Sorted: List[str] = sorted(key2)
@@ -81,7 +81,7 @@ def checkSymKey(symKey: str):
         raise error.InvalidSymbolKeyError()
 
 
-class SuperEncrypt():
+class SuperEncrypt:
     """Class for performing operations"""
 
     def __init__(self, keyCharList: List[str], keySym: str):
@@ -94,11 +94,11 @@ class SuperEncrypt():
 
     def encrypt(self, msg: str) -> str:
         """Encrypt data"""
-        encrypted1: str = ''
-        encrypted2: str = ''
-        encrypted3: str = ''
-        encrypted4: str = ''
-        encryptedSym: str = ''
+        encrypted1: str = ""
+        encrypted2: str = ""
+        encrypted3: str = ""
+        encrypted4: str = ""
+        encryptedSym: str = ""
 
         checkCharKeys(self.keyCharList)
         checkSymKey(self.key5)
@@ -172,11 +172,11 @@ class SuperEncrypt():
 
     def decrypt(self, msg: str) -> str:
         """Decrypt data"""
-        decrypted4: str = ''
-        decrypted3: str = ''
-        decrypted2: str = ''
-        decrypted1: str = ''
-        decryptedSym: str = ''
+        decrypted4: str = ""
+        decrypted3: str = ""
+        decrypted2: str = ""
+        decrypted1: str = ""
+        decryptedSym: str = ""
 
         checkCharKeys(self.keyCharList)
         checkSymKey(self.key5)

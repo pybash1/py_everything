@@ -20,7 +20,7 @@ def perimeterRect(length: float, breadth: float) -> float:
 
 def areaSqr(side: float) -> float:
     """Finds area of square"""
-    area: float = side**2
+    area: float = side ** 2
 
     return area
 
@@ -75,14 +75,14 @@ def volCone(radius: float, height: float) -> float:
 
 def volSphere(radius: float) -> float:
     """Finds volume of a sphere"""
-    volume: float = 4/3 * pi * radius * radius * radius
+    volume: float = 4 / 3 * pi * radius * radius * radius
 
     return volume
 
 
 def volCube(edge: float) -> float:
     """Finds volume of a cube"""
-    volume: float = edge**3
+    volume: float = edge ** 3
 
     return volume
 

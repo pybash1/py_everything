@@ -13,7 +13,9 @@ def add(num1: Union[int, float], num2: Union[int, float], *args) -> Union[int, f
     return sum
 
 
-def subtract(num1: Union[int, float], num2: Union[int, float], *args) -> Union[int, float]:
+def subtract(
+    num1: Union[int, float], num2: Union[int, float], *args
+) -> Union[int, float]:
     """Subtracts given numbers"""
     sub: Union[int, float] = num1 - num2
     for num in args:
@@ -29,12 +31,14 @@ def multiply(num1: Union[int, float], *args) -> Union[int, float]:
     return product
 
 
-def divide(num1: Union[int, float], num2: Union[int, float], type: str) -> Union[int, float]:
+def divide(
+    num1: Union[int, float], num2: Union[int, float], type: str
+) -> Union[int, float]:
     """Divides given numbers"""
-    if type.lower() == 'int':
+    if type.lower() == "int":
         int_quotient: Union[int, float] = num1 / num2
         return int_quotient
-    if type.lower() == 'float':
+    if type.lower() == "float":
         float_quotient: Union[int, float] = num1 // num2
         return float_quotient
     raise error.UnknownDivisionTypeError(type)

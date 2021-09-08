@@ -50,7 +50,9 @@ class UnknownPathTypeError(Exception):
     """Exception raised if path type is unknown"""
 
     def __init__(self):
-        self.msg: str = "Provided path did not match any available types - web, and local"
+        self.msg: str = (
+            "Provided path did not match any available types - web, and local"
+        )
         super().__init__(self.msg)
 
 
@@ -58,5 +60,5 @@ class UnknownDivisionTypeError(Exception):
     """Exception raised if division type is unknown"""
 
     def __init__(self, type: str):
-        self.msg: str = f'Unknown division type \'{type}\''
+        self.msg: str = f"Unknown division type '{type}'"
         super().__init__(self.msg)

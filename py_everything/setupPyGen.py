@@ -7,24 +7,41 @@ def main():
     import textwrap
     from . import __data as data
 
-    ver = 'v1.0.1'
+    ver = "v1.0.1"
     helpDesc = data.helpDesc.format(ver, ver, sys.version)
 
     argparser = argparse.ArgumentParser(
-        prog="setupPyGen", formatter_class=argparse.RawDescriptionHelpFormatter, description=textwrap.dedent(helpDesc))
-    argparser.add_argument('-g', '--git', action='store_true', required=False,
-                           help="Start a git repository in the base directory(True or False).")
-    argparser.add_argument('-t', '--tests', action='store_true', required=False,
-                           help="Add tests/ folder to project directory(True or False).")
-    argparser.add_argument('--gitignore', action='store_true', required=False,
-                           help="Add .gitignore to project directory(True or False).")
+        prog="setupPyGen",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        description=textwrap.dedent(helpDesc),
+    )
+    argparser.add_argument(
+        "-g",
+        "--git",
+        action="store_true",
+        required=False,
+        help="Start a git repository in the base directory(True or False).",
+    )
+    argparser.add_argument(
+        "-t",
+        "--tests",
+        action="store_true",
+        required=False,
+        help="Add tests/ folder to project directory(True or False).",
+    )
+    argparser.add_argument(
+        "--gitignore",
+        action="store_true",
+        required=False,
+        help="Add .gitignore to project directory(True or False).",
+    )
     args = argparser.parse_args()
 
-    readmePath = os.path.realpath(os.getcwd()+"\\README.md")
-    setupFilePath = os.path.realpath(os.getcwd()+"\\setup.py")
-    licensePath = os.path.realpath(os.getcwd()+"\\LICENSE")
-    gitignorePath = os.path.realpath(os.getcwd()+"\\.gitignore")
-    testsPath = os.path.realpath(os.getcwd()+"\\tests")
+    readmePath = os.path.realpath(os.getcwd() + "\\README.md")
+    setupFilePath = os.path.realpath(os.getcwd() + "\\setup.py")
+    licensePath = os.path.realpath(os.getcwd() + "\\LICENSE")
+    gitignorePath = os.path.realpath(os.getcwd() + "\\.gitignore")
+    testsPath = os.path.realpath(os.getcwd() + "\\tests")
 
     originDir = os.getcwd()
 
@@ -70,12 +87,12 @@ def main():
         print("setupPyGen: error: cannot generate setup.py with 0 packages! quitting!")
         sys.exit()
 
-    if packages[0] != 'find_packages' or 'find_packages()':
+    if packages[0] != "find_packages" or "find_packages()":
         for package in packages:
-            packagePath = os.getcwd()+"\\"+package
+            packagePath = os.getcwd() + "\\" + package
             os.mkdir(packagePath)
             os.chdir(packagePath)
-            initPath = os.getcwd()+"\\__init__.py"
+            initPath = os.getcwd() + "\\__init__.py"
             with open(initPath, "w+") as f:
                 pass
             os.chdir(originDir)
@@ -110,11 +127,32 @@ def main():
         pass
 
     if setupPyData == data.setupPyData:
-        setupPyDataFinal = setupPyData.format(readmePath, packageName, packageVersion, packageDescription,
-                                              packageAuthor, packageEmail, packages, depends, packageLicense, packageHomepage, pythonVersion)
+        setupPyDataFinal = setupPyData.format(
+            readmePath,
+            packageName,
+            packageVersion,
+            packageDescription,
+            packageAuthor,
+            packageEmail,
+            packages,
+            depends,
+            packageLicense,
+            packageHomepage,
+            pythonVersion,
+        )
     else:
-        setupPyDataFinal = setupPyData.format(readmePath, packageName, packageVersion, packageDescription,
-                                              packageAuthor, packageEmail, depends, packageLicense, packageHomepage, pythonVersion)
+        setupPyDataFinal = setupPyData.format(
+            readmePath,
+            packageName,
+            packageVersion,
+            packageDescription,
+            packageAuthor,
+            packageEmail,
+            depends,
+            packageLicense,
+            packageHomepage,
+            pythonVersion,
+        )
 
     with open(setupFilePath, "w+") as f:
         f.write(setupPyDataFinal)
@@ -122,9 +160,11 @@ def main():
 
     print("Generating README...")
 
-    readmeData = '''# {}
+    readmeData = """# {}
 {}
-'''.format(packageName, packageDescription)
+""".format(
+        packageName, packageDescription
+    )
 
     with open(readmePath, "w+") as f:
         f.write(readmeData)
@@ -147,7 +187,7 @@ def main():
 
     if args.gitignore == True:
         print("Generating .gitignore...")
-        with open(gitignorePath, 'w+') as f:
+        with open(gitignorePath, "w+") as f:
             pass
 
     if args.tests == True:
