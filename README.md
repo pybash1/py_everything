@@ -36,6 +36,7 @@ Status -
 [![Documentation Status](https://readthedocs.org/projects/py-everything/badge/?version=latest)](https://py-everything.readthedocs.io/en/latest/?badge=latest)
 [![Codecov](https://img.shields.io/codecov/c/github/pybash1/py_everything)]()
 [![DeepSource](https://deepsource.io/gh/pybash1/py_everything.svg/?label=active+issues&show_trend=true)](https://deepsource.io/gh/pybash1/py_everything/?ref=repository-badge)
+[![LGTM Grade](https://img.shields.io/lgtm/grade/python/github/pybash1/py_everything)](https://lgtm.com/projects/g/pybash1/py_everything/)
 
 GitHub - 
 
