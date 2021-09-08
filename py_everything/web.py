@@ -1,13 +1,13 @@
 import webbrowser
 
-googleUrl: str = 'https://google.com/search?q='
-ytUrl: str = 'https://youtube.com/results?search_query='
-githubUrl: str = 'https://github.com/search?q='
-soUrl: str = 'https://stackoverflow.com/search?q='
-amz_inUrl: str = 'https://www.amazon.in/s?k='
-amz_comUrl: str = 'https://www.amazon.com/s?k='
-pypiUrl: str = 'https://pypi.org/search/?q='
-rtdocsUrl: str = 'https://readthedocs.io/search/?q='
+googleUrl: str = "https://google.com/search?q="
+ytUrl: str = "https://youtube.com/results?search_query="
+githubUrl: str = "https://github.com/search?q="
+soUrl: str = "https://stackoverflow.com/search?q="
+amz_inUrl: str = "https://www.amazon.in/s?k="
+amz_comUrl: str = "https://www.amazon.com/s?k="
+pypiUrl: str = "https://pypi.org/search/?q="
+rtdocsUrl: str = "https://readthedocs.io/search/?q="
 
 
 def googleSearch(query: str) -> None:

@@ -172,8 +172,8 @@ unitTypes: Dict[str, Union[int, float]] = {
     "k": 1000,
     "h": 100,
     "da": 10,
-    "b": 1,    # "b" signifies "base"
+    "b": 1,  # "b" signifies "base"
     "d": 0.1,
     "c": 0.01,
-    "m": 0.001
+    "m": 0.001,
 }
