@@ -9,5 +9,5 @@ jobs:
     - uses: actions/first-interaction@v1
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
-        issue-message: "Thanks for opening the issue. Hope, it get's fixed soon."
-        pr-message: 'Thanks for contributing to $GITHUB_REPOSITORY.'
+        issue-message: "Thanks for your contribution. We will try to work on your issue ASAP."
+        pr-message: 'Thanks for your contribution to pybash1/py_everything.'
