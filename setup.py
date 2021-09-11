@@ -13,20 +13,28 @@ setup(
     maintainer="PyBash",
     packages=find_packages(),
     entry_points={
-            'console_scripts': [
-                'setupPyGen = py_everything.setupPyGen:main',
-                'gitIt = py_everything.gitIt:main',
-            ]
+        "console_scripts": [
+            "setupPyGen = py_everything.setupPyGen:main",
+            "gitIt = py_everything.gitIt:main",
+        ]
     },
-    install_requires=['requests', 'playsound', 'setuptools',
-                      'wheel', 'pip', 'enrocrypt', 'py-expression-eval'],
+    install_requires=[
+        "requests",
+        "playsound",
+        "setuptools",
+        "wheel",
+        "pip",
+        "enrocrypt",
+        "py-expression-eval",
+    ],
     license="MIT License",
     url="https://github.com/pybash1/py_everything",
     download_url="https://pypi.org/project/py-everything/#files",
-    project_urls={'Documentation': 'https://py_everything.readthedocs.io/en/stable/',
-                  'Issues': 'https://github.com/pybash1/py_everything/issues',
-                  'Code': 'https://github.com/pybash1/py_everything/'
-                  },
+    project_urls={
+        "Documentation": "https://py_everything.readthedocs.io/en/stable/",
+        "Issues": "https://github.com/pybash1/py_everything/issues",
+        "Code": "https://github.com/pybash1/py_everything/",
+    },
     classifiers=[
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
@@ -50,5 +58,5 @@ setup(
         "Topic :: System :: Archiving :: Packaging",
         "Topic :: Software Development :: Code Generators",
     ],
-    python_requires='>=3.6'
+    python_requires=">=3.6",
 )

@@ -18,7 +18,36 @@ def randRGB() -> Tuple[int, int, int]:
 
 def randletter() -> str:
     """Returns arandom alphabet"""
-    return random.choice(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'])
+    return random.choice(
+        [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f",
+            "g",
+            "h",
+            "i",
+            "j",
+            "k",
+            "l",
+            "m",
+            "n",
+            "o",
+            "p",
+            "q",
+            "r",
+            "s",
+            "t",
+            "u",
+            "v",
+            "w",
+            "x",
+            "y",
+            "z",
+        ]
+    )
 
 
 def randint(start: int, end: int) -> int:
@@ -30,7 +59,7 @@ def randfloat(start: float, end: float) -> float:
     """Returns a random float between `start` and `end`"""
     start = int(start * 10000000)
     end = int(end * 10000000)
-    resultList = [i/10000000 for i in range(start, end)]
+    resultList = [i / 10000000 for i in range(start, end)]
 
     return random.choice(resultList)
 
@@ -58,6 +87,7 @@ def randstring(string: str) -> str:
         resultList.append(letter)
 
     return str(random.choice(resultList))
+
 
 # To round off result returned by randfloat() to 2 decimal places the following can be used
 # float(str(randfloat(1.1, 2.3)).split('.')[0]+'.'+str("".join(list(str(randfloat(1.1, 2.3)).split('.')[1])[0:2])))

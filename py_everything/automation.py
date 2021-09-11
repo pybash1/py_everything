@@ -7,7 +7,15 @@ from . import error
 from typing import List, Union
 
 
-def sendEmail(sendAddr: str, password: str, recvAddr: str, body: str, server: str, port: int, sub: str = 'No Subject') -> bool:
+def sendEmail(
+    sendAddr: str,
+    password: str,
+    recvAddr: str,
+    body: str,
+    server: str,
+    port: int,
+    sub: str = "No Subject",
+) -> bool:
     """Sends an email using given arguments"""
     with smtplib.SMTP(server, port) as smtp:
         smtp.ehlo()
@@ -16,8 +24,8 @@ def sendEmail(sendAddr: str, password: str, recvAddr: str, body: str, server: st
 
         smtp.login(sendAddr, password)
 
-        subMsg: str = 'Subject: {}'.format(sub)
-        bodyMsg: str = '\n\n {}'.format(body)
+        subMsg: str = "Subject: {}".format(sub)
+        bodyMsg: str = "\n\n {}".format(body)
 
         finalMsg: str = subMsg + bodyMsg
 
@@ -27,7 +35,7 @@ def sendEmail(sendAddr: str, password: str, recvAddr: str, body: str, server: st
 
 def emailAddressSlicer(fullAddr: str) -> tuple:
     """Splits an email address into an username and domain and is returned as a tuple"""
-    splitList: List[str] = fullAddr.split('@')
+    splitList: List[str] = fullAddr.split("@")
     username: str = splitList[0]
     domain: str = splitList[1]
     return (username, domain)

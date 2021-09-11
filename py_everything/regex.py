@@ -41,11 +41,6 @@ password = r'(?=(.*[0-9]))(?=.*[\!@#$%^&*()\\[\]{}\-_+=~`|:;"\'<>,./?])(?=.*[a-z
 passwordC = re.compile(password)
 
 # Regex to match any IPv4 Address
-ip4 = r'^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$'
-# Precompiled IPv4 regex
-ip4C = re.compile(ip4)
-
-# Regex to match any IPv6 Address. This regex matches only plain IPv6 addresses. This Does not match a localhost ipv6 address or an ipv4 embedded ipv6 address
 ip6 = r'[0-9a-fA-F]{1,4}::[0-9a-fA-F]{1,4}:[0-9a-fA-F]{1,4}:[0-9a-fA-F]{1,4}:[0-9a-fA-F]{1,4}'
 # Precompiled iIPv6 regex
 ip6C = re.compile(ip6)
