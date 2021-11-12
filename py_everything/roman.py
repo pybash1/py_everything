@@ -1,12 +1,12 @@
-from typing import Union, List, Dict
+from typing import Dict
 
 
-def convertRoman(roman: str) -> str:
+def convertRoman(roman: str) -> int:
     """Changes given roman numeral to the integer equivalent"""
 
     roman = roman.upper()  # change entered value to upper case
 
-    rom_val: dict[str, int] = {
+    rom_val: Dict[str, int] = {
         "I": 1,
         "V": 5,
         "X": 10,
