@@ -34,3 +34,13 @@ archive/
 # Batch files for automation #
 ##############################
 automation/
+
+# Virtual environments #
+##############################
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
