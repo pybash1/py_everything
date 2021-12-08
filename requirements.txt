@@ -2,7 +2,7 @@ Sphinx
 python-docs-theme==2021.11.1
 playsound==1.3.0
 enrocrypt==1.1.4
-twine==3.7.0
+twine==3.7.1
 py-expression-eval==0.3.14
 pygments>=2.7.4 # not directly required, pinned by Snyk to avoid a vulnerability
 black
