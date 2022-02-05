@@ -3,7 +3,6 @@ from typing import Dict
 
 def convertRoman(roman: str) -> int:
     """Changes given roman numeral to the integer equivalent"""
-
     roman = roman.upper()  # change entered value to upper case
 
     rom_val: Dict[str, int] = {
